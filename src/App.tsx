@@ -7,6 +7,7 @@ import {Prices} from "./components/prices/Prices.tsx";
 import {Cooperation} from "./components/cooperation/Cooperation.tsx";
 import {Portfolio} from "./components/portfolio/Portfolio.tsx";
 import {Contact} from "./components/contact/Contact.tsx";
+import {Footer} from "./components/footer/Footer.tsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Prices/>
       <Portfolio/>
       <Contact/>
+      <Footer/>
     </>
   )
 }
