@@ -3,6 +3,7 @@ import {Header} from "./components/Header.tsx";
 import {Title} from "./components/Title.tsx";
 import {About} from "./components/About.tsx";
 import {Services} from "./components/services/Services.tsx";
+import {Prices} from "./components/prices/Prices.tsx";
 import {Cooperation} from "./components/cooperation/Cooperation.tsx";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <About/>
       <Services/>
       <Cooperation/>
+      <Prices/>
     </>
   )
 }
