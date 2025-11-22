@@ -2,6 +2,7 @@ import './App.css'
 import {Header} from "./components/Header.tsx";
 import {Title} from "./components/Title.tsx";
 import {About} from "./components/About.tsx";
+import {Services} from "./components/services/Services.tsx";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <Header/>
       <Title/>
       <About/>
-      <h1>Vite + React</h1>
+      <Services/>
     </>
   )
 }
