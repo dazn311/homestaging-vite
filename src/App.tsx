@@ -6,6 +6,7 @@ import {Services} from "./components/services/Services.tsx";
 import {Prices} from "./components/prices/Prices.tsx";
 import {Cooperation} from "./components/cooperation/Cooperation.tsx";
 import {Portfolio} from "./components/portfolio/Portfolio.tsx";
+import {Contact} from "./components/contact/Contact.tsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Cooperation/>
       <Prices/>
       <Portfolio/>
+      <Contact/>
     </>
   )
 }
