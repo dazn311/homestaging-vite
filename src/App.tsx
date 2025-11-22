@@ -3,6 +3,7 @@ import {Header} from "./components/Header.tsx";
 import {Title} from "./components/Title.tsx";
 import {About} from "./components/About.tsx";
 import {Services} from "./components/services/Services.tsx";
+import {Cooperation} from "./components/cooperation/Cooperation.tsx";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Title/>
       <About/>
       <Services/>
+      <Cooperation/>
     </>
   )
 }
