@@ -78,3 +78,8 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/dazn311/homestaging-vite.git
 git push -u origin main
+
+ssh -i ~/.ssh/id_rsa root@185.72.144.201
+scp -r  /Users/dazn311/Projects/homesstaging.online root@185.72.144.201:/var/www/
+
+scp -r /Users/dazn311/Projects/react-project/homestaging-vite/dist root@185.72.144.201:/var/www/html

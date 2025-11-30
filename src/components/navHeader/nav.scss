@@ -1,0 +1,21 @@
+.street-name {
+  min-width: 100%;
+  @media (min-width: 1200px) {
+    .navmenu .dropdown .dropdown ul {
+      left: 100%;
+    }
+  }
+}
+
+.navmenu .dropdown ul {
+  left: -100%;
+  min-width: 100%;
+  //visibility: visible;
+  //opacity: 1;
+}
+//.navmenu .dropdown .dropdown ul {
+//  left: -100%;
+//  min-width: 100%;
+//  visibility: visible;
+//  opacity: 1;
+//}
