@@ -43,7 +43,7 @@ function Content() {
           <div className="swiper-wrapper align-items-center" id="swiper-wrapper-2f6687a6a8b08d24" aria-live="off">
             <div
               className="swiper-slide"
-              style={{backgroundImage: "url(https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_19_55.jpg)"}}
+              style={{backgroundImage: "url(/uploads/projects/ilyinskie21.jpg)"}}
               role="group"
               aria-label="1 / 5">
             </div>
