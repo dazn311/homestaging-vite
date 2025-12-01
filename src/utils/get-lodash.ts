@@ -9,7 +9,7 @@ export function get(
   const pathParts = Array.isArray(path) ? path : (path ?? '').split('.');
 
   if (!pathParts || pathParts.length === 0) {
-    return obj;
+    return defaultValue;
   }
 
   const current: any = typeof obj === 'object' ? obj : {};
