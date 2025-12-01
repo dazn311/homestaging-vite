@@ -1,50 +1,60 @@
-export type TDataApp = {
-  [key: string]: {
-    jkName:string;
-    jkTitle:string;
-    projects: {
-      [key: string]: string;
-    }
-  };
+export type TProject = {
+  id: string;
+  jkName: string;
+  jkTitle: string;
+  street: string;
+  city?: string;
+  url: string;
 };
 
-export const dataApp:TDataApp = {
-  ilyinskieLuga: {
+export const dataApp: TProject[] = [
+  {
+    id: 'ilyinskie20',
     jkName: 'ilyinskieLuga',
     jkTitle: 'ЖК Ильинские Луга',
-    projects: {
-      ilyinskie20:'ул. Заповедная, 20',
-      ilyinskie21:'ул. Заповедная, 21',
-    },
+    street: 'ул. Заповедная, 20',
+    url: '/projects/1',
   },
-  rimskogoKorsakova: {
+  {
+    id: 'ilyinskie21',
+    jkName: 'ilyinskieLuga',
+    jkTitle: 'ЖК Ильинские Луга',
+    street: 'ул. Заповедная, 21',
+    url: '/projects/2',
+  },
+  {
+    id: 'rimskogoKorsakova9152',
     jkName: 'rimskogoKorsakova',
     jkTitle: 'ЖК Римского-Корсакова',
-    projects: {
-      rimskogoKorsakova9152:'ул. Римского-Корсакова, 11к9',
-    },
+    street: 'ул. Римского-Корсакова, 11к9',
+    url: '/projects/3',
   },
-  mitinskiiles: {
+  {
+    id: 'mitino1',
     jkName: 'mitinskiiles',
     jkTitle: 'ЖК Митинский лес',
-    projects: {
-      mitino1:'ул. Муравская, 38Бк1',
-      mitino2:'ул. Муравская, 32к1',
-    },
+    street: 'ул. Муравская, 38Бк1',
+    url: '/projects/4',
   },
-  kronstadskii: {
+  {
+    id: 'mitino2',
+    jkName: 'mitinskiiles',
+    jkTitle: 'ЖК Митинский лес',
+    street: 'ул. Муравская, 32к1',
+    url: '/projects/5',
+  },
+  {
+    id: 'kronstadskii8k2',
     jkName: 'kronstadskii',
     jkTitle: 'ЖК Кронштадтский',
-    projects: {
-      kronstadskii8k2:'Кронштадтский бул., 8к2',
-    },
+    street: 'Кронштадтский бул., 8к2',
+    url: '/projects/5',
   },
-  hollandpark: {
+  {
+    id: 'ozerova8k1kv176',
     jkName: 'hollandpark',
     jkTitle: 'ЖК Holland park',
-    projects: {
-      ozerova8k1kv176:'ул. Озерова, 8к1',
-    },
+    street: 'ул. Озерова, 8к1',
+    url: '/projects/6',
   },
-
-}
+]

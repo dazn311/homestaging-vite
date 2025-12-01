@@ -1,17 +1,17 @@
-import type {TDataApp} from "../../store/dataApp.ts";
+import type {TProject} from "../../store/dataApp.ts";
 
-type TBreadcrumbsProps = {dataApp:TDataApp,street:string,jk:string};
+type TBreadcrumbsProps = {data:TProject | null};
 
-export const Breadcrumbs = ({dataApp,street,jk}:TBreadcrumbsProps) => {
+export const Breadcrumbs = ({data}:TBreadcrumbsProps) => {
   return (
     <nav className="breadcrumbs">
       <ol>
         <li><a href="/">Главная</a></li>
-        {jk &&
-          <li className="current">{dataApp[jk] ? dataApp[jk].jkTitle : ''}</li>
+        {data?.jkTitle &&
+          <li className="current">{data.jkTitle}</li>
         }
-        {street &&
-          <li className="current">{dataApp[jk] ? dataApp[jk].projects[street] : ''}</li>
+        {data?.street &&
+          <li className="current">{data['street']}</li>
         }
       </ol>
     </nav>

@@ -6,18 +6,17 @@ import {Breadcrumbs} from "../components/breadcrumbs/Breadcrumbs.tsx";
 function Document() {
   const [searchParams] = useSearchParams();
 
-  const street = searchParams.get('street') ?? '';
-  const jk = searchParams.get('jk') ?? '';
+  const id = searchParams.get('id') ?? '';
+  const data = dataApp.filter(item => item.id === id);
+  const dataOjb = data.length > 0 ? data[0] : null;
 
   return (
     <div className="page-title dark-background aos-init aos-animate" data-aos="fade">
       <div className="container">
         <Breadcrumbs
-          jk={jk}
-          street={street}
-          dataApp={dataApp}
+          data={dataOjb}
         />
-        <h1>{dataApp[jk] ? dataApp[jk].jkTitle : ''}</h1>
+        <h1>{dataOjb ? dataOjb.jkTitle : ''}</h1>
         <Content/>
       </div>
     </div>

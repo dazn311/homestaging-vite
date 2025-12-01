@@ -52,21 +52,21 @@ const navmenuArr:TNavmenu[] = [
 
 const navmenuSubArr:TNavMenuSub[] = [
   {title: 'ЖК Ильинские Луга',children: [
-      {url: '/document?street=ilyinskie20&jk=ilyinskieLuga', title: 'ул. Заповедная, 20'},
-      {url: '/document?street=ilyinskie21&jk=ilyinskieLuga', title: 'ул. Заповедная, 21'},
+      {url: '/document?id=ilyinskie20', title: 'ул. Заповедная, 20'},
+      {url: '/document?id=ilyinskie21', title: 'ул. Заповедная, 21'},
     ]},
   {title: 'ЖК Римского-Корсакова',children: [
-      {url: '/document?street=rimskogoKorsakova9152&jk=rimskogoKorsakova', title: 'ул. Римского-Корсакова, 11к9'},
+      {url: '/document?id=rimskogoKorsakova9152', title: 'ул. Римского-Корсакова, 11к9'},
     ]},
   {title: 'ЖК Митинский лес',children: [
-      {url: '/document?street=mitino1&jk=mitinskiiles', title: 'ул. Муравская, 38Бк1'},
-      {url: '/document?street=mitino2&jk=mitinskiiles', title: 'ул. Муравская, 32к1'},
+      {url: '/document?id=mitino1', title: 'ул. Муравская, 38Бк1'},
+      {url: '/document?id=mitino2', title: 'ул. Муравская, 32к1'},
     ]},
   {title: 'ЖК Кронштадтский',children: [
-      {url: '/document?street=kronstadskii&jk=kronstadskii', title: 'Кронштадтский бул., 8к2'},
+      {url: '/document?id=kronstadskii', title: 'Кронштадтский бул., 8к2'},
     ]},
   {title: 'ЖК Holland park',children: [
-      {url: '/document?street=ozerova8k1kv176&jk=hollandpark', title: 'ул. Озерова, 8к1'},
+      {url: '/document?id=ozerova8k1kv176', title: 'ул. Озерова, 8к1'},
     ]},
 ];
 
