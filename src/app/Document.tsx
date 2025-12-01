@@ -1,22 +1,30 @@
+import {useEffect, useState} from "react";
 import './App.css'
 import {useSearchParams} from "react-router";
-import {dataApp} from "../store/dataApp.ts";
+import {type TProject} from "../store/dataApp.ts";
 import {Breadcrumbs} from "../components/breadcrumbs/Breadcrumbs.tsx";
 
 function Document() {
   const [searchParams] = useSearchParams();
+  const [page, setPage] = useState<TProject | null>(null);
 
   const id = searchParams.get('id') ?? '';
-  const data = dataApp.filter(item => item.id === id);
-  const dataOjb = data.length > 0 ? data[0] : null;
+
+  useEffect(() => {
+    fetch('/api/projects.json')
+    .then(res => res.json())
+      .then((res:TProject[]) => {
+        const data = res.filter(item => item.id === id);
+        const dataOjb = data.length > 0 ? data[0] : null;
+        setPage(dataOjb);
+      });
+  },[id, setPage]);
 
   return (
     <div className="page-title dark-background aos-init aos-animate" data-aos="fade">
       <div className="container">
-        <Breadcrumbs
-          data={dataOjb}
-        />
-        <h1>{dataOjb ? dataOjb.jkTitle : ''}</h1>
+        <Breadcrumbs data={page} />
+        <h1>{page ? page.jkTitle : ''}</h1>
         <Content/>
       </div>
     </div>
