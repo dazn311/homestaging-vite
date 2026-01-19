@@ -5,7 +5,7 @@ export const Contact = () => {
       <div className="container section-title" >
         <span>Контакты</span>
         <h2>Контакты</h2>
-        <p>Основное место г. Москва, Митинский район</p>
+        <p>Основное место г. Москва, СЗАО, Митино</p>
       </div>
 
       <div className="container" >
@@ -14,7 +14,7 @@ export const Contact = () => {
             <div className="info-item d-flex flex-column justify-content-center align-items-center">
               <i className="bi bi-geo-alt"></i>
               <h3>Адрес</h3>
-              <p>125222. г. Москва, ул. Генерала Белобородова</p>
+              <p>125222. г. Москва, СЗАО, Митино</p>
             </div>
           </div>
 

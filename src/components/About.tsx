@@ -56,11 +56,6 @@ export const About = () => {
                   Друзья - это вещи очевидные, но почему-то для многих, до сих пор невероятные☺️</span>
                 <br/>
               </li>
-              <li>
-                <i className="bi"></i>
-                <span style={{fontWeight: 600}}>✨Особая благодарность за помощь и поддержку моему учителю и куратору Светлане Борисовой, известному хоумстейджеру и блогеру, ее Телеграм-канал.....</span>
-                <a href={"https://t.me/homestaging_BS"}><i className="bi bi-telegram"></i></a>
-              </li>
             </ul>
             <a href="https://t.me/homeupakovka" className="read-more"><span>еще</span><i
               className="bi bi-arrow-right"></i></a>
