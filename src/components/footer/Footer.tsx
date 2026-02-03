@@ -1,3 +1,5 @@
+import {ButtonTelegram} from "../btn-telegram/ButtonTelegram.tsx";
+
 export const Footer = () => {
 
   return (
@@ -15,9 +17,9 @@ export const Footer = () => {
                   <p><strong>Email:</strong> <span>natalia888@homesstaging.online</span></p>
                 </div>
                 <div className="social-links d-flex mt-4">
-                  <a href="https://t.me/homeupakovka"><i className="bi bi-telegram"></i></a>
-                  <a href="https://t.me/homeupakovka"><i className="bi bi-facebook"></i></a>
-                  <a href="https://t.me/homeupakovka"><i className="bi bi-instagram"></i></a>
+                  <ButtonTelegram cls={'telegram'} />
+                  <ButtonTelegram cls={'facebook'} />
+                  <ButtonTelegram cls={'instagram'} />
                 </div>
               </div>
             </div>

@@ -25,7 +25,7 @@ export function PricingItem({caption,titles,items}:TPricingItemProps) {
           )
         })}
       </ul>
-      <ButtonTelegram/>
+      <ButtonTelegram cls={'telegram'} title={'Заказать'}/>
     </div>
   )
 }
