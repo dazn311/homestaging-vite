@@ -1,0 +1,52 @@
+.about-item {
+
+  .caption {
+    font-weight: 600;
+  }
+  .body {
+    display: block;
+    transition: all 1s ease;
+    transition-delay: 0.2s;
+    transform: scaleY(1);
+  }
+  //&.show {
+  //  .body {
+  //    animation: show 0.7s ease-in forwards;
+  //  }
+  //}
+
+
+}
+
+#about {
+  .read-more {
+    display: none;
+  }
+}
+
+@media (max-width: 492px) {
+  .about-item {
+    &.hide {
+      .body {
+        transform: scaleY(0);
+        visibility: hidden;
+        height: 0;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+  #about {
+    .read-more {
+      display: inline-flex;
+    }
+  }
+}
+
+
+
+//
+//@keyframes show {
+//  0% { content-visibility: hidden; color: transparent; }
+//  100% { content-visibility: visible; color: black; }
+//}
