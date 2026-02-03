@@ -1,5 +1,7 @@
 import {PricingItem} from "./PricingItem.tsx";
 import {pricingHelpers, pricingItemProps, pricingOnLine} from "../../store/dataApp.ts";
+import './prices.styles.scss';
+
 
 export const Prices = () => {
   return (

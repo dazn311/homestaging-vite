@@ -1,8 +1,9 @@
 import type {TPricingItemProps, TTitlePrice} from "../../store/dataApp.ts";
+import {ButtonTelegram} from "../btn-telegram/ButtonTelegram.tsx";
 
 export function PriceTitle({id,title,price}:TTitlePrice) {
   return (
-    <div key={id} style={{width:'100%',display:'flex',justifyContent:'space-between'}}>
+    <div className={'price-title'} key={id}>
       <h3>{title}</h3>
       <h5>{price} тыс. ₽</h5>
     </div>
@@ -24,11 +25,7 @@ export function PricingItem({caption,titles,items}:TPricingItemProps) {
           )
         })}
       </ul>
-      <div className="text-center">
-        <a href="https://t.me/homeupakovka" className="buy-btn">
-          <i className="bi bi-telegram p-1"></i>Заказать
-        </a>
-      </div>
+      <ButtonTelegram/>
     </div>
   )
 }
