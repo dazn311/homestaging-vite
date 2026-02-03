@@ -15,6 +15,7 @@ export const Contact = () => {
               <i className="bi bi-geo-alt"></i>
               <h3>Адрес</h3>
               <p>125222. г. Москва, СЗАО, Митино</p>
+              <p>г. Красногорск</p>
             </div>
           </div>
 
