@@ -1,4 +1,5 @@
 import {ImageBlockData, type TImageBlockData} from "../../store/dataApp.ts";
+import { Image } from 'antd';
 
 export const Portfolio = () => {
 
@@ -27,19 +28,15 @@ function ImageBlock({id,title,price,imageUrl}:TImageBlockData) {
 
   return (
     <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-ilinskie-luga-21">
-      <img
+      <Image
         id={'image_'+id}
-        src={imageUrl}
         className="img-fluid"
-        alt={title}/>
+        alt={title}
+        src={imageUrl}
+      />
       <div className="portfolio-info">
         <h4>{title}</h4>
         <PriceBlock price={price} />
-        <a href={imageUrl} title="Увеличить"
-           data-gallery="portfolio-gallery-ilinskie-luga"
-           className="glightbox preview-link">
-          <i className="bi bi-zoom-in"></i>
-        </a>
         <a href="/?details=ilinskie-luga" title="перейти на страницу <?=$PortfolioObj['projectKey'];?>"
            className="details-link">
           <i className="bi bi-link-45deg"></i>

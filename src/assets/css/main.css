@@ -1316,9 +1316,13 @@ section,
 /*--------------------------------------------------------------
 # Pricing Section
 --------------------------------------------------------------*/
+.pricing .featured .pricing-item h5 {
+  color: var(--contrast-color);
+}
+
 .pricing .pricing-item {
   background-color: var(--surface-color);
-  padding: 60px 40px;
+  padding: 30px 40px;
   box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1);
   height: 100%;
   position: relative;
