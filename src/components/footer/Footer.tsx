@@ -42,7 +42,7 @@ export const Footer = () => {
             <div className="col-lg-2 col-md-3 footer-links">
               <h4>Наши услуги</h4>
               <ul>
-                <li><a href="/#cards">Услуги</a></li>
+                <li><a href="/#service">Услуги</a></li>
                 <li><a href="/#pricing">Цены</a></li>
                 <li><a href="/?documents=all">Проекты</a></li>
               </ul>

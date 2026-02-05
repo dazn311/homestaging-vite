@@ -1017,7 +1017,7 @@ section,
 /*--------------------------------------------------------------
 # Cards Section
 --------------------------------------------------------------*/
-.cards .card {
+.service .card {
   background-color: var(--surface-color);
   color: var(--default-color);
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
@@ -1027,19 +1027,19 @@ section,
 }
 
 @media (max-width: 768px) {
-  .cards .card {
+  .service .card {
     padding: 10px;
   }
 }
 
-.cards .card span {
+.service .card span {
   display: block;
   font-size: 24px;
   font-weight: 400;
   color: var(--accent-color);
 }
 
-.cards .card h4 {
+.service .card h4 {
   color: color-mix(in srgb, var(--heading-color), transparent 20%);
   font-size: 24px;
   font-weight: 600;
@@ -1047,7 +1047,7 @@ section,
   margin: 20px 0;
 }
 
-.cards .card p {
+.service .card p {
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   font-size: 15px;
   margin: 0;

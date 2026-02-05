@@ -4,7 +4,7 @@ import {ServiceItem} from "./ServiceItem.tsx";
 export const Services = () => {
 
   return (
-    <section id="cards" className="cards section">
+    <section id="service" className="service section">
       <div className="container">
         <div className="container section-title" data-aos="fade-up" style={{opacity: 1}} >
           <span>Услуги</span>
