@@ -50,7 +50,7 @@ export const Footer = () => {
 
             <div className="col-lg-4 col-md-12 footer-newsletter">
               <h4>Наша рассылка</h4>
-              <p>Подпишитесь на нашу рассылку и получайте последние новости о наших продуктах и услугах!</p>
+              <p>Подпишитесь на нашу рассылку и получайте последние новости о наших услугах и новых проектах!</p>
               <form action="forms/newsletter.php" method="post" className="php-email-form">
                 <div className="newsletter-form">
                   <input type="email" name="email"/>
@@ -69,11 +69,9 @@ export const Footer = () => {
           <p>© <span>2025. Copyright</span> <strong className="px-1 sitename">Dazn311</strong>
             <span>All Rights Reserved</span></p>
           <div className="credits">
-
             Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
           </div>
         </div>
-
       </footer>
 
       <a href="#" id="scroll-top" className="scroll-top d-flex align-items-center justify-content-center"><i
