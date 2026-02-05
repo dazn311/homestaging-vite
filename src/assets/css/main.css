@@ -1026,6 +1026,12 @@ section,
   border-radius: 0;
 }
 
+@media (max-width: 768px) {
+  .cards .card {
+    padding: 10px;
+  }
+}
+
 .cards .card span {
   display: block;
   font-size: 24px;
