@@ -1,12 +1,12 @@
+import {TitleBlock} from "../title-block/TitleBlock.tsx";
+
 export const Contact = () => {
 
   return (
     <section id="contact" className="contact section">
-      <div className="container section-title" >
-        <span>Контакты</span>
-        <h2>Контакты</h2>
-        <p>Основное место г. Москва, СЗАО, Митино</p>
-      </div>
+      <TitleBlock
+        title={'Контакты'}
+        body={'Основное место г. Москва, СЗАО, Митино'}/>
 
       <div className="container" >
         <div className="row gy-4">

@@ -1,14 +1,14 @@
 import React from 'react';
 import { ClockCircleOutlined } from '@ant-design/icons';
 import { Timeline } from 'antd';
+import {TitleBlock} from "../title-block/TitleBlock.tsx";
 
 const TimelineComp: React.FC = () => (
   <section id="contact" className="contact section">
-    <div className="container section-title" >
-      <span>Timeline</span>
-      <h2>Временная шкала</h2>
-      <p>Пример поэтапной реализации проекта "Студия"</p>
-    </div>
+    <TitleBlock
+      title={'Timeline'}
+      header={'Временная шкала'}
+      body={'Пример поэтапной реализации проекта "Студия"'}/>
     <div className="container" >
       <Timeline
         mode="alternate"

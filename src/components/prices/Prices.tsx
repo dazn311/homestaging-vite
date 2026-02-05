@@ -1,15 +1,13 @@
 import {PricingItem} from "./PricingItem.tsx";
 import {pricingHelpers, pricingItemProps, pricingOnLine} from "../../store/dataApp.ts";
+import {TitleBlock} from "../title-block/TitleBlock.tsx";
 import './prices.styles.scss';
 
 
 export const Prices = () => {
   return (
     <section id="pricing" className="pricing section">
-      <div className="container section-title mt-3 pb-0" data-aos="fade-up">
-        <span>Прайс</span>
-        <h2>Прайс</h2>
-      </div>
+      <TitleBlock title={'Прайс'}/>
       <div className="container">
         <div className="row g-4 g-lg-0">
           <div className="col-lg-4" >

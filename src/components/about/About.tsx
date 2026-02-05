@@ -1,6 +1,7 @@
 import {useState} from "react";
 import cn from 'classnames';
 import {aboutItems, type PricingItemProps} from "../../store/dataApp.ts";
+import {TitleBlock} from "../title-block/TitleBlock.tsx";
 import './about.styles.scss';
 
 
@@ -10,13 +11,13 @@ export const About = () => {
   return (
 
     <section id="about" className="about section">
-      <div className="container section-title" data-aos="fade-up" style={{opacity: 1}} >
-        <span>Обо мне<br/></span>
-        <h2>Рада приветствовать вас,<br/></h2>
+      <TitleBlock
+        title={'Обо мне'}
+        header={'Рада приветствовать вас,'} >
         <p>меня зовут <b>Наталия Снимщикова</b>,люблю преображать скучные ремонты от застройщика в уютные
           функциональные пространства для аренды или
           последующей продажи. </p>
-      </div>
+      </TitleBlock>
 
       <div className="container">
         <div className="row gy-4">
