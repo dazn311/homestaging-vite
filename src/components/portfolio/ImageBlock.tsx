@@ -1,17 +1,21 @@
+// import React, { useState } from 'react';
 import {type TImageBlockData} from "../../store/dataApp.ts";
-import {Image} from 'antd';
+// import { Button, Image, InputNumber } from 'antd';
 
 //used in Portfolio;
-export function ImageBlock({id,docId,title,price,imageUrl}:TImageBlockData) {
+export function ImageBlock({docId,title,price,imageUrl}:TImageBlockData) {
   const urlDoc = `/?details=${docId}`;
   return (
     <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-ilinskie-luga-21">
-      <Image
-        id={'image_'+id}
-        className="img-fluid"
-        alt={title}
-        src={imageUrl}
-      />
+      <div className="div-bg" style={{
+        backgroundImage: `url(${imageUrl})`
+      }}>
+        {/*<Image*/}
+        {/*  className="img-fluid"*/}
+        {/*  alt={title}*/}
+        {/*  src={imageUrl}*/}
+        {/*/>*/}
+      </div>
       <div className="portfolio-info">
         <h4>{title}</h4>
         <PriceBlock price={price} />

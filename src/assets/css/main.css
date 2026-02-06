@@ -1225,6 +1225,13 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
+.portfolio .div-bg {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .portfolio .portfolio-filters {
   padding: 0;
   margin: 0 auto 20px auto;
