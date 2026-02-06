@@ -5,7 +5,7 @@ export const NavHeader = () => {
     <div className="branding d-flex align-items-center">
       <div className="container position-relative d-flex align-items-center justify-content-between">
         <a href="/" className="logo d-flex align-items-center">
-          <h1 className="sitename">HomeStaging МОСКВА</h1>
+          <h1 className="sitename">Хоумстейжинг МОСКВА</h1>
         </a>
         <nav id="navmenu" className="navmenu">
           <ul>
