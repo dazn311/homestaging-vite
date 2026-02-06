@@ -1,9 +1,9 @@
 import {type TImageBlockData} from "../../store/dataApp.ts";
 import {Image} from 'antd';
 
-
-export function ImageBlock({id,title,price,imageUrl}:TImageBlockData) {
-
+//used in Portfolio;
+export function ImageBlock({id,docId,title,price,imageUrl}:TImageBlockData) {
+  const urlDoc = `/?details=${docId}`;
   return (
     <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-ilinskie-luga-21">
       <Image
@@ -15,7 +15,7 @@ export function ImageBlock({id,title,price,imageUrl}:TImageBlockData) {
       <div className="portfolio-info">
         <h4>{title}</h4>
         <PriceBlock price={price} />
-        <a href="/?details=ilinskie-luga" title="перейти на страницу <?=$PortfolioObj['projectKey'];?>"
+        <a href={urlDoc} title={`перейти на страницу ${title}`}
            className="details-link">
           <i className="bi bi-link-45deg"></i>
         </a>
