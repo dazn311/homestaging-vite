@@ -10,7 +10,7 @@ export const Portfolio = () => {
       <TitleBlock title={'Портфолио проектов'}/>
       <div className="container">
         <div className="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-          <PortfolioMenu/>
+          <PortfolioMenu data={ImageBlockData}/>
           <div className="row gy-4 isotope-container" >
             {ImageBlockData.map((item,idx) => (<ImageBlock key={idx} {...item} />))}
           </div>
