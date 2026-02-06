@@ -5,7 +5,7 @@ import {TitleBlock} from "../title-block/TitleBlock.tsx";
 import {useState} from "react";
 
 export const Portfolio = () => {
-  const [activeDocId, setActiveDocId] = useState('*');
+  const [activeDocId, setActiveDocId] = useState('ilyinskie21');
 
   return (
     <section id="portfolio" className="portfolio section">

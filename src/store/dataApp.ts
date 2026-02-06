@@ -148,21 +148,28 @@ export const ImageBlockData:TImageBlockData[] = [
     docId:'jkHollandPark8k1',
     title:'ЖК Холланд Парк,8к1',
     price:1430000,
-    imageUrl:'https://homesstaging.online/uploads/jkHollandPark8k1/754/JK-Holland-park-100.jpg'
+    imageUrl:'https://homesstaging.online/uploads/jkHollandPark8k1/754/JK-Holland-park-103.jpg'
   },
   {
     id:11,
     docId:'jkHollandPark8k1',
     title:'ЖК Холланд Парк,8к1',
     price:1430000,
-    imageUrl:'https://homesstaging.online/uploads/jkHollandPark8k1/754/JK-Holland-park-102.jpg'
+    imageUrl:'https://homesstaging.online/uploads/jkHollandPark8k1/754/JK-Holland-park-104.jpg'
   },
   {
     id:12,
     docId:'jkHollandPark8k1',
     title:'ЖК Холланд Парк,8к1',
     price:1430000,
-    imageUrl:'https://homesstaging.online/uploads/jkHollandPark8k1/754/JK-Holland-park-101.jpg'
+    imageUrl:'https://homesstaging.online/uploads/hollandparkozerova8k1/8%D0%BA1/20251204_06_00_04.jpg'
+  },
+  {
+    id:130000777,
+    docId:'mitino2',
+    title:'ЖК Митинский лес,2',
+    price:1430000,
+    imageUrl:'https://homesstaging.online/uploads/mitino2/32%D0%BA1/20250906_04_34_10.jpg'
   },
   {
     id:13,
@@ -177,6 +184,13 @@ export const ImageBlockData:TImageBlockData[] = [
     title:'ЖК Митинский лес,2',
     price:1430000,
     imageUrl:'https://homesstaging.online/uploads/mitino2/32%D0%BA1/20250906_04_34_25.jpg'
+  },
+  {
+    id:1500007,
+    docId:'mitino1',
+    title:'ЖК Митинский лес,38',
+    price:1430000,
+    imageUrl:'https://homesstaging.online/assets/img/flats/Mitinskii-les/38/4.jpg'
   },
   {
     id:15,
