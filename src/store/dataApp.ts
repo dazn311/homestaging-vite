@@ -72,34 +72,156 @@ export const pricingHelpers:TPricingItemProps = {
 
 export type TImageBlockData = {
   id: number;
+  key: string;
   title: string;
   price: number;
   imageUrl: string;
 }
+//
 
 export const ImageBlockData:TImageBlockData[] = [
   {
     id:1,
-    title:'ЖК Ильинские Луга',
+    key:'ilyinskie21',
+    title:'ЖК Ильинские Луга,21',
     price:132000,
     imageUrl:'https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_19_55.jpg'
   },
   {
     id:2,
-    title:'ЖК Ильинские Луга',
+    key:'ilyinskie21',
+    title:'ЖК Ильинские Луга,21',
     price:1320000,
     imageUrl:'https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_20_14.jpg'
   },
   {
     id:3,
-    title:'ЖК Ильинские Луга',
+    key:'ilyinskie21',
+    title:'ЖК Ильинские Луга,21',
     price:1320000,
     imageUrl:'https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_20_31.jpg'
   },
-
+  {
+    id:4,
+    key:'ilyinskie20',
+    title:'ЖК Ильинские Луга,20',
+    price:1325000,
+    imageUrl:'https://homesstaging.online/uploads/ilyinskie20/20/20250906_03_57_46.jpg'
+  },
+  {
+    id:5,
+    key:'ilyinskie20',
+    title:'ЖК Ильинские Луга,20',
+    price:1325000,
+    imageUrl:'https://homesstaging.online/uploads/ilyinskie20/20/20250906_03_58_38.jpg'
+  },
+  {
+    id:6,
+    key:'ilyinskie20',
+    title:'ЖК Ильинские Луга,20',
+    price:1325000,
+    imageUrl:'https://homesstaging.online/uploads/ilyinskie20/20/20250906_03_58_16.jpg'
+  },
+  {
+    id:7,
+    key:'rimskogoKorsakova9152',
+    title:'ЖК Римского Корсакова,9к1',
+    price:1350000,
+    imageUrl:'https://homesstaging.online/uploads/rimskogoKorsakova9152/11%D0%BA9/20250920_15_16_10.jpg'
+  },
+  {
+    id:8,
+    key:'rimskogoKorsakova9152',
+    title:'ЖК Римского Корсакова,9к1',
+    price:1350000,
+    imageUrl:'https://homesstaging.online/uploads/rimskogoKorsakova9152/11%D0%BA9/20250921_13_13_47.jpeg'
+  },
+  {
+    id:9,
+    key:'rimskogoKorsakova9152',
+    title:'ЖК Римского Корсакова,9к1',
+    price:1350000,
+    imageUrl:'https://homesstaging.online/uploads/rimskogoKorsakova9152/11%D0%BA9/20250921_13_11_43.jpeg'
+  },
+  {
+    id:10,
+    key:'jkHollandPark8k1',
+    title:'ЖК Холланд Парк,8к1',
+    price:1430000,
+    imageUrl:'https://homesstaging.online/uploads/jkHollandPark8k1/754/JK-Holland-park-100.jpg'
+  },
+  {
+    id:11,
+    key:'jkHollandPark8k1',
+    title:'ЖК Холланд Парк,8к1',
+    price:1430000,
+    imageUrl:'https://homesstaging.online/uploads/jkHollandPark8k1/754/JK-Holland-park-102.jpg'
+  },
+  {
+    id:12,
+    key:'jkHollandPark8k1',
+    title:'ЖК Холланд Парк,8к1',
+    price:1430000,
+    imageUrl:'https://homesstaging.online/uploads/jkHollandPark8k1/754/JK-Holland-park-101.jpg'
+  },
+  {
+    id:13,
+    key:'mitino2',
+    title:'ЖК Митинский лес,2',
+    price:1430000,
+    imageUrl:'https://homesstaging.online/uploads/mitino2/32%D0%BA1/20250906_04_34_45.jpg'
+  },
+  {
+    id:14,
+    key:'mitino2',
+    title:'ЖК Митинский лес,2',
+    price:1430000,
+    imageUrl:'https://homesstaging.online/uploads/mitino2/32%D0%BA1/20250906_04_34_25.jpg'
+  },
+  {
+    id:15,
+    key:'mitino1',
+    title:'ЖК Митинский лес,38',
+    price:1430000,
+    imageUrl:'https://homesstaging.online/uploads/mitino1/38%D0%91%D0%BA1/20250906_04_32_51.jpg'
+  },
+  {
+    id:16,
+    key:'mitino1',
+    title:'ЖК Митинский лес,38',
+    price:1430000,
+    imageUrl:'https://homesstaging.online/uploads/mitino1/38%D0%91%D0%BA1/20250906_04_32_36.jpg'
+  },
+  {
+    id:17,
+    key:'kronstadskii1',
+    title:'ЖК Кронштадский,8к2',
+    price:1430000,
+    imageUrl:'https://homesstaging.online/uploads/kronstadskii1/8%D0%BA2/20250906_04_46_16.png'
+  },
+  {
+    id:18,
+    key:'kronstadskii1',
+    title:'ЖК Кронштадский,8к2',
+    price:1430000,
+    imageUrl:'https://homesstaging.online/uploads/kronstadskii1/8%D0%BA2/20250906_04_46_51.png'
+  },
+  {
+    id:19,
+    key:'kronstadskii1',
+    title:'ЖК Кронштадский,8к2',
+    price:1430000,
+    imageUrl:'https://homesstaging.online/uploads/kronstadskii1/8%D0%BA2/20250906_04_46_37.png'
+  },
 ]
 
-
+//
+//
+//
+//
+//
+//
+// https://homesstaging.online/uploads/kronstadskii1/8%D0%BA2/20250906_04_46_37.png
 export type PricingItemProps = {
   caption: string;
   body: string;
