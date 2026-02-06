@@ -1,9 +1,16 @@
-import React, {useState} from "react";
+import React, {type Dispatch, type SetStateAction} from "react";
 import type {TImageBlockData} from "../../store/dataApp.ts";
 import cn from "classnames";
 
-export const PortfolioMenu = ({data}:{data: TImageBlockData[]}) => {
-  const [activeDocId, setActiveDocId] = useState('*');
+type TPortfolioMenuProps = {
+  data: TImageBlockData[];
+  activeDocId:string;
+  setActiveDocId:Dispatch<SetStateAction<string>>;
+};
+
+export const PortfolioMenu = ({
+    data,activeDocId,setActiveDocId
+  }:TPortfolioMenuProps) => {
 
   return (
     <ul className="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
