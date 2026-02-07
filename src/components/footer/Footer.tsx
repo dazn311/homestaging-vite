@@ -30,7 +30,7 @@ export const Footer = () => {
             <div className="col-lg-2 col-md-3 footer-links">
               <h4>Полезные ссылки</h4>
               <ul>
-                <li><a href="/#hero" className="active">Главная</a></li>
+                <li><a href="/#titte-app" className="active">Главная</a></li>
                 <li><a href="/#about">Обо мне</a></li>
                 <li><a href="/#portfolio">Портфолио</a></li>
                 <li><a href="/#contact">Контакты</a></li>

@@ -44,7 +44,7 @@ type TNavMenuSub = {
 };
 
 const navmenuArr:TNavmenu[] = [
-  {url: '/#hero', title: 'Главная'},
+  {url: '/#titte-app', title: 'Главная'},
   {url: '/#about', title: 'Обо мне'},
   {url: '/#service', title: 'Услуги'},
   {url: '/#pricing', title: 'Цены'},

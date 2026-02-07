@@ -888,53 +888,54 @@ section,
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-.hero {
+.titte-app {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding: 160px 0 100px 0;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.hero img {
+.titte-app img {
   position: absolute;
   inset: 0;
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
+  /*z-index: 1;*/
 }
 
-.hero:before {
+.titte-app:before {
   content: "";
   background: color-mix(in srgb, var(--background-color), transparent 30%);
   position: absolute;
   inset: 0;
-  z-index: 2;
+  opacity: 0.7;
+  z-index: 3;
 }
 
-.hero .container {
+.titte-app .container {
   position: relative;
   z-index: 3;
 }
 
-.hero h2 {
+.titte-app h2 {
   margin: 0;
   font-size: 48px;
   text-transform: uppercase;
   font-weight: 700;
 }
 
-.hero p {
+.titte-app p {
   margin: 10px 0 0 0;
   font-size: 24px;
   color: var(--heading-color);
 }
 
-.hero .btn-get-started {
+.titte-app .btn-get-started {
   color: var(--default-color);
   font-weight: 400;
   font-size: 15px;
@@ -946,18 +947,18 @@ section,
   border: 2px solid color-mix(in srgb, var(--default-color), transparent 20%);
 }
 
-.hero .btn-get-started:hover {
+.titte-app .btn-get-started:hover {
   color: var(--contrast-color);
   background: var(--accent-color);
   border-color: var(--accent-color);
 }
 
 @media (max-width: 768px) {
-  .hero h2 {
+  .titte-app h2 {
     font-size: 32px;
   }
 
-  .hero p {
+  .titte-app p {
     font-size: 18px;
   }
 }
