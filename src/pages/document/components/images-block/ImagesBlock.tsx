@@ -3,8 +3,8 @@ import {Image} from 'antd';
 
 const contentStyle: React.CSSProperties = {
   // margin: 0,
-  width: 400,
-  height: 400,
+  width: 'auto',
+  height: 500,
 };
 
 export const ImagesBlock: React.FC = () => (

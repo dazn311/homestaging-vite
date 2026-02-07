@@ -6,7 +6,7 @@ import cn from "classnames";
 //used in Portfolio;
 export function ImageBlock({docId,title,price,imageUrl,cls}:TImageBlockData) {
   const [open, setOpen] = useState(false);
-  const urlDoc = `/?details=${docId}`;
+  const urlDoc = `/document?id=${docId}`;
 
   const onClickHandler = (event: React.MouseEvent<HTMLElement>) => {
     // @ts-ignore
