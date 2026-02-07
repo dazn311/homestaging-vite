@@ -14,9 +14,19 @@ export const Portfolio = () => {
         <div className="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
           <PortfolioMenu data={ImageBlockData} setActiveDocId={setActiveDocId} activeDocId={activeDocId} />
           <div className="row gy-4 isotope-container" >
-            {ImageBlockData.filter(im => {
-              return im.docId === activeDocId || /^\*$/.test(activeDocId);
-            }).map((item,idx) => (<ImageBlock key={idx} {...item} />))}
+            {ImageBlockData
+              // .filter(im => {
+              //   return im.docId === activeDocId || /^\*$/.test(activeDocId);
+              // })
+              .map(im => {
+                if (im.docId === activeDocId || /^\*$/.test(activeDocId) ) {
+                  im.cls = '';
+                } else {
+                  im.cls = 'is-deleting';
+                }
+                return im;
+              })
+              .map((item,idx) => (<ImageBlock key={idx} {...item} />))}
           </div>
         </div>
       </div>

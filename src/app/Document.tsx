@@ -50,7 +50,7 @@ function Content() {
             <div
               className="swiper-slide"
               style={{backgroundImage: "url(https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_20_14.jpg)"}}
-                 role="group" aria-label="2 / 5">
+              role="group" aria-label="2 / 5">
             </div>
             <div className="swiper-slide"
                  style={{backgroundImage: "url(https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_20_31.jpg)"}}
@@ -63,9 +63,9 @@ function Content() {
               aria-label="4 / 5">
             </div>
             <div className="swiper-slide swiper-slide-active"
-              style={{backgroundImage: "url(https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_21_03.jpg)"}}
-              role="group"
-              aria-label="5 / 5">
+                 style={{backgroundImage: "url(https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_21_03.jpg)"}}
+                 role="group"
+                 aria-label="5 / 5">
             </div>
           </div>
           <div

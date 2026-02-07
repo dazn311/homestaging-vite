@@ -76,6 +76,7 @@ export type TImageBlockData = {
   title: string;
   price: number;
   imageUrl: string;
+  cls?: string;
 }
 //
 
