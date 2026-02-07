@@ -15,7 +15,7 @@ export const Services = () => {
           {
             dataServices
               .map((service) => (
-                <ServiceItem id={service.id} title={service.title} description={service.description} />))}
+                <ServiceItem key={service.id} id={service.id} title={service.title} description={service.description} />))}
         </div>
 
       </div>

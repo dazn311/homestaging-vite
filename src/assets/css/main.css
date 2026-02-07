@@ -222,6 +222,11 @@ h6 {
   text-transform: uppercase;
   color: var(--heading-color);
 }
+.header .logo h1.ru {
+  position: absolute;
+  opacity: .3;
+  top: 4px;
+}
 
 /*--------------------------------------------------------------
 # Navigation Menu

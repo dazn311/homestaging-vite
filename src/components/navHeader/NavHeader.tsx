@@ -5,12 +5,13 @@ export const NavHeader = () => {
     <div className="branding d-flex align-items-center">
       <div className="container position-relative d-flex align-items-center justify-content-between">
         <a href="/" className="logo d-flex align-items-center">
-          <h1 className="sitename">Хоумстейжинг МОСКВА</h1>
+          <h1 className="sitename">HomeStaging МОСКВА</h1>
+          <h1 className="sitename ru">Подготовка дома к продаже</h1>
         </a>
         <nav id="navmenu" className="navmenu">
           <ul>
             {navmenuArr.map(item => (
-              <li><a href={item.url}>{item.title}</a></li>
+              <li key={item.url}><a href={item.url}>{item.title}</a></li>
             ))}
             <li className="dropdown text-secondary">
               <a>
@@ -18,8 +19,8 @@ export const NavHeader = () => {
                 <i className="bi bi-chevron-down toggle-dropdown"></i>
               </a>
               <ul className={'jk-name'}>
-                {navmenuSubArr.map(item => (
-                  <ListItem title={item.title} children={item.children}/>
+                {navmenuSubArr.map((item,idx) => (
+                  <ListItem key={'nav'+idx} title={item.title} children={item.children}/>
                 ))}
               </ul>
             </li>
@@ -79,7 +80,7 @@ function ListItem({title,children}:{title:string,children:TNavmenu[]}) {
       </a>
       <ul className={'street-name'}>
         {children.map((item:TNavmenu) => (
-          <li><a href={item.url}>{item.title}</a></li>
+          <li key={item.url}><a href={item.url}>{item.title}</a></li>
         ))}
       </ul>
     </li>
