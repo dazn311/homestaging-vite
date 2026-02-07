@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import {type TImageBlockData} from "../../store/dataApp.ts";
 import {Image} from 'antd';
+import cn from "classnames";
 
 //used in Portfolio;
-export function ImageBlock({docId,title,price,imageUrl}:TImageBlockData) {
+export function ImageBlock({docId,title,price,imageUrl,cls}:TImageBlockData) {
   const [open, setOpen] = useState(false);
   const urlDoc = `/?details=${docId}`;
 
@@ -16,12 +17,17 @@ export function ImageBlock({docId,title,price,imageUrl}:TImageBlockData) {
     event.preventDefault();
     setOpen(!open);
   }
+  // const handleTouchMove = (event: React.TouchEvent<HTMLDivElement>) => {
+  //   const touch = event.touches[0];
+  //   console.log(`Touch moved to: ${touch.clientX}, ${touch.clientY}`);
+  // };
 
   return (
-    <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-ilinskie-luga-21">
+    <div className={cn("col-lg-4 col-md-6 portfolio-item isotope-item",docId,cls)}>
       <div
         className="div-bg"
         onClick={onClickHandler}
+        // onTouchMove={handleTouchMove}
         style={{backgroundImage: `url(${imageUrl})`}}>
         <Image
           style={{ display: 'none' }}

@@ -1,4 +1,4 @@
-import {HeaderAnim} from "./header-anim/HeaderAnim.tsx";
+// import {HeaderAnim} from "./header-anim/HeaderAnim.tsx";
 
 export const Title = () => {
 
@@ -15,7 +15,7 @@ export const Title = () => {
           </div>
         </div>
       </div>
-      <HeaderAnim/>
+      {/*<HeaderAnim/>*/}
     </section>
   )
 }

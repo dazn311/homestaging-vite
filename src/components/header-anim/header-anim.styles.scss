@@ -37,6 +37,7 @@
   width: 100%;
   opacity: 0.5;
   z-index: 2;
+  transform-style: preserve-3d;
   svg {
     //position: fixed;
     top: 0;

@@ -13,6 +13,7 @@ export const HeaderAnim = () => {
         circle.setAttribute("cx", String(attributeCalc(900,0)));
         circle.setAttribute("cy", String(attributeCalc(900,0)));
         circle.setAttribute("stroke-width", String(attributeCalc(400,15)));
+        circle.classList.add("circle");
 
         function getRandomLength() {
           return Math.floor(Math.random() * 500 + 100);
