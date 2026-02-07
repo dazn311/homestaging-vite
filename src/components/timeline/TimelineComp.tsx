@@ -4,7 +4,7 @@ import { Timeline } from 'antd';
 import {TitleBlock} from "../title-block/TitleBlock.tsx";
 
 const TimelineComp: React.FC = () => (
-  <section id="contact" className="contact section">
+  <section id="time-line" className="time-line section">
     <TitleBlock
       title={'Timeline'}
       header={'Временная шкала'}

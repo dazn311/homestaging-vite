@@ -12,6 +12,7 @@ export const router = createBrowserRouter([
       { index: true, Component: App },
       { path: "document", Component: Document },
       { path: "no-find", Component: NoFinded },
+      { path: "*", Component: NoFinded },
     ],
   },
 ]);
