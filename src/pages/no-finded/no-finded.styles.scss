@@ -10,7 +10,10 @@
   initial-value: 0;
   inherits: false;
 }
-
+* {
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+}
 #no-finded {
   --button: hsl(44, 0%, 70%);
   --button-color: hsl(0, 0%, 4%);
@@ -24,8 +27,8 @@
   box-sizing: border-box;
   transform-style: preserve-3d;
 
-  min-height: 80vh;
-  width: 100vw;
+  min-height: 100vh;
+  //width: 100vw;
   display: flex;
   font-family: 'Roboto', sans-serif;
   flex-direction: column;
@@ -34,6 +37,11 @@
   background: var(--bg);
   color: var(--color);
   perspective: 1200px;
+
+  h2 {
+    color: white;
+    margin-top: 20px;
+  }
 
   a {
     text-transform: uppercase;
@@ -52,16 +60,18 @@
     animation: swing var(--speed) infinite alternate ease-in-out;
     font-size: clamp(5rem, 40vmin, 20rem);
     font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
     margin: 0 0 1rem;
     letter-spacing: 1rem;
-    transform: translate3d(0, 0, 0vmin);
+    transform: translate3d(0, 0, 6vmin);
     --x: calc(50% + (var(--swing-x) * 0.5) * 1%);
-    //radial-gradient(circle at center, red 0, blue, green 100%)
-    background: radial-gradient(var(--lit-header), var(--header) 45%, grey 0) var(--x) 100%/200% 200%;
+    //background: radial-gradient(var(--lit-header), var(--header) 45%, rgba(255, 255, 255, 0.15) 0%) var(--x) 100%/200% 200%;
+    background: radial-gradient(var(--lit-header), var(--header) 45%) var(--x) 100% / 200% 200%;
     -webkit-background-clip: text;
     color: transparent;
 
-    &:after {
+
+    &::after {
       animation: swing var(--speed) infinite alternate ease-in-out;
       content: "404";
       position: absolute;
@@ -69,10 +79,10 @@
       left: 0;
       color: var(--shadow);
       filter: blur(1.5vmin);
-      //transform: scale(1.05) translate3d(0, 12%, -10vmin) translate(calc((#{--swing-x} * 0.05) * 1%), calc((#{--swing-y} * 0.05) * 1%));
-      transform: scale(1.05) translate3d(0, 12%, -10vmin) translate(calc((var(--swing-x, 0) * 0.05) * 1%), calc((var(--swing-y) * 0.05) * 1%));
-
-
+      --v2: calc((var(--swing-x) * 0.05) * 1%);
+      --v3: calc((var(--swing-y) * 0.05) * 1%);
+      //vector [tx, ty, tz].
+      transform: scale(1.05) translate3d(0, 12%, -6vmin) translate(var(--v2), var(--v3));
     }
   }
 
