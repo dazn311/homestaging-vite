@@ -83,7 +83,13 @@ function Content() {
   return (
     <Flex justify={'space-evenly'} wrap={'wrap'} gap={8}>
       <div className="col-lg-4">
-        <ImagesBlock/>
+        <ImagesBlock
+          items={[
+            "https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_19_55.jpg",
+            "https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_20_14.jpg",
+            "https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_20_31.jpg"
+          ]}
+        />
       </div>
       <div className="col-lg-4">
         <div className="portfolio-info">

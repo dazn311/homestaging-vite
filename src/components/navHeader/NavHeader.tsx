@@ -1,12 +1,15 @@
+import {Link} from "react-router";
+import {navmenuArr, navmenuSubArr} from "./dataNav.ts";
+import {ListItem} from "./ListItem.tsx";
 import './nav.scss';
 
 export const NavHeader = () => {
   return (
     <div className="branding d-flex align-items-center">
       <div className="container position-relative d-flex align-items-center justify-content-between">
-        <a href="/" className="logo d-flex align-items-center">
+        <Link to="/" className="logo d-flex align-items-center">
           <h1 className="sitename">HomeStaging МОСКВА</h1>
-        </a>
+        </Link>
         <nav id="navmenu" className="navmenu">
           <ul>
             {navmenuArr.map(item => (
@@ -19,69 +22,15 @@ export const NavHeader = () => {
               </a>
               <ul className={'jk-name'}>
                 {navmenuSubArr.map((item,idx) => (
-                  <ListItem key={'nav'+idx} title={item.title} children={item.children}/>
+                  <ListItem key={'nav'+idx} item={item} />
                 ))}
               </ul>
             </li>
-            <li><a href="/#contact">Контакты</a></li>
+            <li><Link to={"/#contact"}>Контакты</Link></li>
           </ul>
           <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
       </div>
     </div>
-  )
-}
-
-type TNavmenu = {
-  url: string;
-  title: string;
-};
-
-type TNavMenuSub = {
-  title: string;
-  children: TNavmenu[];
-};
-
-const navmenuArr:TNavmenu[] = [
-  {url: '/#titte-app', title: 'Главная'},
-  {url: '/#about', title: 'Обо мне'},
-  {url: '/#service', title: 'Услуги'},
-  {url: '/#pricing', title: 'Цены'},
-  {url: '/#portfolio', title: 'Портфолио'},
-];
-
-const navmenuSubArr:TNavMenuSub[] = [
-  {title: 'ЖК Ильинские Луга',children: [
-      {url: '/document?id=ilyinskie20', title: 'ул. Заповедная, 20'},
-      {url: '/document?id=ilyinskie21', title: 'ул. Заповедная, 21'},
-    ]},
-  {title: 'ЖК Римского-Корсакова',children: [
-      {url: '/document?id=rimskogoKorsakova9152', title: 'ул. Римского-Корсакова, 11к9'},
-    ]},
-  {title: 'ЖК Митинский лес',children: [
-      {url: '/document?id=mitino1', title: 'ул. Муравская, 38Бк1'},
-      {url: '/document?id=mitino2', title: 'ул. Муравская, 32к1'},
-    ]},
-  {title: 'ЖК Кронштадтский',children: [
-      {url: '/document?id=kronstadskii', title: 'Кронштадтский бул., 8к2'},
-    ]},
-  {title: 'ЖК Holland park',children: [
-      {url: '/document?id=ozerova8k1kv176', title: 'ул. Озерова, 8к1'},
-    ]},
-];
-
-function ListItem({title,children}:{title:string,children:TNavmenu[]}) {
-  return (
-    <li className="dropdown">
-      <a>
-        <span>{title}</span>
-        <i className="bi bi-chevron-down toggle-dropdown"></i>
-      </a>
-      <ul className={'street-name'}>
-        {children.map((item:TNavmenu) => (
-          <li key={item.url}><a href={item.url}>{item.title}</a></li>
-        ))}
-      </ul>
-    </li>
   )
 }

@@ -3,23 +3,23 @@ import {Image} from 'antd';
 
 const contentStyle: React.CSSProperties = {
   // margin: 0,
-  width: 'auto',
-  height: 500,
+  width: '100%',
+  // height: 500,
 };
 
-export const ImagesBlock: React.FC = () => (
+type ImageBlockProps = {
+  items:string[];
+}
+
+export const ImagesBlock: React.FC<ImageBlockProps> = ({items}) => (
   <Image.PreviewGroup
-    items={[
-      'https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_19_55.jpg',
-      'https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_20_14.jpg',
-      'https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_20_31.jpg',
-    ]}
+    items={items}
 
   >
     <Image
       alt="webp image"
       style={contentStyle}
-      src="https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_20_14.jpg"
+      src={items[0]}
     />
   </Image.PreviewGroup>
 );

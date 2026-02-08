@@ -5,6 +5,7 @@ export type TProject = {
   street: string;
   city?: string;
   url: string;
+  images: string[];
 };
 
 type TItemPrice = {
