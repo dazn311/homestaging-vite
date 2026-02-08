@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {type TImageBlockData} from "../../store/dataApp.ts";
 import {Image} from 'antd';
 import cn from "classnames";
+import {Link} from "react-router";
 
 //used in Portfolio;
 export function ImageBlock({docId,title,price,imageUrl,cls}:TImageBlockData) {
@@ -50,10 +51,10 @@ export function ImageBlock({docId,title,price,imageUrl,cls}:TImageBlockData) {
            data-gallery="portfolio-gallery-rimskogoKorsakova9152" className="glightbox preview-link">
           <i className="bi bi-zoom-in"></i>
         </a>
-        <a href={urlDoc} title={`перейти на страницу ${title}`}
+        <Link to={urlDoc} title={`перейти на страницу ${title}`}
            className="details-link">
           <i className="bi bi-link-45deg"></i>
-        </a>
+        </Link>
       </div>
     </div>
   )

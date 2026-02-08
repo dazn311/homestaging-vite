@@ -1,8 +1,8 @@
 import {useEffect, useState} from "react";
-import {useSearchParams} from "react-router";
+import {Link, useSearchParams} from "react-router";
 import {type TProject} from "../../store/dataApp.ts";
 import {getProject} from "../../api/project.ts";
-import { Card, Flex } from 'antd';
+import {Card, Flex} from 'antd';
 import ImagesBlock from "../document/components/images-block/ImagesBlock.tsx";
 import './projects.styles.scss';
 
@@ -26,18 +26,22 @@ function Projects() {
   }, [jkName, setPages]);
 
   return (
-    <div className="document-container">
+    <div className="project-container">
       <div className="container">
         <h2>{pages[0] ? pages[0].jkTitle : ''}</h2>
-        <Flex justify="center" gap={8} wrap={true} >
+        <Flex justify="center" gap={4} wrap={true} >
           {pages.map((item) => (<Card
             hoverable
-            style={{ width: 240 }}
+            style={{ width: 200 }}
             cover={
               <ImagesBlock items={item.images} />
             }
           >
             <Meta title={item.jkTitle} description={item.street} />
+            <Link to={`/document?id=${item.id}`} title={`перейти на страницу ${item.jkTitle}`}
+                  className="details-link">
+              <i className="bi bi-link-45deg"></i>
+            </Link>
           </Card>))}
         </Flex>
 
