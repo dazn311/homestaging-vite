@@ -235,14 +235,15 @@ p, span {
   z-index: 1;
 }
 .header .logo h1::after {
-  content: "Подготовка дома к продаже";
+  content: "HomeStaging";
   position: absolute;
-  top: -60%;
-  left: 0;
+  top: -10px;
+  left: 52px;
   /*opacity: .3;*/
   color: rgba(128, 128, 128, 0.66);
   z-index: -1;
   transition: color 1.3s ease;
+  transform: scale(1.5);
 }
 
 .header .logo h1:hover {

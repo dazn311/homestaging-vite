@@ -12,7 +12,14 @@ export const router = createBrowserRouter([
     children: [
       { index: true, Component: App },
       { path: "document", Component: Document },
-      { path: "projects", Component: Projects },
+      {
+        path: "projects",
+        Component: Projects,
+        // loader: ({params, request}) => {
+          //store.dispatch(getData());
+          // return null;
+        // }
+      },
       { path: "no-find", Component: NoFinded },
       { path: "*", Component: NoFinded },
     ],

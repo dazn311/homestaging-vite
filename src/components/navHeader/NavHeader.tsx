@@ -8,7 +8,7 @@ export const NavHeader = () => {
     <div className="branding d-flex align-items-center">
       <div className="container position-relative d-flex align-items-center justify-content-between">
         <Link to="/" className="logo d-flex align-items-center">
-          <h1 className="sitename">HomeStaging МОСКВА</h1>
+          <h1 className="sitename">ХоумУпаковка МОСКВА</h1>
         </Link>
         <nav id="navmenu" className="navmenu">
           <ul>

@@ -18,7 +18,9 @@ function Projects() {
     getProject(jkName)
       .then(res => {
         console.log(res);
-        if (res.length) {
+        if (/^all$/.test(jkName)) {
+          document.title = 'Все проекты';
+        } else if (res.length) {
           document.title = res[0].jkTitle;
         }
         setPages(res);
@@ -28,7 +30,7 @@ function Projects() {
   return (
     <div className="project-container">
       <div className="container">
-        <h2>{pages[0] ? pages[0].jkTitle : ''}</h2>
+        <h2>{pages[0] && !/^all$/i.test(jkName) ? pages[0].jkTitle : 'Все проекты'}</h2>
         <Flex justify="center" gap={4} wrap={true} >
           {pages.map((item) => (<Card
             hoverable
@@ -44,7 +46,6 @@ function Projects() {
             </Link>
           </Card>))}
         </Flex>
-
       </div>
     </div>
   )

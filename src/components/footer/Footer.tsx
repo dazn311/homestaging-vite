@@ -16,8 +16,8 @@ export const Footer = () => {
                 <div className="footer-contact pt-3">
                   <p>125222, Митино.</p>
                   <p>Красногорск.</p>
-                  <p className="mt-3"><strong>Phone:</strong> <a href="tel:+79256388830">+7 (925) 63-888-30</a></p>
-                  <p><strong>Email:</strong> <span>natalia888@homesstaging.online</span></p>
+                  <p className="mt-3"><strong>тел.:</strong> <a href="tel:+79256388830">+7 (925) 63-888-30</a></p>
+                  <p><strong>эл.почта:</strong> <span>natalia888@homesstaging.online</span></p>
                 </div>
                 <div className="social-links d-flex mt-4">
                   <ButtonTelegram cls={'telegram'} />
@@ -47,7 +47,7 @@ export const Footer = () => {
               <ul>
                 <li><a href="/#service">Услуги</a></li>
                 <li><a href="/#pricing">Цены</a></li>
-                <li><a href="/?documents=all">Проекты</a></li>
+                <li><a href="/projects?jkName=all">Проекты</a></li>
               </ul>
             </div>
 
@@ -57,7 +57,7 @@ export const Footer = () => {
               <form action="forms/newsletter.php" method="post" className="php-email-form">
                 <div className="newsletter-form">
                   <input type="email" name="email"/>
-                  <input type="submit" value="Subscribe"/>
+                  <input type="submit" value="Подписаться"/>
                 </div>
                 <div className="loading">Загрузка</div>
                 <div className="error-message"></div>

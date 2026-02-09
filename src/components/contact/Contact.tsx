@@ -38,7 +38,7 @@ export const Contact = () => {
           <div className="col-lg-3 col-md-4">
             <div className="info-item d-flex flex-column justify-content-center align-items-center">
               <i className="bi bi-envelope"></i>
-              <h3>Email</h3>
+              <h3>Эл.почта</h3>
               <p><a href="mailto:natalia888@homesstaging.online">natalia888@homesstaging.online</a></p>
             </div>
           </div>
