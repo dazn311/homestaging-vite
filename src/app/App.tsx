@@ -7,6 +7,7 @@ import {Cooperation} from "../components/cooperation/Cooperation.tsx";
 import {Portfolio} from "../components/portfolio/Portfolio.tsx";
 import {Contact} from "../components/contact/Contact.tsx";
 import TimelineComp from "../components/timeline/TimelineComp.tsx";
+import {ScrollTopBtn} from "../components/scroll-top-btn/ScrollTopBtn.tsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Prices/>
       <Portfolio/>
       <Contact/>
+      <ScrollTopBtn/>
     </>
   )
 }
