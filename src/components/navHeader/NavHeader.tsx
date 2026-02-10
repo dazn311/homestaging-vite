@@ -1,12 +1,15 @@
-import {Link} from "react-router";
+import React, {useState} from "react";
+import {Link, useNavigate} from "react-router";
 import {navmenuArr, navmenuSubArr} from "./dataNav.ts";
 import {ListItem} from "./ListItem.tsx";
-import './nav.scss';
-import {useState} from "react";
 import cn from "classnames";
+import {handlerClickLink} from "../../utils/handlerClickLink.ts";
+import './nav.scss';
 
 export const NavHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+
   function handlerClick(e: React.MouseEvent<HTMLAnchorElement>) {
     e.preventDefault();
     e.stopPropagation();
@@ -23,7 +26,11 @@ export const NavHeader = () => {
         <nav id="navmenu" className="navmenu">
           <ul>
             {navmenuArr.map(item => (
-              <li key={item.url}><a href={item.url}>{item.title}</a></li>
+              <li key={item.url}>
+                <a
+                  onClick={(e)=>handlerClickLink(e,item.url,navigate)}
+                  href={item.url}>{item.title}</a>
+              </li>
             ))}
             <li className="dropdown text-secondary">
               <Link to={'/projects?jkName=all'}>
@@ -36,7 +43,11 @@ export const NavHeader = () => {
                 ))}
               </ul>
             </li>
-            <li><Link to={"/#contact"}>Контакты</Link></li>
+            <li>
+              <a
+                onClick={(e)=>handlerClickLink(e,"/#contact",navigate)}
+                href={"/#contact"}>Контакты</a>
+            </li>
           </ul>
           <i onClick={handlerClick} className="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>

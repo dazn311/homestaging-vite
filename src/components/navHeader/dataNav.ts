@@ -8,6 +8,18 @@ export const navmenuArr:TNavmenu[] = [
   {url: '/#portfolio', title: 'Портфолио'},
 ];
 
+export const navmenuFooterArr:TNavmenu[] = [
+  {url: '/#titte-app', title: 'Главная'},
+  {url: '/#about', title: 'Обо мне'},
+  {url: '/#portfolio', title: 'Портфолио'},
+  {url: '/#contact', title: 'Контакты'},
+];
+
+export const navmenuFooterCol2Arr:TNavmenu[] = [
+  {url: '/#service', title: 'Услуги'},
+  {url: '/#pricing', title: 'Цены'},
+];
+
 export const navmenuSubArr:TNavMenuSub[] = [
   {
     title: 'ЖК Ильинские Луга',

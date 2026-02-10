@@ -1,9 +1,13 @@
 import {ButtonTelegram} from "../btn-telegram/ButtonTelegram.tsx";
+import {Link, useNavigate} from "react-router";
+import {navmenuFooterArr, navmenuFooterCol2Arr} from "../navHeader/dataNav.ts";
+import {handlerClickLink} from "../../utils/handlerClickLink.ts";
 
 const date = new Date();
 const fullYear = date.getFullYear();
 
 export const Footer = () => {
+  const navigate = useNavigate();
 
   return (
     <>
@@ -12,7 +16,10 @@ export const Footer = () => {
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6">
               <div className="footer-about">
-                <a href="/" className="logo sitename">Москва</a>
+                <a
+                  href="/"
+                  onClick={(e)=>handlerClickLink(e,'/',navigate)}
+                  className="logo sitename">Москва</a>
                 <div className="footer-contact pt-3">
                   <p>125222, Митино.</p>
                   <p>Красногорск.</p>
@@ -30,24 +37,28 @@ export const Footer = () => {
             <div className="col-lg-2 col-md-3 footer-links">
               <h4>Полезные ссылки</h4>
               <ul>
-                <li><a href="/#titte-app" className="active">Главная</a></li>
-                <li><a href="/#about">Обо мне</a></li>
-                <li><a href="/#portfolio">Портфолио</a></li>
-                <li><a href="/#contact">Контакты</a></li>
-
-                <li><a href="/?logout=user">Выйти</a></li>
-
-                <li><a href="/?login=user">Логин</a></li>
-
+                {navmenuFooterArr.map(item => (
+                  <li key={item.url}>
+                    <a
+                      onClick={(e)=>handlerClickLink(e,item.url,navigate)}
+                      href={item.url}>{item.title}</a>
+                  </li>
+                ))}
+                <li><Link to={"/logout"} >Выйти</Link></li>
+                <li><Link to={"/login"}>Логин</Link></li>
               </ul>
             </div>
 
             <div className="col-lg-2 col-md-3 footer-links">
               <h4>Наши услуги</h4>
               <ul>
-                <li><a href="/#service">Услуги</a></li>
-                <li><a href="/#pricing">Цены</a></li>
-                <li><a href="/projects?jkName=all">Проекты</a></li>
+                {navmenuFooterCol2Arr.map(item => (
+                  <li key={item.url}>
+                    <a onClick={(e)=>handlerClickLink(e,item.url,navigate)}
+                       href={item.url}>{item.title}</a>
+                  </li>
+                ))}
+                <li><Link to={"/projects?jkName=all"}>Проекты</Link></li>
               </ul>
             </div>
 
@@ -68,18 +79,22 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="container copyright text-center mt-4">
-          <p>© <span>2025-{fullYear}. Copyright</span> <strong className="px-1 sitename">Dazn311</strong>
-            <span>All Rights Reserved</span>, version of 06.02.2026</p>
-          <div className="credits">
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-          </div>
-        </div>
+        <CopyrightContainer />
       </footer>
 
-      <a href="#" id="scroll-top" className="scroll-top d-flex align-items-center justify-content-center"><i
-        className="bi bi-arrow-up-short"></i></a>
-      <div id="preloader3"></div>
     </>
+  )
+}
+
+
+function CopyrightContainer() {
+  return (
+    <div className="container copyright text-center mt-4">
+      <p>© <span>2025-{fullYear}. Copyright</span> <strong className="px-1 sitename">Dazn311</strong>
+        <span>All Rights Reserved</span>, version of 06.02.2026</p>
+      <div className="credits">
+        Designed by <a href="#">BootstrapMade</a>
+      </div>
+    </div>
   )
 }
