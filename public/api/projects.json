@@ -47,5 +47,12 @@
     "jkTitle": "ЖК Holland park",
     "street": "ул. Озерова, 8к1",
     "url": "/projects/6"
+  },
+  {
+    "id": "kronstadskii8k2p2",
+    "jkName": "kronstadskii",
+    "jkTitle": "ЖК Кронштадтский",
+    "street": "Кронштадтский бул., 8к2п2",
+    "url": "/projects/7"
   }
 ]

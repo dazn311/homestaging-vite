@@ -4,6 +4,8 @@ export type TProject = {
   jkTitle: string;
   street: string;
   city?: string;
+  dataDoc?: string[];
+  dataWork?: string[];
   url: string;
   images: string[];
 };
