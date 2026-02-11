@@ -3,8 +3,10 @@ import {useSearchParams} from "react-router";
 import {type TProject} from "../../store/dataApp.ts";
 import ImagesBlock from "./components/images-block/ImagesBlock.tsx";
 import {Flex, Table} from "antd";
-import './document.styles.scss';
 import {docColumns, docColumnsWork} from "./dataDoc.ts";
+import { motion } from "motion/react";
+// import motion from "antd/es/_util/motion";
+import './document.styles.scss';
 
 function Document() {
   const [searchParams] = useSearchParams();
@@ -79,10 +81,15 @@ function Content() {
   ];
 
 
-
   return (
     <Flex justify={'space-evenly'} wrap={'wrap'} gap={8}>
-      <div className="col-lg-4">
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{
+          scale: 1,
+          transition: { duration: 0.5 }
+        }}
+        className="col-lg-4">
         <ImagesBlock
           items={[
             "https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_19_55.jpg",
@@ -90,7 +97,8 @@ function Content() {
             "https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_20_31.jpg"
           ]}
         />
-      </div>
+      </motion.div>
+
       <div className="col-lg-4">
         <div className="portfolio-info">
           <Table

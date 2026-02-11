@@ -24,12 +24,12 @@ export function ImageBlock({docId,title,price,imageUrl,cls}:TImageBlockData) {
   // };
 
   return (
-    <div className={cn("col-lg-4 col-md-6 portfolio-item isotope-item",docId,cls)}>
+    <div className={cn("portfolio-item isotope-item", docId, cls)}>
       <div
         className="div-bg"
         onClick={onClickHandler}
         // onTouchMove={handleTouchMove}
-        style={{backgroundImage: `url(${imageUrl})`}}>
+        style={{backgroundImage: `url(${imageUrl})`, width: '100%', height: '100%'}}>
         <Image
           style={{ display: 'none' }}
           alt={title}
@@ -52,7 +52,7 @@ export function ImageBlock({docId,title,price,imageUrl,cls}:TImageBlockData) {
           <i className="bi bi-zoom-in"></i>
         </a>
         <Link to={urlDoc} title={`перейти на страницу ${title}`}
-           className="details-link">
+              className="details-link">
           <i className="bi bi-link-45deg"></i>
         </Link>
       </div>

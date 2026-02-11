@@ -1,0 +1,4 @@
+'/Users/dazn311/Downloads/Telegram Desktop/homestaging-260210'
+scp -r '/Users/dazn311/Downloads/Telegram Desktop/homestaging-260210' root@185.72.144.201:/var/www/html/tg/
+
+https://homesstaging.ru/tg/homestaging-260210

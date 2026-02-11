@@ -1,12 +1,13 @@
 import {useEffect, useState} from "react";
 import {Link, useSearchParams} from "react-router";
+import {LayoutGroup, motion} from "motion/react";
 import {type TProject} from "../../store/dataApp.ts";
 import {getProject} from "../../api/project.ts";
 import {Card, Flex} from 'antd';
 import ImagesBlock from "../document/components/images-block/ImagesBlock.tsx";
 import './projects.styles.scss';
 
-const { Meta } = Card;
+const {Meta} = Card;
 
 function Projects() {
   const [searchParams] = useSearchParams();
@@ -31,20 +32,31 @@ function Projects() {
     <div className="project-container">
       <div className="container">
         <h2>{pages[0] && !/^all$/i.test(jkName) ? pages[0].jkTitle : 'Все проекты'}</h2>
-        <Flex justify="center" gap={4} wrap={true} >
-          {pages.map((item) => (<Card
-            hoverable
-            style={{ width: 200 }}
-            cover={
-              <ImagesBlock items={item.images} />
-            }
-          >
-            <Meta title={item.jkTitle} description={item.street} />
-            <Link to={`/document?id=${item.id}`} title={`перейти на страницу ${item.jkTitle}`}
-                  className="details-link">
-              <i className="bi bi-link-45deg"></i>
-            </Link>
-          </Card>))}
+        <Flex justify="center" gap={4} wrap={true}>
+          <LayoutGroup id={'3'}>
+            {pages.map((item,idx:number) => (<motion.div
+              initial={{ scale: 0 }}
+              exit={{scale:0}}
+              animate={{
+                scale: 1,
+                transition: { duration: 0.5, delay:(idx * 0.2) }
+              }}
+            >
+              <Card
+                hoverable
+                style={{width: 200}}
+                cover={
+                  <ImagesBlock items={item.images}/>
+                }
+              >
+                <Meta title={item.jkTitle} description={item.street}/>
+                <Link to={`/document?id=${item.id}`} title={`перейти на страницу ${item.jkTitle}`}
+                      className="details-link">
+                  <i className="bi bi-link-45deg"></i>
+                </Link>
+              </Card>
+            </motion.div>))}
+          </LayoutGroup>
         </Flex>
       </div>
     </div>
