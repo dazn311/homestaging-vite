@@ -1,0 +1,839 @@
+[
+  {
+    "type": "header",
+    "version": "5.2.1-1.el8",
+    "comment": "Export to JSON plugin for PHPMyAdmin"
+  },
+  {
+    "type": "database",
+    "name": "u3179688_homesStaging"
+  },
+  {
+    "type": "table",
+    "name": "addressBook",
+    "database": "u3179688_homesStaging",
+    "data": [
+      {
+        "address_id": "1",
+        "code": "125222",
+        "street": "ул. Муравская",
+        "apartment": "38Бк1",
+        "document_id": "2"
+      },
+      {
+        "address_id": "2",
+        "code": "125222",
+        "street": "ул. Муравская",
+        "apartment": "32к1",
+        "document_id": "3"
+      },
+      {
+        "address_id": "3",
+        "code": "125222",
+        "street": "Кронштадтский бул.",
+        "apartment": "8к2",
+        "document_id": "1"
+      },
+      {
+        "address_id": "4",
+        "code": "143421",
+        "street": "ул. Заповедная",
+        "apartment": "21",
+        "document_id": "4"
+      },
+      {
+        "address_id": "5",
+        "code": "143421",
+        "street": "ул. Заповедная",
+        "apartment": "20",
+        "document_id": "5"
+      },
+      {
+        "address_id": "6",
+        "code": "127566",
+        "street": "улица Римского-Корсакова",
+        "apartment": "11к9",
+        "document_id": "6"
+      },
+      {
+        "address_id": "7",
+        "code": "125424",
+        "street": "ул. Николая Озерова",
+        "apartment": "8к1",
+        "document_id": "7"
+      },
+      {
+        "address_id": "8",
+        "code": "125222",
+        "street": "Кронштадтский бул.",
+        "apartment": "8к2p2",
+        "document_id": "8"
+      }
+    ]
+  },
+  {
+    "type": "table",
+    "name": "breadcrumbs",
+    "database": "u3179688_homesStaging",
+    "data": [
+      {
+        "breadcrumbs_id": "1",
+        "project_title": "ЖК Кронштадтский",
+        "document_id": "1"
+      },
+      {
+        "breadcrumbs_id": "2",
+        "project_title": "ЖК Митинский лес",
+        "document_id": "2"
+      },
+      {
+        "breadcrumbs_id": "3",
+        "project_title": "ЖК Митинский лес",
+        "document_id": "3"
+      },
+      {
+        "breadcrumbs_id": "4",
+        "project_title": "ЖК Ильинские Луга",
+        "document_id": "4"
+      },
+      {
+        "breadcrumbs_id": "5",
+        "project_title": "ЖК Ильинские Луга",
+        "document_id": "5"
+      },
+      {
+        "breadcrumbs_id": "6",
+        "project_title": " ЖК Римского-Корсакова",
+        "document_id": "6"
+      },
+      {
+        "breadcrumbs_id": "7",
+        "project_title": " ЖК Холланд парк",
+        "document_id": "7"
+      },
+      {
+        "breadcrumbs_id": "8",
+        "project_title": "ЖК Кронштадтский",
+        "document_id": "8"
+      }
+    ]
+  },
+  {
+    "type": "table",
+    "name": "caption",
+    "database": "u3179688_homesStaging",
+    "data": [
+      {
+        "id": "1",
+        "caption_key": "type",
+        "input_type": "text",
+        "caption_ru": "Тип объекта:"
+      },
+      {
+        "id": "2",
+        "caption_key": "mode",
+        "input_type": "select",
+        "caption_ru": "Статус проекта:"
+      },
+      {
+        "id": "3",
+        "caption_key": "street",
+        "input_type": "text",
+        "caption_ru": "Улица:"
+      },
+      {
+        "id": "4",
+        "caption_key": "apartment",
+        "input_type": "text",
+        "caption_ru": "Дом:"
+      },
+      {
+        "id": "5",
+        "caption_key": "fileName",
+        "input_type": "file",
+        "caption_ru": "Смета:"
+      }
+    ]
+  },
+  {
+    "type": "table",
+    "name": "description",
+    "database": "u3179688_homesStaging",
+    "data": [
+      {
+        "id": "1",
+        "title": "Евродвушка",
+        "category": "Комплектация \"Под ключ\"",
+        "price": "988000",
+        "project_url": "https:\/\/t.me\/homeupakovka\/41",
+        "project_des": "канал Telegram",
+        "createDate": null,
+        "end_date": "2025-01-20 00:00:00",
+        "document_id": "2"
+      },
+      {
+        "id": "2",
+        "title": "Евродвушка",
+        "category": "Комплектация \"Под ключ\"",
+        "price": "1320000",
+        "project_url": "https:\/\/t.me\/homeupakovka\/124",
+        "project_des": "Telegram канал",
+        "createDate": "2025-08-31 10:24:47",
+        "end_date": "2025-03-13 00:00:00",
+        "document_id": "1"
+      },
+      {
+        "id": "3",
+        "title": "Евродвушка",
+        "category": "Комплектация \"Под ключ\"",
+        "price": "1320000",
+        "project_url": "https:\/\/t.me\/homeupakovka",
+        "project_des": "Telegram канал",
+        "createDate": "2025-08-31 15:39:46",
+        "end_date": "2025-08-22 00:00:00",
+        "document_id": "3"
+      },
+      {
+        "id": "4",
+        "title": "Евродвушка",
+        "category": "Комплектация \"Под ключ",
+        "price": "1320000",
+        "project_url": "https:\/\/t.me\/homeupakovka",
+        "project_des": "Телеграм канал",
+        "createDate": "2025-09-05 21:02:28",
+        "end_date": "2025-08-15 00:00:00",
+        "document_id": "4"
+      },
+      {
+        "id": "5",
+        "title": "Евродвушка",
+        "category": "Комплектация \"Под ключ\"",
+        "price": "1325000",
+        "project_url": "https:\/\/t.me\/homeupakovka",
+        "project_des": "Telegram канал",
+        "createDate": "2025-08-31 10:24:47",
+        "end_date": "2025-08-13 00:00:00",
+        "document_id": "5"
+      },
+      {
+        "id": "6",
+        "title": "Евро-3",
+        "category": "Комплектация",
+        "price": "1350000",
+        "project_url": "https:\/\/t.me\/homeupakovka\/337",
+        "project_des": "Telegram канал",
+        "createDate": "2025-09-17 10:24:47",
+        "end_date": "2025-09-20 00:00:00",
+        "document_id": "6"
+      },
+      {
+        "id": "7",
+        "title": "Евро-2",
+        "category": "Комплектация",
+        "price": "1430000",
+        "project_url": "https:\/\/t.me\/homeupakovka\/463",
+        "project_des": "Telegram канал",
+        "createDate": "2025-10-12 16:25:48",
+        "end_date": "2025-12-03 00:00:00",
+        "document_id": "7"
+      },
+      {
+        "id": "8",
+        "title": "Студия",
+        "category": "Комплектация \"Под ключ\"",
+        "price": "900000",
+        "project_url": "https:\/\/t.me\/homeupakovka\/41",
+        "project_des": "канал Telegram",
+        "createDate": "2025-12-09 05:29:00",
+        "end_date": "2026-01-31 00:00:00",
+        "document_id": "2"
+      },
+      {
+        "id": "9",
+        "title": "Студия",
+        "category": "Комплектация \"Под ключ\"",
+        "price": "940000",
+        "project_url": "https:\/\/t.me\/homeupakovka\/124",
+        "project_des": "Telegram канал",
+        "createDate": "2026-02-08 05:59:04",
+        "end_date": "2026-01-31 00:00:00",
+        "document_id": "8"
+      }
+    ]
+  },
+  {
+    "type": "table",
+    "name": "document",
+    "database": "u3179688_homesStaging",
+    "data": [
+      {
+        "id": "1",
+        "type": "Евродвушка",
+        "mode_id": "3",
+        "project_key": "kronstadskii1",
+        "createDate": "2025-08-31 10:11:04",
+        "userRole": "1",
+        "fileName": "kronstadskii1-Nata-250831.xlsx"
+      },
+      {
+        "id": "2",
+        "type": "Евродвушка",
+        "mode_id": "3",
+        "project_key": "mitino1",
+        "createDate": "2025-08-31 10:12:11",
+        "userRole": "1",
+        "fileName": "mitino1-Nata-250807.xlsx"
+      },
+      {
+        "id": "3",
+        "type": "Евродвушка",
+        "mode_id": "3",
+        "project_key": "mitino2",
+        "createDate": "2025-08-31 10:12:48",
+        "userRole": "1",
+        "fileName": "mitino2-Nata-250612.xlsx"
+      },
+      {
+        "id": "4",
+        "type": "Евродвушка",
+        "mode_id": "3",
+        "project_key": "ilyinskie21",
+        "createDate": "2025-09-05 15:20:27",
+        "userRole": "1",
+        "fileName": "ilyinskie1-Nata-250822.xlsx"
+      },
+      {
+        "id": "5",
+        "type": "Евродвушка",
+        "mode_id": "3",
+        "project_key": "ilyinskie20",
+        "createDate": "2025-09-05 15:20:27",
+        "userRole": "1",
+        "fileName": "ilyinskie21-Nata-250813.xlsx"
+      },
+      {
+        "id": "6",
+        "type": "Евро-3",
+        "mode_id": "3",
+        "project_key": "rimskogoKorsakova9152",
+        "createDate": "2025-09-05 15:20:27",
+        "userRole": "1",
+        "fileName": "rimskogoKorsakova9152-Nata-250920.xlsx"
+      },
+      {
+        "id": "7",
+        "type": "Евро-2",
+        "mode_id": "3",
+        "project_key": "hollandparkozerova8k1",
+        "createDate": "2025-09-05 15:20:27",
+        "userRole": "1",
+        "fileName": "hollandparkozerova8k1-Nata-251204.xlsx"
+      },
+      {
+        "id": "8",
+        "type": "Студия",
+        "mode_id": "3",
+        "project_key": "kronstadskii8k2p2",
+        "createDate": "2025-12-14 10:11:04",
+        "userRole": "1",
+        "fileName": "kronstadskii1-Nata-251214.xlsx"
+      }
+    ]
+  },
+  {
+    "type": "table",
+    "name": "image",
+    "database": "u3179688_homesStaging",
+    "data": [
+      {
+        "image_id": "2",
+        "image_url": "assets\/img\/flats\/Mitinskii-les\/38\/4.jpg",
+        "document_id": "2",
+        "image_description": null
+      },
+      {
+        "image_id": "10",
+        "image_url": "uploads\/ilyinskie20\/20\/20250906_03_57_46.jpg",
+        "document_id": "5",
+        "image_description": "Зал"
+      },
+      {
+        "image_id": "11",
+        "image_url": "uploads\/ilyinskie20\/20\/20250906_03_58_16.jpg",
+        "document_id": "5",
+        "image_description": "Зал-Кухня"
+      },
+      {
+        "image_id": "12",
+        "image_url": "uploads\/ilyinskie20\/20\/20250906_03_58_38.jpg",
+        "document_id": "5",
+        "image_description": "Зал-Кухня"
+      },
+      {
+        "image_id": "13",
+        "image_url": "uploads\/ilyinskie20\/20\/20250906_03_59_12.jpg",
+        "document_id": "5",
+        "image_description": "Зал - Рабочее пространство"
+      },
+      {
+        "image_id": "14",
+        "image_url": "uploads\/ilyinskie20\/20\/20250906_03_59_30.jpg",
+        "document_id": "5",
+        "image_description": "Спальная"
+      },
+      {
+        "image_id": "15",
+        "image_url": "uploads\/ilyinskie20\/20\/20250906_03_59_45.jpg",
+        "document_id": "5",
+        "image_description": "Прихожка"
+      },
+      {
+        "image_id": "16",
+        "image_url": "uploads\/ilyinskie20\/20\/20250906_04_00_02.jpg",
+        "document_id": "5",
+        "image_description": "Сан. узел"
+      },
+      {
+        "image_id": "17",
+        "image_url": "uploads\/ilyinskie21\/21\/20250906_04_19_55.jpg",
+        "document_id": "4",
+        "image_description": "Зал - Рабочее пространство"
+      },
+      {
+        "image_id": "18",
+        "image_url": "uploads\/ilyinskie21\/21\/20250906_04_20_14.jpg",
+        "document_id": "4",
+        "image_description": "Зал-Кухня"
+      },
+      {
+        "image_id": "19",
+        "image_url": "uploads\/ilyinskie21\/21\/20250906_04_20_31.jpg",
+        "document_id": "4",
+        "image_description": "Спальная"
+      },
+      {
+        "image_id": "20",
+        "image_url": "uploads\/ilyinskie21\/21\/20250906_04_20_48.jpg",
+        "document_id": "4",
+        "image_description": "Спальная"
+      },
+      {
+        "image_id": "21",
+        "image_url": "uploads\/ilyinskie21\/21\/20250906_04_21_03.jpg",
+        "document_id": "4",
+        "image_description": "Сан. узел"
+      },
+      {
+        "image_id": "22",
+        "image_url": "uploads\/mitino1\/38Бк1\/20250906_04_32_36.jpg",
+        "document_id": "2",
+        "image_description": "Зал"
+      },
+      {
+        "image_id": "23",
+        "image_url": "uploads\/mitino1\/38Бк1\/20250906_04_32_51.jpg",
+        "document_id": "2",
+        "image_description": "Спальная"
+      },
+      {
+        "image_id": "24",
+        "image_url": "uploads\/mitino1\/38Бк1\/20250906_04_33_05.jpg",
+        "document_id": "2",
+        "image_description": "Кухня"
+      },
+      {
+        "image_id": "25",
+        "image_url": "uploads\/mitino2\/32к1\/20250906_04_34_10.jpg",
+        "document_id": "3",
+        "image_description": "Спальная"
+      },
+      {
+        "image_id": "26",
+        "image_url": "uploads\/mitino2\/32к1\/20250906_04_34_25.jpg",
+        "document_id": "3",
+        "image_description": "Спальная"
+      },
+      {
+        "image_id": "27",
+        "image_url": "uploads\/mitino2\/32к1\/20250906_04_34_45.jpg",
+        "document_id": "3",
+        "image_description": "Зал-Кухня"
+      },
+      {
+        "image_id": "28",
+        "image_url": "uploads\/kronstadskii1\/8к2\/20250906_04_46_16.png",
+        "document_id": "1",
+        "image_description": "Зал"
+      },
+      {
+        "image_id": "29",
+        "image_url": "uploads\/kronstadskii1\/8к2\/20250906_04_46_37.png",
+        "document_id": "1",
+        "image_description": "Спальная"
+      },
+      {
+        "image_id": "30",
+        "image_url": "uploads\/kronstadskii1\/8к2\/20250906_04_46_51.png",
+        "document_id": "1",
+        "image_description": "Спальная"
+      },
+      {
+        "image_id": "31",
+        "image_url": "uploads\/kronstadskii1\/8к2\/20250906_04_47_10.png",
+        "document_id": "1",
+        "image_description": "Зал-Кухня"
+      },
+      {
+        "image_id": "32",
+        "image_url": "uploads\/kronstadskii1\/8к2\/20250906_04_47_39.png",
+        "document_id": "1",
+        "image_description": "Сан. узел"
+      },
+      {
+        "image_id": "33",
+        "image_url": "uploads\/kronstadskii1\/8к2\/20250906_14_18_35.jpeg",
+        "document_id": "1",
+        "image_description": "Кухня"
+      },
+      {
+        "image_id": "34",
+        "image_url": "uploads\/kronstadskii1\/8к2\/20250907_15_22_05.jpg",
+        "document_id": "1",
+        "image_description": "Спальная"
+      },
+      {
+        "image_id": "35",
+        "image_url": "uploads\/rimskogoKorsakova9152\/11к9\/20250920_15_16_10.jpg",
+        "document_id": "6",
+        "image_description": ""
+      },
+      {
+        "image_id": "39",
+        "image_url": "uploads\/rimskogoKorsakova9152\/11к9\/20250921_13_11_43.jpeg",
+        "document_id": "6",
+        "image_description": "спальня"
+      },
+      {
+        "image_id": "40",
+        "image_url": "uploads\/rimskogoKorsakova9152\/11к9\/20250921_13_13_47.jpeg",
+        "document_id": "6",
+        "image_description": "кухня-гостиная"
+      },
+      {
+        "image_id": "41",
+        "image_url": "uploads\/rimskogoKorsakova9152\/11к9\/20251012_12_40_52.jpeg",
+        "document_id": "6",
+        "image_description": ""
+      },
+      {
+        "image_id": "44",
+        "image_url": "uploads\/rimskogoKorsakova9152\/11к9\/20251012_16_20_46.jpeg",
+        "document_id": "6",
+        "image_description": ""
+      },
+      {
+        "image_id": "45",
+        "image_url": "uploads\/rimskogoKorsakova9152\/11к9\/20251012_16_21_08.jpeg",
+        "document_id": "6",
+        "image_description": ""
+      },
+      {
+        "image_id": "46",
+        "image_url": "uploads\/rimskogoKorsakova9152\/11к9\/20251012_16_21_36.jpeg",
+        "document_id": "6",
+        "image_description": ""
+      },
+      {
+        "image_id": "47",
+        "image_url": "uploads\/rimskogoKorsakova9152\/11к9\/20251012_16_39_05.jpeg",
+        "document_id": "6",
+        "image_description": ""
+      },
+      {
+        "image_id": "48",
+        "image_url": "uploads\/rimskogoKorsakova9152\/11к9\/20251012_16_39_19.jpeg",
+        "document_id": "6",
+        "image_description": ""
+      },
+      {
+        "image_id": "49",
+        "image_url": "uploads\/rimskogoKorsakova9152\/11к9\/20251012_16_39_29.jpeg",
+        "document_id": "6",
+        "image_description": ""
+      },
+      {
+        "image_id": "50",
+        "image_url": "uploads\/jkHollandPark8k1\/754\/JK-Holland-park-100.jpg",
+        "document_id": "7",
+        "image_description": "Прихожка"
+      },
+      {
+        "image_id": "51",
+        "image_url": "uploads\/jkHollandPark8k1\/754\/JK-Holland-park-101.jpg",
+        "document_id": "7",
+        "image_description": "Прихожка"
+      },
+      {
+        "image_id": "52",
+        "image_url": "uploads\/jkHollandPark8k1\/754\/JK-Holland-park-102.jpg",
+        "document_id": "7",
+        "image_description": "Зал"
+      },
+      {
+        "image_id": "53",
+        "image_url": "uploads\/jkHollandPark8k1\/754\/JK-Holland-park-103.jpg",
+        "document_id": "7",
+        "image_description": "Спальня"
+      },
+      {
+        "image_id": "54",
+        "image_url": "uploads\/jkHollandPark8k1\/754\/JK-Holland-park-104.jpg",
+        "document_id": "7",
+        "image_description": "Зал"
+      },
+      {
+        "image_id": "55",
+        "image_url": "uploads\/jkHollandPark8k1\/754\/JK-Holland-park-105.jpg",
+        "document_id": "7",
+        "image_description": "Сан. узел"
+      },
+      {
+        "image_id": "56",
+        "image_url": "uploads\/hollandparkozerova8k1\/8к1\/20251204_06_00_04.jpg",
+        "document_id": "7",
+        "image_description": "Спальня"
+      },
+      {
+        "image_id": "57",
+        "image_url": "uploads\/kronstadskii8k2p2\/8к2p2\/20260208_05_49_03.jpg",
+        "document_id": "8",
+        "image_description": "Зал"
+      },
+      {
+        "image_id": "58",
+        "image_url": "uploads\/kronstadskii8k2p2\/8к2p2\/20260208_05_49_37.jpg",
+        "document_id": "8",
+        "image_description": "Зал"
+      },
+      {
+        "image_id": "59",
+        "image_url": "uploads\/kronstadskii8k2p2\/8к2p2\/20260208_05_50_05.jpg",
+        "document_id": "8",
+        "image_description": "Зал"
+      },
+      {
+        "image_id": "60",
+        "image_url": "uploads\/kronstadskii8k2p2\/8к2p2\/20260208_05_50_29.jpg",
+        "document_id": "8",
+        "image_description": "Зал"
+      },
+      {
+        "image_id": "61",
+        "image_url": "uploads\/kronstadskii8k2p2\/8к2p2\/20260208_05_51_01.jpg",
+        "document_id": "8",
+        "image_description": "Прихожка"
+      },
+      {
+        "image_id": "62",
+        "image_url": "uploads\/kronstadskii8k2p2\/8к2p2\/20260208_05_51_34.jpg",
+        "document_id": "8",
+        "image_description": "Сан. узел"
+      }
+    ]
+  },
+  {
+    "type": "table",
+    "name": "message",
+    "database": "u3179688_homesStaging",
+    "data": [
+    ]
+  },
+  {
+    "type": "table",
+    "name": "mode",
+    "database": "u3179688_homesStaging",
+    "data": [
+      {
+        "id": "1",
+        "title_mode": "Создан"
+      },
+      {
+        "id": "2",
+        "title_mode": "работе"
+      },
+      {
+        "id": "3",
+        "title_mode": "Завершен"
+      }
+    ]
+  },
+  {
+    "type": "table",
+    "name": "user",
+    "database": "u3179688_homesStaging",
+    "data": [
+      {
+        "id": "1",
+        "email": "alex250555@bk.ru",
+        "name": "Саша",
+        "password": "$2y$10$tc0QSkekVa3sfKsElceVTu3eOT9rY9GrN3IyqPGZVwsPUJVvq4VQ2",
+        "createDate": "2025-08-13 01:30:12",
+        "remember_me": "1",
+        "avatar": "\/uploads\/avatars\/2025\/01\/01\/avatar-0.png",
+        "role": "2"
+      },
+      {
+        "id": "2",
+        "email": "nkartashova@mail.ru",
+        "name": "Natalia",
+        "password": "$2y$10$0tUwDA0PeoKDK2y.83XM3.68sCRxb8ACvfEjvZoJ3Wm9zmCKSxn9u",
+        "createDate": "2025-08-13 01:30:12",
+        "remember_me": "1",
+        "avatar": "\/uploads\/avatars\/2025\/01\/01\/avatar-0.png",
+        "role": "1"
+      },
+      {
+        "id": "3",
+        "email": "alex2505@bk.ru",
+        "name": "Саша",
+        "password": "$2y$10$tc0QSkekVa3sfKsElceVTu3eOT9rY9GrN3IyqPGZVwsPUJVvq4VQ2",
+        "createDate": "2025-08-13 01:30:12",
+        "remember_me": "1",
+        "avatar": "\/uploads\/avatars\/2025\/01\/01\/avatar-0.png",
+        "role": "2"
+      }
+    ]
+  },
+  {
+    "type": "table",
+    "name": "worksPerformed",
+    "database": "u3179688_homesStaging",
+    "data": [
+      {
+        "id": "2",
+        "title_work": "описание с планшета",
+        "document_id": "3"
+      },
+      {
+        "id": "3",
+        "title_work": "покраска стен, замена плинтусов",
+        "document_id": "5"
+      },
+      {
+        "id": "4",
+        "title_work": "регулировка окон",
+        "document_id": "5"
+      },
+      {
+        "id": "5",
+        "title_work": "перенос розеток",
+        "document_id": "5"
+      },
+      {
+        "id": "6",
+        "title_work": "покраска швов в санузле",
+        "document_id": "5"
+      },
+      {
+        "id": "7",
+        "title_work": "замена ручек на дверях",
+        "document_id": "5"
+      },
+      {
+        "id": "8",
+        "title_work": "покрасили стены",
+        "document_id": "4"
+      },
+      {
+        "id": "9",
+        "title_work": "отрегулировали окна, поставили москитные сетки",
+        "document_id": "4"
+      },
+      {
+        "id": "10",
+        "title_work": "поменяли унитаз, и все смесители от застройщика",
+        "document_id": "4"
+      },
+      {
+        "id": "11",
+        "title_work": "перенесли розетки в спальне и гостинной",
+        "document_id": "4"
+      },
+      {
+        "id": "12",
+        "title_work": "приняли большую часть доставок и собрали мебель.",
+        "document_id": "4"
+      },
+      {
+        "id": "19",
+        "title_work": "покраска стен и установка молдингов",
+        "document_id": "6"
+      },
+      {
+        "id": "20",
+        "title_work": "установка кондиционеров (3 штуки)",
+        "document_id": "6"
+      },
+      {
+        "id": "21",
+        "title_work": "монтаж гигиенического душа в санузле",
+        "document_id": "6"
+      },
+      {
+        "id": "22",
+        "title_work": "установка зеркала на входную дверь",
+        "document_id": "6"
+      },
+      {
+        "id": "23",
+        "title_work": "перенос розеток",
+        "document_id": "6"
+      },
+      {
+        "id": "24",
+        "title_work": "установка зеркал, плинтуса, молдингов и их покраска",
+        "document_id": "7"
+      },
+      {
+        "id": "25",
+        "title_work": "сборка мебели",
+        "document_id": "7"
+      },
+      {
+        "id": "26",
+        "title_work": "регулировка окон",
+        "document_id": "7"
+      },
+      {
+        "id": "27",
+        "title_work": "установка дверей",
+        "document_id": "7"
+      },
+      {
+        "id": "28",
+        "title_work": "ремонт окон",
+        "document_id": "8"
+      },
+      {
+        "id": "29",
+        "title_work": "замена унитаза",
+        "document_id": "8"
+      },
+      {
+        "id": "30",
+        "title_work": "замена душевой кабины",
+        "document_id": "8"
+      },
+      {
+        "id": "31",
+        "title_work": "установка кондеционера",
+        "document_id": "8"
+      },
+      {
+        "id": "32",
+        "title_work": "замена плинтуса",
+        "document_id": "8"
+      }
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+{"type":"table","name":"document","database":"u3179688_homesStaging","data":
+[
+{"id":"1","type":"Евродвушка","mode_id":"3","project_key":"kronstadskii1","createDate":"2025-08-31 10:11:04","userRole":"1","fileName":"kronstadskii1-Nata-250831.xlsx"},
+{"id":"2","type":"Евродвушка","mode_id":"3","project_key":"mitino1","createDate":"2025-08-31 10:12:11","userRole":"1","fileName":"mitino1-Nata-250807.xlsx"},
+{"id":"3","type":"Евродвушка","mode_id":"3","project_key":"mitino2","createDate":"2025-08-31 10:12:48","userRole":"1","fileName":"mitino2-Nata-250612.xlsx"},
+{"id":"4","type":"Евродвушка","mode_id":"3","project_key":"ilyinskie21","createDate":"2025-09-05 15:20:27","userRole":"1","fileName":"ilyinskie1-Nata-250822.xlsx"},
+{"id":"5","type":"Евродвушка","mode_id":"3","project_key":"ilyinskie20","createDate":"2025-09-05 15:20:27","userRole":"1","fileName":"ilyinskie21-Nata-250813.xlsx"},
+{"id":"6","type":"Евро-3","mode_id":"3","project_key":"rimskogoKorsakova9152","createDate":"2025-09-05 15:20:27","userRole":"1","fileName":"rimskogoKorsakova9152-Nata-250920.xlsx"},
+{"id":"7","type":"Евро-2","mode_id":"3","project_key":"hollandparkozerova8k1","createDate":"2025-09-05 15:20:27","userRole":"1","fileName":"hollandparkozerova8k1-Nata-251204.xlsx"},
+{"id":"8","type":"Студия","mode_id":"3","project_key":"kronstadskii8k2p2","createDate":"2025-12-14 10:11:04","userRole":"1","fileName":"kronstadskii1-Nata-251214.xlsx"}
+]
+}

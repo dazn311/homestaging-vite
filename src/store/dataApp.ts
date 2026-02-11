@@ -1,5 +1,6 @@
 export type TProject = {
   id: string;
+  document_id?: string;
   jkName: string;
   jkTitle: string;
   street: string;

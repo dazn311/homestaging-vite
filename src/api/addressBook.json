@@ -1,0 +1,12 @@
+{"type":"table","name":"addressBook","database":"u3179688_homesStaging","data":
+[
+{"address_id":"1","code":"125222","street":"ул. Муравская","apartment":"38Бк1","document_id":"2"},
+{"address_id":"2","code":"125222","street":"ул. Муравская","apartment":"32к1","document_id":"3"},
+{"address_id":"3","code":"125222","street":"Кронштадтский бул.","apartment":"8к2","document_id":"1"},
+{"address_id":"4","code":"143421","street":"ул. Заповедная","apartment":"21","document_id":"4"},
+{"address_id":"5","code":"143421","street":"ул. Заповедная","apartment":"20","document_id":"5"},
+{"address_id":"6","code":"127566","street":"улица Римского-Корсакова","apartment":"11к9","document_id":"6"},
+{"address_id":"7","code":"125424","street":"ул. Николая Озерова","apartment":"8к1","document_id":"7"},
+{"address_id":"8","code":"125222","street":"Кронштадтский бул.","apartment":"8к2p2","document_id":"8"}
+]
+}
