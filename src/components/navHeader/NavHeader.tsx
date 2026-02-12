@@ -1,57 +1,111 @@
-import React, {useState} from "react";
-import {Link, useNavigate} from "react-router";
-import {navmenuArr, navmenuSubArr} from "./dataNav.ts";
-import {ListItem} from "./ListItem.tsx";
-import cn from "classnames";
+import React, {useState} from 'react';
+import {
+  AppleOutlined,
+  CloudServerOutlined,
+  DollarOutlined,
+  FileImageFilled,
+  HomeOutlined,
+  MailOutlined,
+  MenuFoldOutlined,
+  MenuUnfoldOutlined,
+  ProjectOutlined
+} from '@ant-design/icons';
+import type {MenuProps} from 'antd';
+import {Button, Menu} from 'antd';
 import {handlerClickLink} from "../../utils/handlerClickLink.ts";
-import './nav.scss';
+import {Link, type NavigateFunction, useNavigate} from "react-router";
 
-export const NavHeader = () => {
-  const [isOpen, setIsOpen] = useState(false);
+type MenuItem = Required<MenuProps>['items'][number];
+
+function getItems(navigate: NavigateFunction) {
+  const items: MenuItem[] = [
+    { key: '1', icon: <HomeOutlined />, label: 'Главная' },
+    {
+      key: '2',
+      icon: <AppleOutlined />,
+      label: (
+        <a
+          onClick={(e)=>handlerClickLink(e,"/#portfolio",navigate)}
+          href="/#about"
+          rel="noopener noreferrer">
+          Обо мне
+        </a>
+      ) },
+    { key: '3', icon: <CloudServerOutlined />, label: (
+        <a
+          onClick={(e)=>handlerClickLink(e,"/#portfolio",navigate)}
+          href="/#service"
+          rel="noopener noreferrer">
+          Услуги
+        </a>
+      ) },
+    {
+      key: '4',
+      icon: <DollarOutlined />,
+      label: (
+        <a
+          onClick={(e)=>handlerClickLink(e,"/#portfolio",navigate)}
+          href="/#pricing"
+          rel="noopener noreferrer">
+          Цены
+        </a>
+      ) },
+    {
+      key: '400003',
+      icon: <FileImageFilled />,
+      label:  (
+        <a
+          onClick={(e)=>handlerClickLink(e,"/#portfolio",navigate)}
+          href="/#portfolio"
+          rel="noopener noreferrer">
+          Портфолио
+        </a>
+      ) },
+    {
+      key: '400004',
+      icon: <ProjectOutlined />,
+      label: (
+        <Link to={'/projects?jkName=all'}>
+          <span className="text-secondary">Проекты</span>
+        </Link>
+      )},
+    {
+      key: '400005',
+      icon: <MailOutlined />,
+      label: (
+        <a
+          onClick={(e)=>handlerClickLink(e,"/#contact",navigate)}
+          href="/#contact"
+          rel="noopener noreferrer">
+          Контакты
+        </a>
+      )
+    },
+  ];
+  return items;
+}
+
+
+export const NavHeader: React.FC = () => {
+  const [collapsed, setCollapsed] = useState(false);
   const navigate = useNavigate();
-
-  function handlerClick(e: React.MouseEvent<HTMLAnchorElement>) {
-    e.preventDefault();
-    e.stopPropagation();
-    setIsOpen(prev =>!prev);
-  }
+  const toggleCollapsed = () => {
+    setCollapsed(!collapsed);
+  };
 
   return (
-    <div onClick={()=>setIsOpen(false)} className={cn("branding d-flex align-items-center",
-      {'mobile-nav-active': isOpen})}>
-      <div className="container position-relative d-flex align-items-center justify-content-between">
-        <Link to="/" className="logo d-flex align-items-center">
-          <h1 className="sitename">ХоумУпаковка МОСКВА</h1>
-        </Link>
-        <nav id="navmenu" className="navmenu">
-          <ul>
-            {navmenuArr.map(item => (
-              <li key={item.url}>
-                <a
-                  onClick={(e)=>handlerClickLink(e,item.url,navigate)}
-                  href={item.url}>{item.title}</a>
-              </li>
-            ))}
-            <li className="dropdown text-secondary">
-              <Link to={'/projects?jkName=all'}>
-                <span className="text-secondary">Проекты</span>
-                <i className="bi bi-chevron-down toggle-dropdown"></i>
-              </Link>
-              <ul className={'jk-name'}>
-                {navmenuSubArr.map((item,idx) => (
-                  <ListItem key={'nav'+idx} item={item} />
-                ))}
-              </ul>
-            </li>
-            <li>
-              <a
-                onClick={(e)=>handlerClickLink(e,"/#contact",navigate)}
-                href={"/#contact"}>Контакты</a>
-            </li>
-          </ul>
-          <i onClick={handlerClick} className="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-      </div>
+    <div style={{ width: 'auto' }}>
+      <Button type="primary" onClick={toggleCollapsed} style={{ marginBottom: 16 }}>
+        {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+      </Button>
+      <Menu
+        defaultSelectedKeys={['1']}
+        defaultOpenKeys={['sub1']}
+        mode="horizontal"
+        theme="dark"
+        inlineCollapsed={collapsed}
+        items={getItems(navigate)}
+      />
     </div>
-  )
-}
+  );
+};
