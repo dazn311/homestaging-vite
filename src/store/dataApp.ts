@@ -73,7 +73,6 @@ export const pricingHelpers:TPricingItemProps = {
 }
 
 
-
 export type TImageBlockData = {
   id: number;
   docId: string;
@@ -82,9 +81,29 @@ export type TImageBlockData = {
   imageUrl: string;
   cls?: string;
 }
-//
 
 export const ImageBlockData:TImageBlockData[] = [
+  {
+    id:100044,
+    docId:'kronstadskii8k2p2',
+    title:'ЖК Кронштадтский,8к2п2',
+    price:132000,
+    imageUrl: "https://homesstaging.online/uploads/kronstadskii8k2p2/8%D0%BA2p2/20260208_05_49_03.jpg"
+  },
+  {
+    id:1000443,
+    docId:'kronstadskii8k2p2',
+    title:'ЖК Кронштадтский,8к2п2',
+    price:132000,
+    imageUrl: "https://homesstaging.online/uploads/kronstadskii8k2p2/8%D0%BA2p2/20260208_05_49_37.jpg"
+  },
+  {
+    id:1000444,
+    docId:'kronstadskii8k2p2',
+    title:'ЖК Кронштадтский,8к2п2',
+    price:132000,
+    imageUrl: "https://homesstaging.online/uploads/kronstadskii8k2p2/8%D0%BA2p2/20260208_05_50_05.jpg"
+  },
   {
     id:1,
     docId:'ilyinskie21',
