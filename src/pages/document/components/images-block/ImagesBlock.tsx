@@ -4,6 +4,7 @@ import {Image} from 'antd';
 const contentStyle: React.CSSProperties = {
   // margin: 0,
   width: '100%',
+  height: '300px',
   // height: 500,
 };
 
@@ -14,7 +15,6 @@ type ImageBlockProps = {
 export const ImagesBlock: React.FC<ImageBlockProps> = ({items}) => (
   <Image.PreviewGroup
     items={items}
-
   >
     <Image
       alt="webp image"
