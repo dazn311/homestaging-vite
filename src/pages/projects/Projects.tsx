@@ -3,7 +3,7 @@ import {Link, useSearchParams} from "react-router";
 import {LayoutGroup, motion} from "motion/react";
 import {type TProject} from "../../store/dataApp.ts";
 import {getProject} from "../../api/project.ts";
-import {Card, Flex} from 'antd';
+import {Card} from 'antd';
 import ImagesBlock from "../document/components/images-block/ImagesBlock.tsx";
 import './projects.styles.scss';
 
@@ -32,16 +32,19 @@ function Projects() {
     <div className="project-container">
       <div className="container">
         <h2>{pages[0] && !/^all$/i.test(jkName) ? pages[0].jkTitle : 'Все проекты'}</h2>
-        <Flex justify="center" gap={4} wrap={true}>
-          <LayoutGroup id={'3'}>
-            {pages.map((item,idx:number) => (<motion.div
-              initial={{ scale: 0 }}
-              exit={{scale:0}}
-              animate={{
-                scale: 1,
-                transition: { duration: 0.5, delay:(idx * 0.2) }
-              }}
-            >
+        <motion.div
+          layoutId={'project-list'}
+          initial={{ scale: 0,marginLeft: -70 }}
+          exit={{scale:0}}
+          animate={{
+            scale: 1,
+            marginLeft: 0,
+            transition: { duration: 0.5, delay:0.2 }
+          }}
+          className={'ant-flex-justify-center'}
+          style={{gap:4, display: 'flex', flexWrap:'wrap'}}>
+          {pages.map((item) => (
+            <LayoutGroup id={'project-list'}>
               <Card
                 hoverable
                 style={{width: 200}}
@@ -55,9 +58,8 @@ function Projects() {
                   <i className="bi bi-link-45deg"></i>
                 </Link>
               </Card>
-            </motion.div>))}
-          </LayoutGroup>
-        </Flex>
+            </LayoutGroup>))}
+        </motion.div>
       </div>
     </div>
   )
