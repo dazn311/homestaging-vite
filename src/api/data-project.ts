@@ -21,8 +21,7 @@ export const dataProject:TProject[] = [
     "images": [
       "https://homesstaging.online/uploads/kronstadskii1/8%D0%BA2/20250906_04_46_16.png",
       "https://homesstaging.online/uploads/kronstadskii1/8%D0%BA2/20250906_04_46_37.png",
-      "https://homesstaging.online/uploads/kronstadskii1/8%D0%BA2/20250906_04_46_51.png",
-      "kronstadskii8k2p2/photo_2026-01-31_20-30-33",
+      "https://homesstaging.online/uploads/kronstadskii1/8%D0%BA2/20250906_04_46_51.png"
     ]
   },
   {

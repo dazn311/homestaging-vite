@@ -9,7 +9,7 @@ import './projects.styles.scss';
 
 const {Meta} = Card;
 
-function Projects() {
+function Projects2() {
   const [searchParams] = useSearchParams();
   const [pages, setPages] = useState<TProject[]>([]);
 
@@ -20,7 +20,7 @@ function Projects() {
       .then(res => {
         console.log(res);
         if (/^all$/.test(jkName)) {
-          document.title = 'Все проекты';
+          document.title = 'Все проекты 2';
         } else if (res.length) {
           document.title = res[0].jkTitle;
         }
@@ -64,5 +64,5 @@ function Projects() {
   )
 }
 
-export default Projects;
+export default Projects2;
 
