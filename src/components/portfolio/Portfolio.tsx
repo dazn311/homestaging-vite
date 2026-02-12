@@ -6,7 +6,7 @@ import {TitleBlock} from "../title-block/TitleBlock.tsx";
 import {motion, AnimatePresence} from "motion/react";
 
 export const Portfolio = () => {
-  const [activeDocId, setActiveDocId] = useState('ilyinskie21');
+  const [activeDocId, setActiveDocId] = useState('kronstadskii8k2p2');
 
   return (
     <section id="portfolio" className="portfolio section">
