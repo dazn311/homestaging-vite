@@ -34,20 +34,19 @@ function Projects() {
         <h2>{pages[0] && !/^all$/i.test(jkName) ? pages[0].jkTitle : 'Все проекты'}</h2>
         <motion.div
           layoutId={'project-list'}
-          initial={{ scale: 0,marginLeft: -70 }}
-          exit={{scale:0}}
+          initial={{scale: 0, marginLeft: -70}}
+          exit={{scale: 0}}
           animate={{
             scale: 1,
             marginLeft: 0,
-            transition: { duration: 0.5, delay:0.2 }
+            transition: {duration: 0.5, delay: 0.2}
           }}
-          className={'ant-flex-justify-center'}
-          style={{gap:4, display: 'flex', flexWrap:'wrap'}}>
+          className={'ant-flex-justify-center'}>
           {pages.map((item) => (
-            <LayoutGroup id={'project-list'}>
+            <LayoutGroup key={item.id} id={'project-list'}>
               <Card
                 hoverable
-                style={{width: 200}}
+                className={'card-project'}
                 cover={
                   <ImagesBlock items={item.images}/>
                 }

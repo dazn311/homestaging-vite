@@ -2,4 +2,51 @@
   background: #fff;
   transform-style: unset;
   min-height: 700px;
+  .card-project {
+    .img-project {
+      position: relative;
+      height: 300px;
+      width: 300px;
+      background-image: url('https://homesstaging.online/uploads/ilyinskie20/20/20250906_03_58_16.jpg');
+      background-position: center; /* Центрирование */
+      background-repeat: no-repeat; /* Не повторять */
+      background-size: cover; /* Покрыть весь блок, сохраняя пропорции */
+      .ant-image {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        filter: blur(20px);
+        top: 0;
+        left: 0;
+        border: 4px solid red;
+        opacity: 0.3;
+        transition: opacity 0.3s;
+        &:hover {
+          opacity: 0;
+        }
+        .ant-image-img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .ant-flex-justify-center {
+    display: flex;
+    gap: 4px;
+    row-gap: 14px;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .ant-flex-justify-center {
+    justify-content: center;
+    flex-direction: column;
+    .ant-card-cover {
+      .img-project {
+        width: 100%;
+      }
+    }
+  }
 }

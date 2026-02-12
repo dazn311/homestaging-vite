@@ -41,10 +41,9 @@ function Projects2() {
             marginLeft: 0,
             transition: {duration: 0.5, delay: 0.2}
           }}
-          className={'ant-flex-justify-center'}
-          style={{display: 'flex', gap: 4, rowGap:14, flexWrap: 'wrap'}}>
+          className={'ant-flex-justify-center'}>
           {pages.map((item) => (
-            <LayoutGroup id={'project-list'}>
+            <LayoutGroup key={item.id} id={'project-list'}>
               <Card
                 hoverable
                 className={'card-project'}
