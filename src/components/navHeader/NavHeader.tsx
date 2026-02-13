@@ -11,70 +11,156 @@ import {
   ProjectOutlined
 } from '@ant-design/icons';
 import type {MenuProps} from 'antd';
-import {Button, Menu} from 'antd';
+import {Button, ConfigProvider, Menu} from 'antd';
 import {handlerClickLink} from "../../utils/handlerClickLink.ts";
 import {Link, type NavigateFunction, useNavigate} from "react-router";
+import './nav.scss';
+import cn from "classnames";
 
 type MenuItem = Required<MenuProps>['items'][number];
 
+const styles: MenuProps['styles'] = {
+  root: {border: 'none', padding: 0, borderRadius: 1, background: 'var(--background-color)'},
+  item: {color: 'white',}
+};
+
+export const NavHeader: React.FC = () => {
+  const navigate = useNavigate();
+  const [ActiveMenu,
+    // setActiveMenu
+  ] = useState<MenuItem[]>(getItems(navigate));
+  const isMobile = window.matchMedia('(max-width: 840px)').matches;
+  const [collapsed, setCollapsed] = useState(!isMobile);
+  const toggleCollapsed = () => {
+    if (isMobile) {
+      setCollapsed(!collapsed);
+    }
+
+  };
+
+  return (
+    <div className={'app-menu-wrapper'}>
+      <Link to="/" className="logo d-flex align-items-center">
+        <h1 className="sitename">ХоумУпаковка МОСКВА</h1>
+      </Link>
+      <ConfigProvider
+        prefixCls="ant"
+        iconPrefixCls="anticon"
+        theme={{
+          token: {colorPrimary: 'red'}
+        }}
+      >
+        {isMobile && (
+          <div className={cn('btn-menu-app', {'mobile-menu': isMobile})}>
+            <Button
+              type="primary"
+              style={{
+                backgroundColor: 'transparent',
+                outlineStyle: 'none',
+                borderColor: 'transparent'
+              }}
+              onClick={toggleCollapsed}
+            >
+              {collapsed ? <MenuUnfoldOutlined/> : <MenuFoldOutlined/>}
+            </Button>
+          </div>
+        )}
+
+        {collapsed && (
+          <Menu
+            defaultSelectedKeys={['1']}
+            mode={window.innerWidth > 840 ? "horizontal" : 'inline'}
+            theme="dark"
+            className={cn('menu-app', {'mobile-menu': isMobile})}
+            styles={styles}
+            items={ActiveMenu}
+            onClick={toggleCollapsed}
+            // inlineCollapsed={collapsed}
+          />
+        )}
+
+      </ConfigProvider>
+    </div>
+  );
+};
+
+
 function getItems(navigate: NavigateFunction) {
   const items: MenuItem[] = [
-    { key: '1', icon: <HomeOutlined />, label: 'Главная' },
     {
-      key: '2',
-      icon: <AppleOutlined />,
+      key: '1',
+      icon: <HomeOutlined/>,
       label: (
         <a
-          onClick={(e)=>handlerClickLink(e,"/#portfolio",navigate)}
+          onClick={(e) => handlerClickLink(e, "/#portfolio", navigate)}
+          href="/#titte-app"
+          rel="noopener noreferrer">
+          Главная
+        </a>
+      )
+    },
+    {
+      key: '2',
+      icon: <AppleOutlined/>,
+      label: (
+        <a
+          onClick={(e) => handlerClickLink(e, "/#portfolio", navigate)}
           href="/#about"
           rel="noopener noreferrer">
           Обо мне
         </a>
-      ) },
-    { key: '3', icon: <CloudServerOutlined />, label: (
+      )
+    },
+    {
+      key: '3', icon: <CloudServerOutlined/>, label: (
         <a
-          onClick={(e)=>handlerClickLink(e,"/#portfolio",navigate)}
+          onClick={(e) => handlerClickLink(e, "/#portfolio", navigate)}
           href="/#service"
           rel="noopener noreferrer">
           Услуги
         </a>
-      ) },
+      )
+    },
     {
       key: '4',
-      icon: <DollarOutlined />,
+      icon: <DollarOutlined/>,
       label: (
         <a
-          onClick={(e)=>handlerClickLink(e,"/#portfolio",navigate)}
+          onClick={(e) => handlerClickLink(e, "/#portfolio", navigate)}
           href="/#pricing"
           rel="noopener noreferrer">
           Цены
         </a>
-      ) },
+      )
+    },
     {
-      key: '400003',
-      icon: <FileImageFilled />,
-      label:  (
-        <a
-          onClick={(e)=>handlerClickLink(e,"/#portfolio",navigate)}
-          href="/#portfolio"
+      key: '5',
+      icon: <FileImageFilled/>,
+      label: (
+        <Link
+          onClick={(e) => handlerClickLink(e, "/#portfolio", navigate)}
+          to="/#portfolio"
           rel="noopener noreferrer">
           Портфолио
-        </a>
-      ) },
+        </Link>
+      )
+    },
     {
-      key: '400004',
-      icon: <ProjectOutlined />,
+      key: '6',
+      icon: <ProjectOutlined/>,
+      className: 'project-link',
       label: (
         <Link to={'/projects?jkName=all'}>
-          <span className="text-secondary">Проекты</span>
+          <span>Проекты</span>
         </Link>
-      )},
+      )
+    },
     {
-      key: '400005',
-      icon: <MailOutlined />,
+      key: '7',
+      icon: <MailOutlined/>,
       label: (
         <a
-          onClick={(e)=>handlerClickLink(e,"/#contact",navigate)}
+          onClick={(e) => handlerClickLink(e, "/#contact", navigate)}
           href="/#contact"
           rel="noopener noreferrer">
           Контакты
@@ -86,26 +172,15 @@ function getItems(navigate: NavigateFunction) {
 }
 
 
-export const NavHeader: React.FC = () => {
-  const [collapsed, setCollapsed] = useState(false);
-  const navigate = useNavigate();
-  const toggleCollapsed = () => {
-    setCollapsed(!collapsed);
-  };
+//const [collapsed, setCollapsed] = useState(true);
+// const toggleCollapsed = () => {
+//   setCollapsed(!collapsed);
+// };
 
-  return (
-    <div style={{ width: 'auto' }}>
-      <Button type="primary" onClick={toggleCollapsed} style={{ marginBottom: 16 }}>
-        {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-      </Button>
-      <Menu
-        defaultSelectedKeys={['1']}
-        defaultOpenKeys={['sub1']}
-        mode="horizontal"
-        theme="dark"
-        inlineCollapsed={collapsed}
-        items={getItems(navigate)}
-      />
-    </div>
-  );
-};
+// <Button
+//   className={'btn-menu-app'}
+//   onClick={toggleCollapsed}
+//   style={{display: 'none'}}
+// >
+//   {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+// </Button>

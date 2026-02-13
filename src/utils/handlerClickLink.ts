@@ -11,6 +11,7 @@ export function handlerClickLink(e: React.MouseEvent<HTMLAnchorElement>,pathName
   } else {
     const section = document.querySelector(pathName);
     if (!section) {
+      navigate('/');
       return;
     }
     const offsetTop = (section as HTMLElement).offsetTop;
