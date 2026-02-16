@@ -5,6 +5,7 @@ import {Card, Image} from 'antd';
 import {ScrollTopBtn} from "../../components/scroll-top-btn/ScrollTopBtn.tsx";
 import type {TVideoCard} from "../../api/data-video.ts";
 import {getSrc} from "./getSrc.ts";
+import {PasscodeComponent} from "../../components/passcode/Passcode.tsx";
 import './video.styles.scss';
 
 const {Meta} = Card;
@@ -25,6 +26,7 @@ function Page() {
   return (
     <div className="project-container">
       <div className="container">
+        <PasscodeComponent/>
         <h2>Все Видео</h2>
         <motion.div
           layoutId={'project-list'}
