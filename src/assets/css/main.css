@@ -862,6 +862,14 @@ section,
   }
 }
 
+@media (max-width: 840px) {
+  section,
+  .section {
+    scroll-margin-top: 26px;
+    padding: 18px 0;
+  }
+}
+
 /*--------------------------------------------------------------
 # Global Section Titles
 --------------------------------------------------------------*/

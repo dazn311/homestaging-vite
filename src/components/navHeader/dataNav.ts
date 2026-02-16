@@ -13,6 +13,7 @@ export const navmenuFooterArr:TNavmenu[] = [
   {url: '/#about', title: 'Обо мне'},
   {url: '/#portfolio', title: 'Портфолио'},
   {url: '/#contact', title: 'Контакты'},
+  {url: '/videos', title: 'Материалы'},
 ];
 
 export const navmenuFooterCol2Arr:TNavmenu[] = [
