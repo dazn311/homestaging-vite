@@ -1,13 +1,21 @@
+import {hashStringSHA256} from "../../utils/hashStringSHA256.ts";
+
 export class Passcode {
   code = 5555; // enter this to unlock
   unlockTimeout:null | number = null;
   form : HTMLFormElement | null;
 
+
   constructor(el:string) {
+    this.enter = this.enter.bind(this);
+    this.prevDigit = this.prevDigit.bind(this);
+    this.nextDigit = this.nextDigit.bind(this);
+
     this.form = document.querySelector(el);
     this.addEvents();
     this.init();
   }
+
   get digits() {
     const selectors = this.form?.querySelectorAll("[name^=digit]");
     return selectors ? Array.from(selectors) : [] as  HTMLFormElement[];
@@ -16,9 +24,9 @@ export class Passcode {
     return this.digits.findIndex(digit => digit === document.activeElement);
   }
   addEvents() {
-    this.form?.addEventListener("click",this.enter.bind(this));
-    this.form?.addEventListener("keydown",this.prevDigit.bind(this));
-    this.form?.addEventListener("input",this.nextDigit.bind(this));
+    this.form?.addEventListener("click",this.enter);
+    this.form?.addEventListener("keydown",this.prevDigit);
+    this.form?.addEventListener("input",this.nextDigit);
   }
   init() {
     if (this.form) {
@@ -33,19 +41,33 @@ export class Passcode {
     }
 
   }
-  enter = (e: MouseEvent) => {
+  enter(e: MouseEvent) {
   // enter(e:MouseEventInit) {
-
     if ((e.target as  HTMLFormElement)?.hasAttribute("data-enter") && !this.unlockTimeout) {
       // concatenate the digits…
       // @ts-ignore
       const inputDigits = this.digits.map(digit => digit.value).join("");
       // …and check them before unlocking
-      if (inputDigits.length === 4 && +inputDigits === this.code) {
-        this.unlock();
-      } else {
-        this.unlockDeny();
+      if (inputDigits.length === 4) {
+        hashStringSHA256(inputDigits)
+          .then(hash => {
+            console.log(inputDigits)
+            fetch('/api/setting.json').then(res => res.json()).then(data => {
+              if (data && data.pass === hash) {
+                this.unlock();
+              } else {
+                this.unlockDeny();
+              }
+            });
+          });
       }
+
+      // if (inputDigits.length === 4 && +inputDigits === this.code) {
+      //   this.unlock();
+      // } else {
+      //   this.unlockDeny();
+      // }
+
     }
   }
   reset() {
@@ -68,7 +90,7 @@ export class Passcode {
     if (reverse) this.form?.classList.add(reverseClass);
     else this.form?.classList.remove(reverseClass);
   }
-  prevDigit = (e: MouseEventInit) =>{
+  prevDigit (e: MouseEventInit) {
     // @ts-ignore
     if (e.code === "Backspace" && !this.unlockTimeout) {
       this.reverseCursor(true);
@@ -94,7 +116,7 @@ export class Passcode {
       }
     }
   }
-  nextDigit =(e:MouseEventInit) => {
+  nextDigit (e:MouseEventInit) {
     // @ts-ignore
     const value = parseInt(e.data);
 

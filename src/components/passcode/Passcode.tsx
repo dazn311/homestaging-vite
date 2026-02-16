@@ -1,11 +1,17 @@
 import {useEffect} from "react";
 import {Passcode} from "./utils.ts";
 import './passvideo.styles.scss';
+// import {hashStringSHA256} from "../../utils/hashStringSHA256.ts";
 
 export function PasscodeComponent() {
   // const [pass, setPass] = useState<string>('');
 
   useEffect(()=> {
+    // setTimeout(()=> {
+    //   const pc = new Passcode(".passcode");
+    //   console.log(pc)
+    //   // hashStringSHA256('122710').then(hash => console.log(hash));
+    // },300);
     const pc = new Passcode(".passcode");
     console.log(pc)
   },[]);
