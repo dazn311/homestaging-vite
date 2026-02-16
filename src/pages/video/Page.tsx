@@ -1,5 +1,4 @@
 import {useEffect, useState} from "react";
-import {Link} from "react-router";
 import {LayoutGroup, motion} from "motion/react";
 import {getVideos} from "../../api/project.ts";
 import {Card, Image} from 'antd';
@@ -44,20 +43,24 @@ function Page() {
                 className={'card-image'}
                 cover={
                   <Image
+                    height={250}
                     alt="homestaging image"
-                    // width={400}
-                    height={400}
                     fallback={fallback}
+                    preview={{
+                      imageRender: () => (
+                        <video
+                          muted
+                          controls
+                          src={getSrc(item,'mp4')}
+                        />
+                      ),
+                      actionsRender: () => null,
+                    }}
                     src={getSrc(item)}
                   />
                 }
               >
-
-                <Link to={`/video-detail?id=${item.id}`} title={`перейти на страницу ${item.title}`}
-                      className="details-link">
-                  <Meta title={item.title} description={item.title}/>
-                  <i className="bi bi-link-45deg"></i>
-                </Link>
+              <Meta title={item.title} description={item.title}/>
               </Card>
             </LayoutGroup>)) : null}
         </motion.div>

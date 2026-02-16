@@ -7,3 +7,10 @@ video {
 	height: auto;
 	max-height: 100hv;
 }
+.container {
+	.ant-flex-justify-center {
+		display: flex;
+		justify-content: space-around;
+
+	}
+}
