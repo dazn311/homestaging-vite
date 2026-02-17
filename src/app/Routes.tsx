@@ -1,5 +1,5 @@
 import {createBrowserRouter} from "react-router";
-import App from "./App.tsx";
+import HomePage from "./HomePage.tsx";
 import Layout from "./LayOut.tsx";
 import Document from "../pages/document/Document.tsx";
 import {NoFinded} from "../pages/no-finded/NoFinded.tsx";
@@ -12,7 +12,7 @@ export const router = createBrowserRouter([
     path: "/",
     Component: Layout,
     children: [
-      { index: true, Component: App },
+      { index: true, Component: HomePage },
       { path: "document", Component: Document },
       {
         path: "projects",

@@ -20,7 +20,7 @@ export function getItems(navigate: NavigateFunction) {
       icon: <HomeOutlined/>,
       label: (
         <a
-          onClick={(e) => handlerClickLink(e, "/#portfolio", navigate)}
+          onClick={(e) => handlerClickLink(e, "#titte-app", navigate)}
           href="/#titte-app"
           rel="noopener noreferrer">
           Главная
@@ -32,7 +32,7 @@ export function getItems(navigate: NavigateFunction) {
       icon: <IdcardOutlined/>,
       label: (
         <a
-          onClick={(e) => handlerClickLink(e, "/#portfolio", navigate)}
+          onClick={(e) => handlerClickLink(e, "#about", navigate)}
           href="/#about"
           rel="noopener noreferrer">
           Обо мне
@@ -42,7 +42,7 @@ export function getItems(navigate: NavigateFunction) {
     {
       key: '3', icon: <CloudServerOutlined/>, label: (
         <a
-          onClick={(e) => handlerClickLink(e, "/#portfolio", navigate)}
+          onClick={(e) => handlerClickLink(e, "#service", navigate)}
           href="/#service"
           rel="noopener noreferrer">
           Услуги
@@ -54,7 +54,7 @@ export function getItems(navigate: NavigateFunction) {
       icon: <DollarOutlined/>,
       label: (
         <a
-          onClick={(e) => handlerClickLink(e, "/#portfolio", navigate)}
+          onClick={(e) => handlerClickLink(e, "#pricing", navigate)}
           href="/#pricing"
           rel="noopener noreferrer">
           Цены
@@ -66,7 +66,7 @@ export function getItems(navigate: NavigateFunction) {
       icon: <PictureOutlined/>,
       label: (
         <Link
-          onClick={(e) => handlerClickLink(e, "/#portfolio", navigate)}
+          onClick={(e) => handlerClickLink(e, "#portfolio", navigate)}
           to="/#portfolio"
           rel="noopener noreferrer">
           Портфолио
@@ -88,7 +88,7 @@ export function getItems(navigate: NavigateFunction) {
       icon: <MailOutlined/>,
       label: (
         <a
-          onClick={(e) => handlerClickLink(e, "/#contact", navigate)}
+          onClick={(e) => handlerClickLink(e, "#contact", navigate)}
           href="/#contact"
           rel="noopener noreferrer">
           Контакты
