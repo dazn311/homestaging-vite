@@ -51,7 +51,6 @@ export class Passcode {
       if (inputDigits.length === 4) {
         hashStringSHA256(inputDigits)
           .then(hash => {
-            console.log(inputDigits)
             fetch('/api/setting.json').then(res => res.json()).then(data => {
               if (data && data.pass === hash) {
                 this.unlock();
