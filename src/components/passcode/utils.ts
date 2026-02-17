@@ -52,7 +52,7 @@ export class Passcode {
         hashStringSHA256(inputDigits)
           .then(hash => {
             fetch('/api/setting.json').then(res => res.json()).then(data => {
-              if (data && data.pass === hash) {
+              if (data && (data.pass === hash || data.token === hash)) {
                 this.unlock();
               } else {
                 this.unlockDeny();
