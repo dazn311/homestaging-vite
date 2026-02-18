@@ -19,58 +19,48 @@ export function getItems(navigate: NavigateFunction) {
       key: '1',
       icon: <HomeOutlined/>,
       label: (
-        <a
-          onClick={(e) => handlerClickLink(e, "#titte-app", navigate)}
-          href="/#titte-app"
-          rel="noopener noreferrer">
-          Главная
-        </a>
+        <LabelA
+          title={'Главная'}
+          nextHash={'#titte-app'}
+          navigate={navigate} />
       )
     },
     {
       key: '2',
       icon: <IdcardOutlined/>,
       label: (
-        <a
-          onClick={(e) => handlerClickLink(e, "#about", navigate)}
-          href="/#about"
-          rel="noopener noreferrer">
-          Обо мне
-        </a>
+        <LabelA
+          title={'Обо мне'}
+          nextHash={'#about'}
+          navigate={navigate} />
       )
     },
     {
       key: '3', icon: <CloudServerOutlined/>, label: (
-        <a
-          onClick={(e) => handlerClickLink(e, "#service", navigate)}
-          href="/#service"
-          rel="noopener noreferrer">
-          Услуги
-        </a>
+        <LabelA
+          title={'Услуги'}
+          nextHash={'#service'}
+          navigate={navigate} />
       )
     },
     {
       key: '4',
       icon: <DollarOutlined/>,
       label: (
-        <a
-          onClick={(e) => handlerClickLink(e, "#pricing", navigate)}
-          href="/#pricing"
-          rel="noopener noreferrer">
-          Цены
-        </a>
+        <LabelA
+          title={'Цены'}
+          nextHash={'#pricing'}
+          navigate={navigate} />
       )
     },
     {
       key: '5',
       icon: <PictureOutlined/>,
       label: (
-        <Link
-          onClick={(e) => handlerClickLink(e, "#portfolio", navigate)}
-          to="/#portfolio"
-          rel="noopener noreferrer">
-          Портфолио
-        </Link>
+        <LabelA
+          title={'Портфолио'}
+          nextHash={'#portfolio-anchor'}
+          navigate={navigate} />
       )
     },
     {
@@ -87,14 +77,23 @@ export function getItems(navigate: NavigateFunction) {
       key: '7',
       icon: <MailOutlined/>,
       label: (
-        <a
-          onClick={(e) => handlerClickLink(e, "#contact", navigate)}
-          href="/#contact"
-          rel="noopener noreferrer">
-          Контакты
-        </a>
+        <LabelA
+          title={'Контакты'}
+          nextHash={'#contact'}
+          navigate={navigate} />
       )
     },
   ];
   return items;
+}
+
+function LabelA({nextHash,navigate,title}:{nextHash:string;navigate:NavigateFunction;title:string}) {
+  return (
+    <a
+      onClick={(e) => handlerClickLink(e, nextHash, navigate)}
+      href={`/${nextHash}`}
+      rel="noopener noreferrer">
+      {title}
+    </a>
+  )
 }

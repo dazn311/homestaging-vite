@@ -5,13 +5,13 @@ export const navmenuArr:TNavmenu[] = [
   {url: '/#about', title: 'Обо мне'},
   {url: '/#service', title: 'Услуги'},
   {url: '/#pricing', title: 'Цены'},
-  {url: '/#portfolio', title: 'Портфолио'},
+  {url: '/#portfolio-anchor', title: 'Портфолио'},
 ];
 
 export const navmenuFooterArr:TNavmenu[] = [
   {url: '/#titte-app', title: 'Главная'},
   {url: '/#about', title: 'Обо мне'},
-  {url: '/#portfolio', title: 'Портфолио'},
+  {url: '/#portfolio-anchor', title: 'Портфолио'},
   {url: '/#contact', title: 'Контакты'},
   {url: '/videos', title: 'Материалы'},
 ];
