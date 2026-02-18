@@ -1,4 +1,5 @@
-import './App.css'
+import {useEffect} from "react";
+import {useLocation} from "react-router";
 import {Title} from "../components/Title.tsx";
 import {About} from "../components/about/About.tsx";
 import {Services} from "../components/services/Services.tsx";
@@ -8,35 +9,20 @@ import {Portfolio} from "../components/portfolio/Portfolio.tsx";
 import {Contact} from "../components/contact/Contact.tsx";
 import TimelineComp from "../components/timeline/TimelineComp.tsx";
 import {ScrollTopBtn} from "../components/scroll-top-btn/ScrollTopBtn.tsx";
-import {useLocation, useNavigate} from "react-router";
-import {useEffect} from "react";
+import './App.css';
 
 function HomePage() {
   const location = useLocation();
-  const navigate = useNavigate();
+//   const ref = useRef(null);
+//   const isVisible = useIsVisible(ref);
 
   useEffect(() => {
-    if (location.state && typeof location.state === "object") {
-      const {nextHash} = location.state;
-      if (nextHash) {
-        navigate(nextHash);
-
-        const section = document.querySelector(nextHash);
-
-        if (!section) {
-          return;
-        }
-        const offsetTop = (section as HTMLElement).offsetTop;
-        const scrollMarginTop = getComputedStyle(section).scrollMarginTop;
-        if (!scrollMarginTop) return;
-
-        window.scrollTo({
-          top: offsetTop - parseInt(scrollMarginTop),
-          behavior: 'smooth'
-        });
-      }
+    const hash = location.hash;
+    if (hash) {
+      const el = document.querySelector(hash);
+      el?.scrollIntoView({ block: "end", behavior: "smooth" });
     }
-  },[location,navigate]);
+  },[location]);
 
   return (
     <>
