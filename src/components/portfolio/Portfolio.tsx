@@ -5,6 +5,8 @@ import {PortfolioMenu} from "./PortfolioMenu.tsx";
 import {TitleBlock} from "../title-block/TitleBlock.tsx";
 import {motion, AnimatePresence} from "motion/react";
 import {useIsVisible} from "../../hooks/useIsVisible.tsx";
+import {activeImages} from "./activeImages.ts";
+
 
 export const Portfolio = () => {
   const [activeDocId, setActiveDocId] = useState('kronstadskii8k2p2');
@@ -26,9 +28,7 @@ export const Portfolio = () => {
           >
             <AnimatePresence mode={'wait'}>
               {isVisible && ImageBlockData
-                .filter(im => {
-                  return im.docId === activeDocId || /^\*$/.test(activeDocId);
-                })
+                .filter(activeImages(activeDocId))
                 .map((item,idx) => {
                   const delay = isVisible ? (idx * 0.2) : 1;
                   return (
@@ -50,3 +50,4 @@ export const Portfolio = () => {
     </section>
   )
 }
+
