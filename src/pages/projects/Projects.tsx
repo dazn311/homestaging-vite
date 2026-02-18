@@ -5,6 +5,7 @@ import {type TProject} from "../../store/dataApp.ts";
 import {getProject} from "../../api/project.ts";
 import {Card} from 'antd';
 import ImagesBlock from "../document/components/images-block/ImagesBlock.tsx";
+import {ScrollTopBtn} from "../../components/scroll-top-btn/ScrollTopBtn.tsx";
 import './projects.styles.scss';
 
 const {Meta} = Card;
@@ -60,6 +61,7 @@ function Projects() {
             </LayoutGroup>))}
         </motion.div>
       </div>
+      <ScrollTopBtn/>
     </div>
   )
 }

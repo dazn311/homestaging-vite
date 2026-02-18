@@ -9,7 +9,7 @@ export const Portfolio = () => {
   const [activeDocId, setActiveDocId] = useState('kronstadskii8k2p2');
 
   return (
-    <section id="portfolio" className="portfolio section">
+    <section id="portfolio-anchor" className="portfolio section">
       <TitleBlock title={'Портфолио проектов'}/>
       <div className="container">
         <div className="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">

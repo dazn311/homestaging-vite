@@ -1,17 +1,18 @@
 import {createBrowserRouter} from "react-router";
-import App from "./App.tsx";
+import HomePage from "./HomePage.tsx";
 import Layout from "./LayOut.tsx";
 import Document from "../pages/document/Document.tsx";
 import {NoFinded} from "../pages/no-finded/NoFinded.tsx";
 import Projects from "../pages/projects/Projects.tsx";
-import Projects2 from "../pages/projects2/Projects2.tsx";
+import VideoPage from "../pages/video/Page.tsx";
+import VideoDetail from "../pages/video/VideoDetail.tsx";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     Component: Layout,
     children: [
-      { index: true, Component: App },
+      { index: true, Component: HomePage },
       { path: "document", Component: Document },
       {
         path: "projects",
@@ -21,10 +22,8 @@ export const router = createBrowserRouter([
           // return null;
         // }
       },
-      {
-        path: "projects2",
-        Component: Projects2,
-      },
+      { path: "videos", Component: VideoPage },
+      { path: "video-detail", Component: VideoDetail },
       { path: "no-find", Component: NoFinded },
       { path: "*", Component: NoFinded },
     ],
