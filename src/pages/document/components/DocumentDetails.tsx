@@ -2,22 +2,11 @@ import {Flex, Table} from "antd";
 import {motion} from "motion/react";
 import ImagesBlock from "./images-block/ImagesBlock.tsx";
 import {docColumns, docColumnsWork} from "../dataDoc.ts";
-import type {TProject} from "../../../store/dataApp.ts";
-import {useEffect, useState} from "react";
-import {getDocDetails, type TDataSource, type TDataSourceDto} from "../../../api/getDocDetails.ts";
+import {type TDataSourceDto} from "../../../api/getDocDetails.ts";
+import type {TDocSource} from "../../../types/documents.ts";
 
-export function DocumentDetails({page}:{ page: TProject}) {
-  const [description,setDescription] = useState<TDataSource | null>(null);
+export function DocumentDetails({data}:{ data: TDocSource}) {
 
-  useEffect(() => {
-    getDocDetails({projectKey:page.id}).then((doc)=> {
-      setDescription(doc);
-    })
-  }, [setDescription,page]);
-
-  if (!description) {
-    return <div/>
-  }
 
   return (
     <Flex justify={'space-evenly'} wrap={'wrap'} gap={8}>
@@ -41,10 +30,10 @@ export function DocumentDetails({page}:{ page: TProject}) {
         <div className="portfolio-info">
           <Table<TDataSourceDto>
             bordered
-            title={() => description.title}
+            title={() => data.titleTab}
             pagination={false}
             showHeader={false}
-            dataSource={description.data}
+            dataSource={data.data}
             columns={docColumns}/>
           <div style={{height: 24}}/>
 
@@ -52,7 +41,7 @@ export function DocumentDetails({page}:{ page: TProject}) {
                  bordered
                  showHeader={false}
                  title={() => 'Произведенные работы'}
-                 dataSource={description.dataWork}
+                 dataSource={data.dataWork}
                  columns={docColumnsWork}
                  pagination={{
                    total:4,

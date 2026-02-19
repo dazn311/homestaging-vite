@@ -9,6 +9,7 @@ export type TDocumentResponse = {
   name: string;
   data: TDocument[];
 }
+
 export type TDocument = {
   "id": string;
   "type": string;
@@ -46,6 +47,7 @@ export type TDescriptionDto = {
 
 export type TDataSource = {
   title: string;
+  titleTab: string;
   data: TDataSourceDto[];
   dataWork: TDataWork[];
 }
@@ -61,6 +63,33 @@ export type TDataWork = {
   name: string;
 }
 
+export interface U3179688HomesStaging {
+  type:      TypeDb,
+  version?:  string,
+  comment?:  string,
+  name?:     string,
+  database?: Database,
+  data?:     { [key: string]: null | string }[],
+}
+
+// @ts-ignore
+export enum Database {
+  U3179688HomesStaging = "u3179688_homesStaging",
+}
+
+// @ts-ignore
+export enum TypeDb {
+  Database = "database",
+  Header = "header",
+  Table = "table",
+}
+
+
+// export const getDocument = async ({projectKey}: { projectKey: string }): Promise<TDataSource> => {
+//   const responseDb = await fetch('/api/u3179688_homesStaging.json', baseConfig);
+//   const db:U3179688HomesStaging[] = await responseDb.json();
+// }
+
 export const getDocDetails = async ({projectKey}: { projectKey: string }): Promise<TDataSource> => {
   const responseDocument = await fetch('/api/document.json', baseConfig);
   const responseDescription = await fetch('/api/description.json', baseConfig);
@@ -72,6 +101,7 @@ export const getDocDetails = async ({projectKey}: { projectKey: string }): Promi
   if (!descriptionObj) {
     return {
       title: "",
+      titleTab: "",
       data:dataSource,
       dataWork:dataWork
     };
@@ -80,6 +110,7 @@ export const getDocDetails = async ({projectKey}: { projectKey: string }): Promi
 
   return {
     title: descriptionObj.title,
+    titleTab: descriptionObj.title,
     dataWork:dataWork,
     data:dataSource.map(data=> {
       const key = data.key as string;

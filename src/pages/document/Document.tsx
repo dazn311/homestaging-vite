@@ -1,38 +1,29 @@
-import {useEffect, useState} from "react";
 import {useSearchParams} from "react-router";
-import {type TProject} from "../../store/dataApp.ts";
-import {getProjectById} from "../../api/project.ts";
 
+import {useGetDocumentQuery} from "../../api/docApi.ts";
 import {DocumentDetails} from "./components/DocumentDetails.tsx";
 import './document.styles.scss';
 
 
 function Document() {
   const [searchParams] = useSearchParams();
-  const [page, setPage] = useState<TProject | null>(null);
 
-  const id = searchParams.get('id') ?? '1';
+  const projectKey = searchParams.get('projectKey') ?? '1';
+  const { data,
+    // isLoading, isFetching, isError
+  } = useGetDocumentQuery({projectKey:projectKey});
 
-  useEffect(() => {
-    getProjectById(id)
-      .then((dataOjb: TProject) => {
-        setPage(dataOjb);
-      })
-      .catch(error => {
-        console.log(error);
-        setPage(null);
-      });
-  }, [id, setPage]);
 
-  if (!page) {
+
+  if (!data) {
     return null;
   }
 
   return (
     <div className="document-container">
       <div className="container">
-        <h2>{page.jkTitle}</h2>
-        <DocumentDetails page={page} />
+        <h2>{data.title}</h2>
+        <DocumentDetails data={data} />
       </div>
     </div>
   )
