@@ -6,7 +6,7 @@ import {type TDataSourceDto} from "../../../api/getDocDetails.ts";
 import type {TDocSource} from "../../../types/documents.ts";
 
 export function DocumentDetails({data}:{ data: TDocSource}) {
-
+  console.log(data)
 
   return (
     <Flex justify={'space-evenly'} wrap={'wrap'} gap={8}>
@@ -18,11 +18,7 @@ export function DocumentDetails({data}:{ data: TDocSource}) {
         }}
         className="col-lg-4">
         <ImagesBlock
-          items={[
-            "https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_19_55.jpg",
-            "https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_20_14.jpg",
-            "https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_20_31.jpg"
-          ]}
+          items={data.images}
         />
       </motion.div>
 
