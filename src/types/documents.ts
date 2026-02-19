@@ -15,7 +15,7 @@ export interface IAllDocument {
   data?:IDocument[] | IDescription[] | IAddressBook[] | IImage[] | IBreadcrumbs[]
 }
 
-export type TDocDataWork = {
+export type TDocTableWork = {
   key: string;
   name: string;
 }
@@ -28,8 +28,9 @@ export type TDocTablesSource = {
 export type TDocSource = {
   title: string;
   titleTab: string;
+  images: string[];
   data: TDocTablesSource[];
-  dataWork: TDocDataWork[];
+  dataWork: TDocTableWork[];
 }
 
 export interface IDescription {

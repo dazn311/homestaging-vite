@@ -1,27 +1,20 @@
 
+/**
+ * docApi
+ * */
 import { baseApi } from './baseApi.ts'
-import type {
-  TDocument,
-} from "./getDocDetails.ts";
+
 import type {
   IAllDocument, IBreadcrumbs,
   IDescription,
-  IDocument,
-  TDocDataWork,
+  IDocument, IImage,
   TDocSource,
-  TDocTablesSource
 } from "../types/documents.ts";
-
-
-export type TDocumentDto = {
-  type: string;
-  name: string;
-  database: string;
-  data: TDocument[];
-}
+import {dataSource} from "./data/dataSource.ts";
+import {dataTableWork} from "./data/dataTableWork.ts";
+import {defValueBread, defValueDes} from "./data/defValues.ts";
 
 type TQueryArg = { id:string };
-
 
 
 const extendedApi = baseApi.injectEndpoints({
@@ -51,21 +44,26 @@ const extendedApi = baseApi.injectEndpoints({
               ? (descriptions as IDescription[]).find((description:IDescription) => description.id === document.id)
               : undefined;
         const description = (descriptionObj || defValueDes) as IDescription;
-        console.log('54 descriptions:',descriptions);
-        console.log('54 descriptionObj:',descriptionObj);
+
         const breadcrumbsInx:number = baseQueryReturnValue.findIndex(b => /^breadcrumbs$/i.test(b.name ?? ''));
         const breadcrumbs = breadcrumbsInx > -1 ? baseQueryReturnValue[breadcrumbsInx].data : ([] as IBreadcrumbs[]);
         const breadcrumbObj = breadcrumbs
           ? (breadcrumbs as IBreadcrumbs[]).find((breadcrumb) => breadcrumb.document_id === id)
           : undefined;
         const breadcrumb = (breadcrumbObj || defValueBread) as IBreadcrumbs;
-        console.log('54 breadcrumbs:',breadcrumbs);
-        console.log('54 breadcrumbObj:',breadcrumbObj);
+
+        const imagesInx:number = baseQueryReturnValue.findIndex(b => /^image$/i.test(b.name ?? ''));
+        const imagesArr = imagesInx > -1 ? (baseQueryReturnValue[imagesInx].data as IImage[]) : ([] as IImage[]);
+        const images = imagesArr
+          .filter(image => image.document_id === id)
+          .map(image => `https://homesstaging.online/${image.image_url}`);
+
 
         return {
           title: breadcrumb.project_title,
           titleTab: description.title,
-          dataWork:dataWork,
+          dataWork:dataTableWork,
+          images:images,
           data:dataSource.map(data=> {
             const key = data.key as string;
             // @ts-ignore
@@ -88,62 +86,3 @@ const extendedApi = baseApi.injectEndpoints({
 
 export const { useGetDocumentQuery } = extendedApi;
 
-const dataSource:TDocTablesSource[] = [
-  {
-    key: 'category',
-    name: 'Категория',
-    description: 'Комплектация "Под ключ"',
-  },
-  {
-    key: 'price',
-    name: 'Бюджет',
-    description: '1320000₽',
-  },
-  {
-    key: 'end_date',
-    name: 'Дата завершения',
-    description: '15.08.2025',
-  },
-  {
-    key: 'project_url',
-    name: 'Проект URL',
-    description: "https://t.me/homeupakovka",
-  },
-]
-
-const dataWork:TDocDataWork[] = [
-  {
-    key: '1',
-    name: 'покрасили стены',
-  },
-  {
-    key: '2',
-    name: 'отрегулировали окна, поставили москитные сетки',
-  },
-  {
-    key: '3',
-    name: 'поменяли унитаз, и все смесители от застройщика',
-  },
-  {
-    key: '4',
-    name: 'перенесли розетки в спальне и гостинной',
-  },
-];
-
-const defValueBread:IBreadcrumbs = {
-  breadcrumbs_id: "1",
-  project_title: "ЖК Кронштадтский",
-  document_id: "1"
-}
-
-const defValueDes:IDescription = {
-  id: "1",
-  title: "Евродвушка",
-  category: "Комплектация \"Под ключ\"",
-  price: "988000",
-  project_url: "https://t.me/homeupakovka/41",
-  project_des: "канал Telegram",
-  createDate: null,
-  end_date: "2025-01-20 00:00:00",
-  document_id: "2"
-}
