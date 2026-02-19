@@ -9,7 +9,7 @@ import {
   ProjectOutlined
 } from "@ant-design/icons";
 import type {MenuProps} from 'antd';
-import {handlerClickLink} from "../../../utils/handlerClickLink.ts";
+import {LabelA} from "../components/LabelA.tsx";
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -85,15 +85,4 @@ export function getItems(navigate: NavigateFunction) {
     },
   ];
   return items;
-}
-
-function LabelA({nextHash,navigate,title}:{nextHash:string;navigate:NavigateFunction;title:string}) {
-  return (
-    <a
-      onClick={(e) => handlerClickLink(e, nextHash, navigate)}
-      href={`/${nextHash}`}
-      rel="noopener noreferrer">
-      {title}
-    </a>
-  )
 }

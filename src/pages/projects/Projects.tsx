@@ -19,7 +19,6 @@ function Projects() {
   useEffect(() => {
     getProject(jkName)
       .then(res => {
-        console.log(res);
         if (/^all$/.test(jkName)) {
           document.title = 'Все проекты';
         } else if (res.length) {

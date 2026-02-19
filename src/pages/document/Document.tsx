@@ -1,9 +1,9 @@
 import {useEffect, useState} from "react";
 import {useSearchParams} from "react-router";
 import {type TProject} from "../../store/dataApp.ts";
-// import {Content} from "./components/Content.tsx";
 import {getProjectById} from "../../api/project.ts";
-// import motion from "antd/es/_util/motion";
+
+import {DocumentDetails} from "./components/DocumentDetails.tsx";
 import './document.styles.scss';
 
 
@@ -32,7 +32,7 @@ function Document() {
     <div className="document-container">
       <div className="container">
         <h2>{page.jkTitle}</h2>
-        {JSON.stringify(page, null, 2)}
+        <DocumentDetails page={page} />
       </div>
     </div>
   )

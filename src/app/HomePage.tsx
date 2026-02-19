@@ -13,14 +13,15 @@ import './App.css';
 
 function HomePage() {
   const location = useLocation();
-//   const ref = useRef(null);
-//   const isVisible = useIsVisible(ref);
 
   useEffect(() => {
-    const hash = location.hash;
-    if (hash) {
-      const el = document.querySelector(hash);
-      el?.scrollIntoView({ block: "end", behavior: "smooth" });
+    //выполнить если только есть мы переходим на главную с другой страницы.
+    if (location.state && typeof location.state === "object") {
+      const {nextHash} = location.state;
+      if (nextHash) {
+        const el = document.querySelector(nextHash);
+        el?.scrollIntoView({ block: "start", behavior: "smooth" });
+      }
     }
   },[location]);
 
