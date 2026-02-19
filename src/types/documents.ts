@@ -12,12 +12,19 @@ export interface IAllDocument {
   type: string,
   name: string,
   database: string,
-  data?:IDocument[] | IDescription[] | IAddressBook[] | IImage[] | IBreadcrumbs[]
+  data?:IDocument[] | IDescription[] | IAddressBook[] | IImage[] | IBreadcrumbs[] | TWorksPerformedDto[]
+}
+
+export type TWorksPerformedDto = {
+  id: string,
+  title_work: string,
+  document_id: string,
 }
 
 export type TDocTableWork = {
   key: string;
   name: string;
+  dataIndex: string;
 }
 
 export type TDocTablesSource = {

@@ -8,10 +8,9 @@ import type {
   IAllDocument, IBreadcrumbs,
   IDescription,
   IDocument, IImage,
-  TDocSource,
+  TDocSource, TDocTableWork, TWorksPerformedDto,
 } from "../types/documents.ts";
 import {dataSource} from "./data/dataSource.ts";
-import {dataTableWork} from "./data/dataTableWork.ts";
 import {defValueBread, defValueDes} from "./data/defValues.ts";
 
 type TQueryArg = { id:string };
@@ -58,11 +57,21 @@ const extendedApi = baseApi.injectEndpoints({
           .filter(image => image.document_id === id)
           .map(image => `https://homesstaging.online/${image.image_url}`);
 
+        //worksPerformed
+        const worksPerformedInx:number = baseQueryReturnValue.findIndex(b => /^worksPerformed$/i.test(b.name ?? ''));
+        const worksPerformedArr = worksPerformedInx > -1 ? (baseQueryReturnValue[worksPerformedInx].data as TWorksPerformedDto[]) : ([] as TWorksPerformedDto[]);
+        const worksPerformed:TDocTableWork[] = worksPerformedArr
+          .filter(works => works.document_id === id)
+          .map(works => ({
+            name:works.title_work,
+            key: works.document_id,
+            dataIndex: works.document_id
+          }));
 
         return {
           title: breadcrumb.project_title,
           titleTab: description.title,
-          dataWork:dataTableWork,
+          dataWork:worksPerformed,
           images:images,
           data:dataSource.map(data=> {
             const key = data.key as string;

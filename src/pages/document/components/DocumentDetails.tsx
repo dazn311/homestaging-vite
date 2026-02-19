@@ -3,7 +3,7 @@ import {motion} from "motion/react";
 import ImagesBlock from "./images-block/ImagesBlock.tsx";
 import {docColumns, docColumnsWork} from "../dataDoc.ts";
 import {type TDataSourceDto} from "../../../api/getDocDetails.ts";
-import type {TDocSource} from "../../../types/documents.ts";
+import type {TDocSource, TDocTableWork} from "../../../types/documents.ts";
 
 export function DocumentDetails({data}:{ data: TDocSource}) {
   console.log(data)
@@ -33,17 +33,21 @@ export function DocumentDetails({data}:{ data: TDocSource}) {
             columns={docColumns}/>
           <div style={{height: 24}}/>
 
-          <Table size={'small'}
-                 bordered
-                 showHeader={false}
-                 title={() => 'Произведенные работы'}
-                 dataSource={data.dataWork}
-                 columns={docColumnsWork}
-                 pagination={{
-                   total:4,
-                   defaultPageSize:4,
-                   placement: ['bottomCenter'] }}
-          />
+          {data.dataWork && (
+            <Table<TDocTableWork>
+              size={'small'}
+                   bordered
+                   showHeader={false}
+                   title={() => 'Произведенные работы'}
+                   dataSource={data.dataWork}
+                   columns={docColumnsWork}
+                   pagination={{
+                     total:4,
+                     defaultPageSize:4,
+                     placement: ['bottomCenter'] }}
+            />
+          )}
+
         </div>
 
       </div>
