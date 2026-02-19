@@ -44,6 +44,7 @@ export const Footer = () => {
                       href={item.url}>{item.title}</a>
                   </li>
                 ))}
+                <li><Link to={"/videos"} >Материалы</Link></li>
                 <li><Link to={"/logout"} >Выйти</Link></li>
                 <li><Link to={"/login"}>Логин</Link></li>
               </ul>
