@@ -51,9 +51,11 @@ function Projects() {
                   <ImagesBlock items={item.images}/>
                 }
               >
-                <Meta title={item.jkTitle} description={item.street}/>
-                <Link to={`/document?id=${item.document_id}`} title={`перейти на страницу ${item.jkTitle}`}
-                      className="details-link">
+                <Link
+                  to={`/document?id=${item.document_id}`}
+                  title={`перейти на страницу ${item.jkTitle}`}
+                  className="details-link">
+                  <Meta title={item.jkTitle} description={item.street}/>
                   <i className="bi bi-link-45deg"></i>
                 </Link>
               </Card>
