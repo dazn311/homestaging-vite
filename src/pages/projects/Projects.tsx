@@ -52,7 +52,7 @@ function Projects() {
                 }
               >
                 <Meta title={item.jkTitle} description={item.street}/>
-                <Link to={`/document?id=${item.id}`} title={`перейти на страницу ${item.jkTitle}`}
+                <Link to={`/document?id=${item.document_id}`} title={`перейти на страницу ${item.jkTitle}`}
                       className="details-link">
                   <i className="bi bi-link-45deg"></i>
                 </Link>

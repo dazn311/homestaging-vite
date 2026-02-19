@@ -4,7 +4,7 @@ import type {
   TDocument,
 } from "./getDocDetails.ts";
 import type {
-  IAllDocument,
+  IAllDocument, IBreadcrumbs,
   IDescription,
   IDocument,
   TDocDataWork,
@@ -20,7 +20,7 @@ export type TDocumentDto = {
   data: TDocument[];
 }
 
-type TQueryArg = { projectKey:string };
+type TQueryArg = { id:string };
 
 
 
@@ -38,10 +38,10 @@ const extendedApi = baseApi.injectEndpoints({
         const documentInx:number = baseQueryReturnValue.findIndex(b => /^document$/i.test(b.name ?? ''));
         const documents = documentInx > -1 ? baseQueryReturnValue[documentInx].data : ([] as IDocument[]);
 
-        const projectKey:string = arg?.projectKey || '';
+        const id:string = arg?.id || '';
 
         const document = documents
-                ? (documents as IDocument[]).find((doc) => doc.project_key === projectKey)
+                ? (documents as IDocument[]).find((doc) => doc.id === id)
                 : undefined;
 
         const descriptionInx:number = baseQueryReturnValue.findIndex(b => /^description$/i.test(b.name ?? ''));
@@ -51,17 +51,32 @@ const extendedApi = baseApi.injectEndpoints({
               ? (descriptions as IDescription[]).find((description:IDescription) => description.id === document.id)
               : undefined;
         const description = (descriptionObj || defValueDes) as IDescription;
+        console.log('54 descriptions:',descriptions);
+        console.log('54 descriptionObj:',descriptionObj);
+        const breadcrumbsInx:number = baseQueryReturnValue.findIndex(b => /^breadcrumbs$/i.test(b.name ?? ''));
+        const breadcrumbs = breadcrumbsInx > -1 ? baseQueryReturnValue[breadcrumbsInx].data : ([] as IBreadcrumbs[]);
+        const breadcrumbObj = breadcrumbs
+          ? (breadcrumbs as IBreadcrumbs[]).find((breadcrumb) => breadcrumb.document_id === id)
+          : undefined;
+        const breadcrumb = (breadcrumbObj || defValueBread) as IBreadcrumbs;
+        console.log('54 breadcrumbs:',breadcrumbs);
+        console.log('54 breadcrumbObj:',breadcrumbObj);
 
         return {
-          title: description.title,
+          title: breadcrumb.project_title,
           titleTab: description.title,
           dataWork:dataWork,
           data:dataSource.map(data=> {
             const key = data.key as string;
             // @ts-ignore
-            const description2 = description[key] ?? '';
+            let description2 = description[key] ?? '';
+            if (description2 && /end_date/.test(key)) {
+              const description2Date = new Date(description2);
+              description2 = ("0"+description2Date.getDate()).slice(-2) + '.' +
+                                    ("0"+(description2Date.getMonth()+1)).slice(-2) +'.' + description2Date.getFullYear();
+            }
             return {...data,
-              description: (description2 as string),
+              description: description2,
             };
           })
         };
@@ -114,6 +129,12 @@ const dataWork:TDocDataWork[] = [
     name: 'перенесли розетки в спальне и гостинной',
   },
 ];
+
+const defValueBread:IBreadcrumbs = {
+  breadcrumbs_id: "1",
+  project_title: "ЖК Кронштадтский",
+  document_id: "1"
+}
 
 const defValueDes:IDescription = {
   id: "1",

@@ -8,12 +8,10 @@ import './document.styles.scss';
 function Document() {
   const [searchParams] = useSearchParams();
 
-  const projectKey = searchParams.get('projectKey') ?? '1';
+  const id = searchParams.get('id') ?? '1';
   const { data,
     // isLoading, isFetching, isError
-  } = useGetDocumentQuery({projectKey:projectKey});
-
-
+  } = useGetDocumentQuery({id:id});
 
   if (!data) {
     return null;
