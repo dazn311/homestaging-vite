@@ -1,5 +1,5 @@
 import {createBrowserRouter} from "react-router";
-import HomePage from "./HomePage.tsx";
+import HomePage from "../pages/HomePage/HomePage.tsx";
 import Layout from "./LayOut.tsx";
 import Document from "../pages/document/Document.tsx";
 import {NoFinded} from "../pages/no-finded/NoFinded.tsx";

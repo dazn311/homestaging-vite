@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {Link, useSearchParams} from "react-router";
 import {LayoutGroup, motion} from "motion/react";
 import {type TProject} from "../../store/dataApp.ts";
@@ -13,6 +13,7 @@ const {Meta} = Card;
 function Projects() {
   const [searchParams] = useSearchParams();
   const [pages, setPages] = useState<TProject[]>([]);
+  const titleRef = useRef<HTMLDivElement>(null);
 
   const jkName = searchParams.get('jkName') ?? '';
 
@@ -25,13 +26,16 @@ function Projects() {
           document.title = res[0].jkTitle;
         }
         setPages(res);
+        if (titleRef) {
+          titleRef.current?.scrollIntoView({ block: "start", behavior: "smooth" });
+        }
       });
   }, [jkName, setPages]);
 
   return (
     <div className="project-container">
       <div className="container">
-        <h2>{pages[0] && !/^all$/i.test(jkName) ? pages[0].jkTitle : 'Все проекты'}</h2>
+        <h2 ref={titleRef} >{pages[0] && !/^all$/i.test(jkName) ? pages[0].jkTitle : 'Все проекты'}</h2>
         <motion.div
           layoutId={'project-list'}
           initial={{scale: 0, marginLeft: -70}}
