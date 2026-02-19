@@ -141,7 +141,7 @@ const defValueDes:IDescription = {
   title: "Евродвушка",
   category: "Комплектация \"Под ключ\"",
   price: "988000",
-  project_url: "https:\/\/t.me\/homeupakovka\/41",
+  project_url: "https://t.me/homeupakovka/41",
   project_des: "канал Telegram",
   createDate: null,
   end_date: "2025-01-20 00:00:00",
