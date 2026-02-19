@@ -19,7 +19,6 @@ function Projects() {
   useEffect(() => {
     getProject(jkName)
       .then(res => {
-        console.log(res);
         if (/^all$/.test(jkName)) {
           document.title = 'Все проекты';
         } else if (res.length) {
@@ -53,7 +52,7 @@ function Projects() {
                 }
               >
                 <Meta title={item.jkTitle} description={item.street}/>
-                <Link to={`/document?id=${item.id}`} title={`перейти на страницу ${item.jkTitle}`}
+                <Link to={`/document?id=${item.document_id}`} title={`перейти на страницу ${item.jkTitle}`}
                       className="details-link">
                   <i className="bi bi-link-45deg"></i>
                 </Link>

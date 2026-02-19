@@ -1,4 +1,4 @@
-import {dataProject} from "./data-project.ts";
+import {dataProject} from "./data/data-project.ts";
 import type {TProject} from "../store/dataApp.ts";
 import type {TVideoCard} from "./data-video.ts";
 import {dataVideo} from "./data-video.ts";

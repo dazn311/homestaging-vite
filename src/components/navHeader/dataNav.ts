@@ -1,24 +1,24 @@
 import type {TNavmenu, TNavMenuSub} from "./typesNav.ts";
 
 export const navmenuArr:TNavmenu[] = [
-  {url: '/#titte-app', title: 'Главная'},
-  {url: '/#about', title: 'Обо мне'},
-  {url: '/#service', title: 'Услуги'},
-  {url: '/#pricing', title: 'Цены'},
-  {url: '/#portfolio-anchor', title: 'Портфолио'},
+  {url: '#titte-app', title: 'Главная'},
+  {url: '#about', title: 'Обо мне'},
+  {url: '#service', title: 'Услуги'},
+  {url: '#pricing', title: 'Цены'},
+  {url: '#portfolio-anchor', title: 'Портфолио'},
 ];
 
 export const navmenuFooterArr:TNavmenu[] = [
-  {url: '/#titte-app', title: 'Главная'},
-  {url: '/#about', title: 'Обо мне'},
-  {url: '/#portfolio-anchor', title: 'Портфолио'},
-  {url: '/#contact', title: 'Контакты'},
+  {url: '#titte-app', title: 'Главная'},
+  {url: '#about', title: 'Обо мне'},
+  {url: '#portfolio-anchor', title: 'Портфолио'},
+  {url: '#contact', title: 'Контакты'},
   {url: '/videos', title: 'Материалы'},
 ];
 
 export const navmenuFooterCol2Arr:TNavmenu[] = [
-  {url: '/#service', title: 'Услуги'},
-  {url: '/#pricing', title: 'Цены'},
+  {url: '#service', title: 'Услуги'},
+  {url: '#pricing', title: 'Цены'},
 ];
 
 export const navmenuSubArr:TNavMenuSub[] = [

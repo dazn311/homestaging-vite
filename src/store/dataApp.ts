@@ -9,7 +9,7 @@ export type TProject = {
   jkTitle: string;
   street: string;
   city?: string;
-  dataDoc?: string[];
+  dataDoc?: [string,string,string,string,string];
   dataWork?: string[];
   url: string;
   images: string[];
