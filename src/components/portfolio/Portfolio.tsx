@@ -66,7 +66,7 @@ function randomInit() {
     case 2:
     case 3:
       nextAnim = nextAnim + 1;
-      return {x: -0, y: -220, opacity: 0, scale: 1};
+      return {x: -0, y: -220, opacity: 0, scale: .1};
     case 4:
     case 5:
     case 6:
