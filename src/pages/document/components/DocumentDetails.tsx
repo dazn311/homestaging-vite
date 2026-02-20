@@ -38,16 +38,17 @@ export function DocumentDetails({data}:{ data: TDocSource}) {
 
           {data.dataWork && (
             <Table<TDocTableWork>
-              size={'small'}
-                   bordered
-                   showHeader={false}
-                   title={() => 'Произведенные работы'}
-                   dataSource={data.dataWork}
-                   columns={docColumnsWork}
-                   pagination={{
-                     total:4,
-                     defaultPageSize:4,
-                     placement: ['bottomCenter'] }}
+               size={'small'}
+               bordered
+               rowKey={record => record.key}
+               showHeader={false}
+               title={() => 'Произведенные работы'}
+               dataSource={data.dataWork}
+               columns={docColumnsWork}
+               pagination={{
+                 total:4,
+                 defaultPageSize:4,
+                 placement: ['bottomCenter'] }}
             />
           )}
 

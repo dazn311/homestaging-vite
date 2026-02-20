@@ -16,7 +16,7 @@ import {defValueBread, defValueDes} from "./data/defValues.ts";
 type TQueryArg = { id:string };
 
 
-const extendedApi = baseApi.injectEndpoints({
+const docApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     getDocument: build.query<TDocSource, TQueryArg>({
       query: () => '/api/u3179688_homesStaging.json',
@@ -62,9 +62,9 @@ const extendedApi = baseApi.injectEndpoints({
         const worksPerformedArr = worksPerformedInx > -1 ? (baseQueryReturnValue[worksPerformedInx].data as TWorksPerformedDto[]) : ([] as TWorksPerformedDto[]);
         const worksPerformed:TDocTableWork[] = worksPerformedArr
           .filter(works => works.document_id === id)
-          .map(works => ({
+          .map((works,index) => ({
             name:works.title_work,
-            key: works.document_id,
+            key: String(index + 1),
             dataIndex: works.document_id
           }));
 
@@ -93,5 +93,5 @@ const extendedApi = baseApi.injectEndpoints({
   overrideExisting: false,
 })
 
-export const { useGetDocumentQuery } = extendedApi;
+export const { useGetDocumentQuery } = docApi;
 

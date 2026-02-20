@@ -14,6 +14,7 @@ const styles: MenuProps['styles'] = {
   item: {color: 'white',}
 };
 
+//TODO: delete file;
 export const NavHeader: React.FC = () => {
   const navigate = useNavigate();
   const [ActiveMenu] = useState<MenuItem[]>(getItems(navigate));

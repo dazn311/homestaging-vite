@@ -4,9 +4,9 @@
 import type {TNavmenu} from "./typesNav.ts";
 
 export const navmenuFooterArr:TNavmenu[] = [
-  {url: '#titte-app', title: 'Главная'},
+  {url: '#title', title: 'Главная'},
   {url: '#about', title: 'Обо мне'},
-  {url: '#portfolio-anchor', title: 'Портфолио'},
+  {url: '#portfolio', title: 'Портфолио'},
   {url: '#contact', title: 'Контакты'},
 ];
 

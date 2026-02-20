@@ -5,8 +5,12 @@ import type {MenuProps} from 'antd';
 import {Button, ConfigProvider, Menu} from 'antd';
 import cn from "classnames";
 import {getItems} from "./helpers/getItems.tsx";
-import './nav-mobil.scss';
 import { AnimatePresence } from 'motion/react';
+import {useDispatch, useSelector} from "react-redux";
+import {updateNavigate} from "../../store/slices/navigateSlice.ts";
+import type {RootState} from "../../store/store.ts";
+import {navOfKey} from "../../store/slices/initialNavigateState.ts";
+import './nav-mobil.scss';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -19,9 +23,19 @@ export const NavHeaderMobil: React.FC = () => {
   const navigate = useNavigate();
   const [ActiveMenu] = useState<MenuItem[]>(getItems(navigate));
 
+  const activeKey = useSelector((state: RootState) => state.navigate.activeKey)
+  const dispatch = useDispatch();
+
   const [collapsed, setCollapsed] = useState(false);
 
   const toggleCollapsed = () => {
+    setCollapsed(prev => !prev);
+  };
+
+  const menuHandler = ({key}:{key:string}) => {
+    dispatch(updateNavigate({
+      activeKey:navOfKey(key),
+    }));
     setCollapsed(prev => !prev);
   };
 
@@ -55,12 +69,13 @@ export const NavHeaderMobil: React.FC = () => {
               {collapsed && (
                 <Menu
                   defaultSelectedKeys={['1']}
+                  selectedKeys={[activeKey]}
                   mode={'inline'}
                   theme="dark"
                   className={cn('menu-app', 'mobile-menu')}
                   styles={styles}
                   items={ActiveMenu}
-                  onClick={toggleCollapsed}
+                  onClick={menuHandler}
                 />
               )}
             </AnimatePresence>

@@ -16,17 +16,17 @@ type MenuItem = Required<MenuProps>['items'][number];
 export function getItems(navigate: NavigateFunction) {
   const items: MenuItem[] = [
     {
-      key: '1',
+      key: 'title',
       icon: <HomeOutlined/>,
       label: (
         <LabelA
           title={'Главная'}
-          nextHash={'#titte-app'}
+          nextHash={'#title'}
           navigate={navigate} />
       )
     },
     {
-      key: '2',
+      key: 'about',
       icon: <IdcardOutlined/>,
       label: (
         <LabelA
@@ -36,7 +36,7 @@ export function getItems(navigate: NavigateFunction) {
       )
     },
     {
-      key: '3', icon: <CloudServerOutlined/>, label: (
+      key: 'service', icon: <CloudServerOutlined/>, label: (
         <LabelA
           title={'Услуги'}
           nextHash={'#service'}
@@ -44,7 +44,7 @@ export function getItems(navigate: NavigateFunction) {
       )
     },
     {
-      key: '4',
+      key: 'pricing',
       icon: <DollarOutlined/>,
       label: (
         <LabelA
@@ -54,17 +54,17 @@ export function getItems(navigate: NavigateFunction) {
       )
     },
     {
-      key: '5',
+      key: 'portfolio',
       icon: <PictureOutlined/>,
       label: (
         <LabelA
           title={'Портфолио'}
-          nextHash={'#portfolio-anchor'}
+          nextHash={'#portfolio'}
           navigate={navigate} />
       )
     },
     {
-      key: '6',
+      key: 'projects',
       icon: <ProjectOutlined/>,
       className: 'project-link',
       label: (
@@ -74,7 +74,7 @@ export function getItems(navigate: NavigateFunction) {
       )
     },
     {
-      key: '7',
+      key: 'contact',
       icon: <MailOutlined/>,
       label: (
         <LabelA

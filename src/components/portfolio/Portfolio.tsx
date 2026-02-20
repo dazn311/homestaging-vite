@@ -15,7 +15,7 @@ export const Portfolio = () => {
 
   return (
     <section
-      id="portfolio-anchor"
+      id="portfolio"
       ref={ref}
       className="portfolio section">
       <TitleBlock title={'Портфолио проектов'}/>
