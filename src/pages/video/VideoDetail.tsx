@@ -23,10 +23,10 @@ function VideoDetail() {
     getVideosBy(id).then(res => {
         if (res) {
           setVideo(res);
-          document.title = res.title;
+          document.title = `${res.title} | Хоумстейджинг`;
         } else {
           setVideo(null);
-          document.title = 'document';
+          document.title = 'document | Хоумстейджинг';
         }
       });
   }, [id, setVideo]);

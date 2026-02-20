@@ -18,7 +18,7 @@ function Page() {
     getVideos().then(res => {
         if (res.length) {
           setPages(res);
-          document.title = 'Все Видео';
+          document.title = 'Все Видео | Хоумстейджинг';
         }
       });
   }, [setPages]);

@@ -1,5 +1,5 @@
 import {useEffect} from "react";
-import {useLocation} from "react-router";
+import {useLocation, useNavigate} from "react-router";
 import {Title} from "../../components/Title.tsx";
 import {About} from "../../components/about/About.tsx";
 import {Services} from "../../components/services/Services.tsx";
@@ -13,17 +13,23 @@ import '../../app/App.css';
 
 function HomePage() {
   const location = useLocation();
+  const nav = useNavigate();
 
   useEffect(() => {
     //выполнить если только есть мы переходим на главную с другой страницы.
     if (location.state && typeof location.state === "object") {
       const {nextHash} = location.state;
       if (nextHash) {
-        const el = document.querySelector(nextHash);
-        el?.scrollIntoView({ block: "start", behavior: "smooth" });
+        try {
+          const el = document.querySelector(nextHash);
+          el?.scrollIntoView({ block: "start", behavior: "smooth" });
+        } catch (e) {
+          console.log('[27 HomePage] error: ',e);
+        }
+        nav(nextHash);
       }
     }
-  },[location]);
+  },[location,nav]);
 
   return (
     <>

@@ -21,9 +21,9 @@ function Projects() {
     getProject(jkName)
       .then(res => {
         if (/^all$/.test(jkName)) {
-          document.title = 'Все проекты';
+          document.title = 'Все проекты | Хоумстейджинг';
         } else if (res.length) {
-          document.title = res[0].jkTitle;
+          document.title = `${res[0].jkTitle} | Хоумстейджинг`;
         }
         setPages(res);
         if (titleRef) {

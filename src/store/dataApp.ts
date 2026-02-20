@@ -89,168 +89,168 @@ export type TImageBlockData = {
 export const ImageBlockData:TImageBlockData[] = [
   {
     id:100044,
-    docId:'kronstadskii8k2p2',
+    docId:'8',
     title:'ЖК Кронштадтский,8к2п2',
     price:132000,
     imageUrl: "https://homesstaging.online/uploads/kronstadskii8k2p2/8%D0%BA2p2/20260208_05_49_03.jpg"
   },
   {
     id:1000443,
-    docId:'kronstadskii8k2p2',
+    docId:'8',
     title:'ЖК Кронштадтский,8к2п2',
     price:132000,
     imageUrl: "https://homesstaging.online/uploads/kronstadskii8k2p2/8%D0%BA2p2/20260208_05_49_37.jpg"
   },
   {
     id:1000444,
-    docId:'kronstadskii8k2p2',
+    docId:'8',
     title:'ЖК Кронштадтский,8к2п2',
     price:132000,
     imageUrl: "https://homesstaging.online/uploads/kronstadskii8k2p2/8%D0%BA2p2/20260208_05_50_05.jpg"
   },
   {
     id:1,
-    docId:'ilyinskie21',
+    docId:"4",
     title:'ЖК Ильинские Луга,21',
     price:132000,
     imageUrl:'https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_19_55.jpg'
   },
   {
     id:2,
-    docId:'ilyinskie21',
+    docId:"4",
     title:'ЖК Ильинские Луга,21',
     price:1320000,
     imageUrl:'https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_20_14.jpg'
   },
   {
     id:3,
-    docId:'ilyinskie21',
+    docId:"4",
     title:'ЖК Ильинские Луга,21',
     price:1320000,
     imageUrl:'https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_20_31.jpg'
   },
   {
     id:4,
-    docId:'ilyinskie20',
+    docId:"5",
     title:'ЖК Ильинские Луга,20',
     price:1325000,
     imageUrl:'https://homesstaging.online/uploads/ilyinskie20/20/20250906_03_57_46.jpg'
   },
   {
     id:5,
-    docId:'ilyinskie20',
+    docId:"5",
     title:'ЖК Ильинские Луга,20',
     price:1325000,
     imageUrl:'https://homesstaging.online/uploads/ilyinskie20/20/20250906_03_58_38.jpg'
   },
   {
     id:6,
-    docId:'ilyinskie20',
+    docId:"5",
     title:'ЖК Ильинские Луга,20',
     price:1325000,
     imageUrl:'https://homesstaging.online/uploads/ilyinskie20/20/20250906_03_58_16.jpg'
   },
   {
     id:7,
-    docId:'rimskogoKorsakova9152',
+    docId:"6",
     title:'ЖК Римского Корсакова,9к1',
     price:1350000,
     imageUrl:'https://homesstaging.online/uploads/rimskogoKorsakova9152/11%D0%BA9/20250920_15_16_10.jpg'
   },
   {
     id:8,
-    docId:'rimskogoKorsakova9152',
+    docId:"6",
     title:'ЖК Римского Корсакова,9к1',
     price:1350000,
     imageUrl:'https://homesstaging.online/uploads/rimskogoKorsakova9152/11%D0%BA9/20250921_13_13_47.jpeg'
   },
   {
     id:9,
-    docId:'rimskogoKorsakova9152',
+    docId:"6",
     title:'ЖК Римского Корсакова,9к1',
     price:1350000,
     imageUrl:'https://homesstaging.online/uploads/rimskogoKorsakova9152/11%D0%BA9/20250921_13_11_43.jpeg'
   },
   {
     id:10,
-    docId:'jkHollandPark8k1',
+    docId:"7",
     title:'ЖК Холланд Парк,8к1',
     price:1430000,
     imageUrl:'https://homesstaging.online/uploads/jkHollandPark8k1/754/JK-Holland-park-103.jpg'
   },
   {
     id:11,
-    docId:'jkHollandPark8k1',
+    docId:"7",
     title:'ЖК Холланд Парк,8к1',
     price:1430000,
     imageUrl:'https://homesstaging.online/uploads/jkHollandPark8k1/754/JK-Holland-park-104.jpg'
   },
   {
     id:12,
-    docId:'jkHollandPark8k1',
+    docId:"7",
     title:'ЖК Холланд Парк,8к1',
     price:1430000,
     imageUrl:'https://homesstaging.online/uploads/hollandparkozerova8k1/8%D0%BA1/20251204_06_00_04.jpg'
   },
   {
     id:130000777,
-    docId:'mitino2',
+    docId:"3",
     title:'ЖК Митинский лес,2',
     price:1430000,
     imageUrl:'https://homesstaging.online/uploads/mitino2/32%D0%BA1/20250906_04_34_10.jpg'
   },
   {
     id:13,
-    docId:'mitino2',
+    docId:"3",
     title:'ЖК Митинский лес,2',
     price:1430000,
     imageUrl:'https://homesstaging.online/uploads/mitino2/32%D0%BA1/20250906_04_34_45.jpg'
   },
   {
     id:14,
-    docId:'mitino2',
+    docId:"3",
     title:'ЖК Митинский лес,2',
     price:1430000,
     imageUrl:'https://homesstaging.online/uploads/mitino2/32%D0%BA1/20250906_04_34_25.jpg'
   },
   {
     id:1500007,
-    docId:'mitino1',
+    docId:"2",
     title:'ЖК Митинский лес,38',
     price:1430000,
     imageUrl:'https://homesstaging.online/assets/img/flats/Mitinskii-les/38/4.jpg'
   },
   {
     id:15,
-    docId:'mitino1',
+    docId:"2",
     title:'ЖК Митинский лес,38',
     price:1430000,
     imageUrl:'https://homesstaging.online/uploads/mitino1/38%D0%91%D0%BA1/20250906_04_32_51.jpg'
   },
   {
     id:16,
-    docId:'mitino1',
+    docId:"2",
     title:'ЖК Митинский лес,38',
     price:1430000,
     imageUrl:'https://homesstaging.online/uploads/mitino1/38%D0%91%D0%BA1/20250906_04_32_36.jpg'
   },
   {
     id:17,
-    docId:'kronstadskii1',
+    docId:"1",
     title:'ЖК Кронштадский,8к2',
     price:1430000,
     imageUrl:'https://homesstaging.online/uploads/kronstadskii1/8%D0%BA2/20250906_04_46_16.png'
   },
   {
     id:18,
-    docId:'kronstadskii1',
+    docId:"1",
     title:'ЖК Кронштадский,8к2',
     price:1430000,
     imageUrl:'https://homesstaging.online/uploads/kronstadskii1/8%D0%BA2/20250906_04_46_51.png'
   },
   {
     id:19,
-    docId:'kronstadskii1',
+    docId:"1",
     title:'ЖК Кронштадский,8к2',
     price:1430000,
     imageUrl:'https://homesstaging.online/uploads/kronstadskii1/8%D0%BA2/20250906_04_46_37.png'

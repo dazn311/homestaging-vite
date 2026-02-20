@@ -9,7 +9,7 @@ import {activeImages} from "./activeImages.ts";
 
 
 export const Portfolio = () => {
-  const [activeDocId, setActiveDocId] = useState('kronstadskii8k2p2');
+  const [activeDocId, setActiveDocId] = useState('8');
   const ref = useRef(null);
   const isVisible = useIsVisible(ref);
 
