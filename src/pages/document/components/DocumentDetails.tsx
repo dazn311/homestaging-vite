@@ -4,9 +4,12 @@ import ImagesBlock from "./images-block/ImagesBlock.tsx";
 import {docColumns, docColumnsWork} from "../dataDoc.ts";
 import {type TDataSourceDto} from "../../../api/getDocDetails.ts";
 import type {TDocSource, TDocTableWork} from "../../../types/documents.ts";
+import {useEffect} from "react";
 
 export function DocumentDetails({data}:{ data: TDocSource}) {
-  console.log(data)
+  useEffect(() => {
+    document.title = `${data.title} | Хоумстейджинг`;
+  }, [data]);
 
   return (
     <Flex justify={'space-evenly'} wrap={'wrap'} gap={8}>
