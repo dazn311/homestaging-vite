@@ -17,3 +17,9 @@ ssh -i ~/.ssh/id_rsa root@185.72.144.201
 scp -r  /Users/dazn311/Projects/homesstaging.online root@185.72.144.201:/var/www/
 
 scp -r /Users/dazn311/Projects/react-project/homestaging-vite/dist root@185.72.144.201:/var/www/html
+
+
+scp -r /Users/dazn311/Projects/react-project/homestaging-vite/dist/* root@185.72.144.201:/var/www/html
+scp -r /Users/dazn311/Projects/react-project/homestaging-vite/dist/* root@185.72.144.201:/var/www/html/projects
+scp -r /Users/dazn311/Projects/react-project/homestaging-vite/dist/* root@185.72.144.201:/var/www/html/videos
+scp -r /Users/dazn311/Projects/react-project/homestaging-vite/dist/* root@185.72.144.201:/var/www/html/document
