@@ -1,5 +1,4 @@
 import {useEffect} from "react";
-import {useLocation, useNavigate} from "react-router";
 import {Title} from "../../components/Title.tsx";
 import {About} from "../../components/about/About.tsx";
 import {Services} from "../../components/services/Services.tsx";
@@ -9,27 +8,23 @@ import {Portfolio} from "../../components/portfolio/Portfolio.tsx";
 import {Contact} from "../../components/contact/Contact.tsx";
 import TimelineComp from "../../components/timeline/TimelineComp.tsx";
 import {ScrollTopBtn} from "../../components/scroll-top-btn/ScrollTopBtn.tsx";
+import {useSelector} from "react-redux";
+import type {RootState} from "../../store/store.ts";
 import '../../app/App.css';
 
 function HomePage() {
-  const location = useLocation();
-  const nav = useNavigate();
+  const activeKey = useSelector((state: RootState) => state.navigate.activeKey)
 
   useEffect(() => {
-    //выполнить если только есть мы переходим на главную с другой страницы.
-    if (location.state && typeof location.state === "object") {
-      const {nextHash} = location.state;
-      if (nextHash) {
-        try {
-          const el = document.querySelector(nextHash);
-          el?.scrollIntoView({ block: "start", behavior: "smooth" });
-        } catch (e) {
-          console.log('[27 HomePage] error: ',e);
-        }
-        nav(nextHash);
+    if (activeKey) {
+      try {
+        const el = document.querySelector(`#${activeKey}`);
+        el?.scrollIntoView({ block: "start", behavior: "smooth" });
+      } catch (e) {
+        console.log('[27 HomePage] error: ',e);
       }
     }
-  },[location,nav]);
+  },[activeKey]);
 
   return (
     <>

@@ -1,0 +1,78 @@
+.street-name {
+  min-width: 100%;
+  @media (min-width: 1200px) {
+    .navmenu .dropdown .dropdown ul {
+      left: 100%;
+    }
+  }
+}
+
+#header {
+  .app-menu-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 10;
+    .group-btn-menu-app {
+      position: absolute;
+      display: flex;
+      flex-direction: row-reverse;
+      padding-right: 20px;
+      top: calc(100% - 34px);
+      right: 0;
+      .menu-app {
+        &.mobile-menu {
+          max-width: 200px;
+          padding: 0;
+          width: 200px;
+          z-index: 12;
+        }
+      }
+      .btn-menu-app {
+        &.mobile-menu {
+          padding: 0;
+          margin: 0;
+          max-width: 270px;
+          width: fit-content;
+          .ant-btn {
+            background-color: transparent;
+            &:hover {
+              background-color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ant-menu-inline .ant-menu-item {
+  text-align: left;
+  margin-block: 0;
+}
+.ant-btn.ant-btn-variant-solid {
+  box-shadow: none;
+}
+
+@media (max-width: 840px) {
+  #header {
+    .app-menu-wrapper {
+      .group-btn-menu-app {
+        top: 100%;
+        padding-right: 2px;
+        background: rgb(37 37 37);
+        .btn-menu-app {
+          &.mobile-menu {
+            //position: absolute;
+            //width: fit-content;
+            //top: 40px;
+            //right: 4px;
+            //transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+}

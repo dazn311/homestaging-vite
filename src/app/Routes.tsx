@@ -5,7 +5,6 @@ import Document from "../pages/document/Document.tsx";
 import {NoFinded} from "../pages/no-finded/NoFinded.tsx";
 import Projects from "../pages/projects/Projects.tsx";
 import VideoPage from "../pages/video/Page.tsx";
-import VideoDetail from "../pages/video/VideoDetail.tsx";
 
 export const router = createBrowserRouter([
   {
@@ -23,7 +22,6 @@ export const router = createBrowserRouter([
         // }
       },
       { path: "videos", Component: VideoPage },
-      { path: "video-detail", Component: VideoDetail },
       { path: "no-find", Component: NoFinded },
       { path: "*", Component: NoFinded },
     ],

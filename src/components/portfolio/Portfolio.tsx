@@ -15,27 +15,32 @@ export const Portfolio = () => {
 
   return (
     <section
-      id="portfolio-anchor"
+      id="portfolio"
       ref={ref}
       className="portfolio section">
       <TitleBlock title={'Портфолио проектов'}/>
       <div className="container">
         <div className="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-          <PortfolioMenu data={ImageBlockData} setActiveDocId={setActiveDocId} activeDocId={activeDocId} />
-          <div
+          <PortfolioMenu data={ImageBlockData} setActiveDocId={setActiveDocId} activeDocId={activeDocId}/>
+          <motion.div
+            layout={true}
             className="row gy-4 isotope-container"
             style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}
           >
             <AnimatePresence mode={'wait'}>
               {isVisible && ImageBlockData
                 .filter(activeImages(activeDocId))
-                .map((item,idx) => {
+                .map((item, idx) => {
                   const delay = isVisible ? (idx * 0.2) : 1;
                   return (
                     <motion.div
-                      initial={{ x: -200, opacity: 0 }}
-                      animate={{ x: 0, opacity: 1 }}
-                      exit={{ x: '100vw', opacity: 0 }}
+                      initial={randomInit()}
+                      animate={{x: 0, y: 0, opacity: 1, scale: 1}}
+                      exit={{
+                        opacity: 0, scale: 0, transition: {
+                          delay: 0, duration: .2
+                        }
+                      }}
                       transition={{delay: delay, duration: .5}}
                       className={'div-bg'}
                       key={item.id}
@@ -44,10 +49,41 @@ export const Portfolio = () => {
                     </motion.div>)
                 })}
             </AnimatePresence>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
   )
 }
 
+
+let nextAnim = 1;
+
+function randomInit() {
+
+  switch (nextAnim) {
+    case 1:
+    case 2:
+    case 3:
+      nextAnim = nextAnim + 1;
+      return {x: -0, y: -220, opacity: 0, scale: .1};
+    case 4:
+    case 5:
+    case 6:
+      nextAnim = nextAnim + 1;
+      return {x: -0, y: 120, opacity: 0, scale: 1};
+    case 7:
+    case 8:
+    case 9:
+      if (nextAnim === 9) {
+        nextAnim = 1;
+      } else {
+        nextAnim = nextAnim + 1;
+      }
+
+
+      return {x: -200, y: 0, opacity: 0, scale: 1}
+    default:
+      return {x: -200, y: 0, opacity: 0, scale: 1}
+  }
+}

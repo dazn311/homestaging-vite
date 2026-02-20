@@ -13,27 +13,3 @@
   }
 }
 
-@media (max-width: 840px) {
-  #header {
-    .app-menu-wrapper {
-      position: relative;
-      display:flex;
-      justify-content: space-between;
-      z-index: 10;
-      .btn-menu-app {
-        &.mobile-menu {
-          position: absolute;
-          width: fit-content;
-          top: 50%;
-          right: 4px;
-          transform: translateY(-50%);
-        }
-      }
-      .menu-app {
-        position: absolute;
-        top: 70px;
-        right: 4px;
-      }
-    }
-  }
-}

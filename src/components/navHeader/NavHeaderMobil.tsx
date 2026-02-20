@@ -5,7 +5,12 @@ import type {MenuProps} from 'antd';
 import {Button, ConfigProvider, Menu} from 'antd';
 import cn from "classnames";
 import {getItems} from "./helpers/getItems.tsx";
-import './nav.scss';
+import { AnimatePresence } from 'motion/react';
+import {useDispatch, useSelector} from "react-redux";
+import {updateNavigate} from "../../store/slices/navigateSlice.ts";
+import type {RootState} from "../../store/store.ts";
+import {navOfKey} from "../../store/slices/initialNavigateState.ts";
+import './nav-mobil.scss';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -14,17 +19,24 @@ const styles: MenuProps['styles'] = {
   item: {color: 'white',}
 };
 
-//TODO: delete file;
-export const NavHeader: React.FC = () => {
+export const NavHeaderMobil: React.FC = () => {
   const navigate = useNavigate();
   const [ActiveMenu] = useState<MenuItem[]>(getItems(navigate));
-  const isMobile = window.matchMedia('(max-width: 840px)').matches;
-  const [collapsed, setCollapsed] = useState(!isMobile);
+
+  const activeKey = useSelector((state: RootState) => state.navigate.activeKey)
+  const dispatch = useDispatch();
+
+  const [collapsed, setCollapsed] = useState(false);
 
   const toggleCollapsed = () => {
-    if (isMobile) {
-      setCollapsed(prev => !prev);
-    }
+    setCollapsed(prev => !prev);
+  };
+
+  const menuHandler = ({key}:{key:string}) => {
+    dispatch(updateNavigate({
+      activeKey:navOfKey(key),
+    }));
+    setCollapsed(prev => !prev);
   };
 
   return (
@@ -39,12 +51,12 @@ export const NavHeader: React.FC = () => {
           token: {colorPrimary: 'red'}
         }}
       >
-        {isMobile && (
-          <div className={cn('btn-menu-app', {'mobile-menu': isMobile})}>
+        <div className={cn('group-btn-menu-app')}>
+          <div className={cn('btn-menu-app', 'mobile-menu')}>
             <Button
               type="primary"
               style={{
-                backgroundColor: 'transparent',
+                // backgroundColor: 'transparent',
                 outlineStyle: 'none',
                 borderColor: 'transparent'
               }}
@@ -53,21 +65,21 @@ export const NavHeader: React.FC = () => {
               {collapsed ? <MenuUnfoldOutlined/> : <MenuFoldOutlined/>}
             </Button>
           </div>
-        )}
-
-        {collapsed && (
-          <Menu
-            defaultSelectedKeys={['1']}
-            mode={window.innerWidth > 840 ? "horizontal" : 'inline'}
-            theme="dark"
-            className={cn('menu-app', {'mobile-menu': isMobile})}
-            styles={styles}
-            items={ActiveMenu}
-            onClick={toggleCollapsed}
-            // inlineCollapsed={collapsed}
-          />
-        )}
-
+            <AnimatePresence mode={'wait'}>
+              {collapsed && (
+                <Menu
+                  defaultSelectedKeys={['1']}
+                  selectedKeys={[activeKey]}
+                  mode={'inline'}
+                  theme="dark"
+                  className={cn('menu-app', 'mobile-menu')}
+                  styles={styles}
+                  items={ActiveMenu}
+                  onClick={menuHandler}
+                />
+              )}
+            </AnimatePresence>
+        </div>
       </ConfigProvider>
     </div>
   );

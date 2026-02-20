@@ -1,10 +1,8 @@
-// import {HeaderAnim} from "./header-anim/HeaderAnim.tsx";
+
 
 export const Title = () => {
-
   return (
-
-    <section id="titte-app" className="titte-app section dark-background">
+    <section id="title" className="title section dark-background">
       <img src="/assets/img/hero-bg.jpg" alt="" data-aos="fade-in" style={{opacity: 1}} />
       <div className="container" data-aos="fade-up" data-aos-delay="100" style={{opacity: 1}} >
 

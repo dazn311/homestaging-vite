@@ -62,7 +62,10 @@ function Page() {
                   />
                 }
               >
-              <Meta title={item.title} description={item.title}/>
+              <Meta
+                style={{maxWidth:250}}
+                title={item.title}
+                description={item.description}/>
               </Card>
             </LayoutGroup>)) : null}
         </motion.div>

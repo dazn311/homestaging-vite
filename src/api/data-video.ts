@@ -60,4 +60,12 @@ export const dataVideo:TVideoCard[] = [
     "category": "ProCreate",
     "video": "6. Procreate-Complete-Course-All-lessons-in-one-video",
   },
+  {
+    "id": "7",
+    "title": "ЯТЛ",
+    "description": "Zivert - ЯТЛ (Авторадио)",
+    "type": "mp4",
+    "category": "clips",
+    "video": "zivert/Zivert - ЯТЛ (Авторадио)",
+  },
 ];
