@@ -5,7 +5,8 @@ import {UsefulLinks} from "@/components/footer/components/UsefulLinks.tsx";
 import {CopyrightContainer} from "@/components/footer/components/CopyrightContainer.tsx";
 import {OurServices} from "@/components/footer/components/OurServices.tsx";
 import {Newsletter} from "@/components/footer/components/Newsletter.tsx";
-import {updateNavigate, navOfKey} from "@/store";
+import {updateNavigate} from "@/store";
+import {navOfKey} from "@/shared/model/routes.ts";
 
 
 export const Footer = () => {

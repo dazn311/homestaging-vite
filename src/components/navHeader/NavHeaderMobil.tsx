@@ -7,8 +7,9 @@ import {Button, ConfigProvider, Menu} from 'antd';
 import cn from "classnames";
 import {getItems} from "./helpers/getItems.tsx";
 import { AnimatePresence } from 'motion/react';
-import {updateNavigate, navOfKey} from "@/store";
+import {updateNavigate} from "@/store";
 import type {RootState} from "@/store/store.ts";
+import {navOfKey} from "@/shared/model/routes.ts";
 import './nav-mobil.scss';
 
 type MenuItem = Required<MenuProps>['items'][number];

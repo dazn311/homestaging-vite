@@ -1,20 +1,21 @@
 import {createBrowserRouter} from "react-router";
 import {HomePage, NoFindPage} from "@/pages";
 import Layout from "@/app/LayOut.tsx";
+import {ROUTES} from "@/shared/model/routes.ts";
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: ROUTES.HOME,
     Component: Layout,
     children: [
       { index: true, Component: HomePage },
       {
-        path: "document",
+        path: ROUTES.DOCUMENT,
         lazy: () => import("@/pages/document/Document.page"),
         // Component: DocumentPage
       },
       {
-        path: "projects",
+        path: ROUTES.PROJECTS,
         lazy: () => import("@/pages/projects/Projects.page"),
         // loader: ({params, request}) => {
           //store.dispatch(getData());
@@ -22,7 +23,7 @@ export const router = createBrowserRouter([
         // }
       },
       {
-        path: "videos",
+        path: ROUTES.VIDEOS,
         // Component: VideoPage
         lazy: () => import("@/pages/video/Video.page"),
       },
