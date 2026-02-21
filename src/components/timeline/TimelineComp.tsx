@@ -1,7 +1,7 @@
 import React from 'react';
 import { ClockCircleOutlined } from '@ant-design/icons';
 import { Timeline } from 'antd';
-import {TitleBlock} from "../title-block/TitleBlock.tsx";
+import {TitleBlock} from "@/components";
 
 const TimelineComp: React.FC = () => (
   <section id="time-line" className="time-line section">

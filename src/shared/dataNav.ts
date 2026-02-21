@@ -1,7 +1,7 @@
 /**
  * dataNav
  * */
-import type {TNavmenu} from "./typesNav.ts";
+import type {TNavmenu} from "@/types/typesNav.ts";
 
 export const navmenuFooterArr:TNavmenu[] = [
   {url: '#title', title: 'Главная'},

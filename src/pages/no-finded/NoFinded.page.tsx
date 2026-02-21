@@ -1,7 +1,7 @@
 import {Link} from "react-router";
 import './no-finded.styles.scss';
 
-export const NoFinded = () => {
+export const NoFindPage = () => {
 
   return (
 

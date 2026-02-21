@@ -1,4 +1,4 @@
-import type {TProject} from "../../store/dataApp.ts";
+import type {TProject} from "@/store/dataApp.ts";
 
 export const dataProject:TProject[] = [
   {

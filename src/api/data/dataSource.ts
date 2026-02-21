@@ -1,4 +1,4 @@
-import type {TDocTablesSource} from "../../types/documents.ts";
+import type {TDocTablesSource} from "@/types/documents.ts";
 
 export const dataSource:TDocTablesSource[] = [
   {

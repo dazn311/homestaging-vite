@@ -2,16 +2,16 @@
 /**
  * docApi
  * */
-import { baseApi } from './baseApi.ts'
+import { baseApi } from '@/api/baseApi.ts'
 
 import type {
   IAllDocument, IBreadcrumbs,
   IDescription,
   IDocument, IImage,
   TDocSource, TDocTableWork, TWorksPerformedDto,
-} from "../types/documents.ts";
-import {dataSource} from "./data/dataSource.ts";
-import {defValueBread, defValueDes} from "./data/defValues.ts";
+} from "@/types/documents.ts";
+import {dataSource} from "@/api/data/dataSource.ts";
+import {defValueBread, defValueDes} from "@/api/data/defValues.ts";
 
 type TQueryArg = { id:string };
 

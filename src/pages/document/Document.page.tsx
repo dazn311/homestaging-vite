@@ -1,11 +1,11 @@
 import {useSearchParams} from "react-router";
 
-import {useGetDocumentQuery} from "../../api/docApi.ts";
-import {DocumentDetails} from "./components/DocumentDetails.tsx";
-import './document.styles.scss';
+import {useGetDocumentQuery} from "@/api/docApi.ts";
+import {DocumentDetails} from "@/pages/document/components/DocumentDetails.tsx";
+import '@/pages/document/document.styles.scss';
 
 
-function Document() {
+function DocumentPage() {
   const [searchParams] = useSearchParams();
 
   const id = searchParams.get('id') ?? '1';
@@ -27,4 +27,5 @@ function Document() {
   )
 }
 
-export default Document;
+export const Component = DocumentPage;
+export default DocumentPage;

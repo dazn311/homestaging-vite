@@ -1,4 +1,4 @@
-import type {TServiceItem} from "./TServiceItem.ts";
+import type {TServiceItem} from "@/components/services/TServiceItem.ts";
 
 
 export const dataServices: TServiceItem[] = [

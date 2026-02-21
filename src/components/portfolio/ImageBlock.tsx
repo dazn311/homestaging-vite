@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import {type TImageBlockData} from "../../store/dataApp.ts";
+import {Link} from "react-router";
+import {type TImageBlockData} from "@/store/dataApp.ts";
 import {Image} from 'antd';
 import cn from "classnames";
-import {Link} from "react-router";
 
 //used in Portfolio;
 export function ImageBlock({docId,title,price,imageUrl,cls}:TImageBlockData) {

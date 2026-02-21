@@ -1,6 +1,6 @@
 import {PricingItem} from "./PricingItem.tsx";
-import {pricingHelpers, pricingItemProps, pricingOnLine} from "../../store/dataApp.ts";
-import {TitleBlock} from "../title-block/TitleBlock.tsx";
+import {pricingHelpers, pricingItemProps, pricingOnLine} from "@/store/dataApp.ts";
+import {TitleBlock} from "@/components";
 import './prices.styles.scss';
 
 

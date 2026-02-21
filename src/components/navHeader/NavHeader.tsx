@@ -4,8 +4,8 @@ import {MenuFoldOutlined, MenuUnfoldOutlined} from '@ant-design/icons';
 import type {MenuProps} from 'antd';
 import {Button, ConfigProvider, Menu} from 'antd';
 import cn from "classnames";
-import {getItems} from "./helpers/getItems.tsx";
-import './nav.scss';
+import {getItems} from "@/components/navHeader/helpers/getItems.tsx";
+import '@/components/navHeader/nav.scss';
 
 type MenuItem = Required<MenuProps>['items'][number];
 

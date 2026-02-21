@@ -1,6 +1,6 @@
 import {Link, useNavigate} from "react-router";
-import {navmenuFooterArr} from "../../navHeader/dataNav.ts";
-import {LabelA} from "../../navHeader/components/LabelA.tsx";
+import {navmenuFooterArr} from "@/shared/dataNav.ts";
+import {LabelA} from "@/components";
 
 
 export const UsefulLinks = () => {

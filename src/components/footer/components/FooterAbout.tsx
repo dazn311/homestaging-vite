@@ -1,6 +1,5 @@
-import {ButtonTelegram} from "../../btn-telegram/ButtonTelegram.tsx";
 import {useNavigate} from "react-router";
-import {LabelA} from "../../navHeader/components/LabelA.tsx";
+import {ButtonTelegram, LabelA} from "@/components";
 
 
 export const FooterAbout = () => {

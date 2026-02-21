@@ -1,7 +1,7 @@
 import {useState} from "react";
 import cn from 'classnames';
-import {aboutItems, type PricingItemProps} from "../../store/dataApp.ts";
-import {TitleBlock} from "../title-block/TitleBlock.tsx";
+import {aboutItems, type PricingItemProps} from "@/store/dataApp.ts";
+import {TitleBlock} from "@/components";
 import './about.styles.scss';
 
 

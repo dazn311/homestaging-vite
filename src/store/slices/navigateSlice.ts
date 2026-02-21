@@ -1,6 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit";
 import type { PayloadAction } from '@reduxjs/toolkit';
-import {initialNavigateState, NAV_PATH, NavActiveKey} from "./initialNavigateState.ts";
+import {initialNavigateState, NAV_PATH, NavActiveKey} from "@/store/slices/initialNavigateState.ts";
 
 export type TUpdateNavProps = {
   currentPath?: NAV_PATH,

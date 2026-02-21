@@ -1,19 +1,14 @@
 import {useEffect} from "react";
 import {useSelector} from "react-redux";
 import {Title} from "@/components/Title.tsx";
-import {About} from "@/components/about/About.tsx";
-import {Services} from "@/components/services/Services.tsx";
-import {Prices} from "@/components/prices/Prices.tsx";
-import {Cooperation} from "@/components/cooperation/Cooperation.tsx";
-import {Portfolio} from "@/components/portfolio/Portfolio.tsx";
-import {Contact} from "@/components/contact/Contact.tsx";
-import TimelineComp from "@/components/timeline/TimelineComp.tsx";
-import {ScrollTopBtn} from "@/components/scroll-top-btn/ScrollTopBtn.tsx";
+import {
+  About, ScrollTopBtn, Services,
+  Prices, Cooperation, Portfolio,
+  Contact, TimelineComp} from "@/components";
 import type {RootState} from "@/store/store.ts";
-import '@/app/App.css';
 
 function HomePage() {
-  const activeKey = useSelector((state: RootState) => state.navigate.activeKey)
+  const activeKey = useSelector((state: RootState) => state.navigate.activeKey);
 
   useEffect(() => {
     if (activeKey) {
@@ -41,4 +36,5 @@ function HomePage() {
   )
 }
 
+export const Component = HomePage;
 export default HomePage

@@ -1,7 +1,6 @@
 import {useEffect} from "react";
 import {useDispatch} from "react-redux";
-import {updateNavigate} from "../../store/slices/navigateSlice.ts";
-import {NavActiveKey} from "../../store/slices/initialNavigateState.ts";
+import {updateNavigate, NavActiveKey} from "@/store";
 
 export function ScrollTopBtn() {
   const dispatch = useDispatch();

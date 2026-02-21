@@ -1,12 +1,11 @@
 import React from "react";
-import {FooterAbout} from "./components/FooterAbout.tsx";
-import {UsefulLinks} from "./components/UsefulLinks.tsx";
-import {CopyrightContainer} from "./components/CopyrightContainer.tsx";
-import {OurServices} from "./components/OurServices.tsx";
-import {Newsletter} from "./components/Newsletter.tsx";
 import {useDispatch} from "react-redux";
-import {updateNavigate} from "../../store/slices/navigateSlice.ts";
-import {navOfKey} from "../../store/slices/initialNavigateState.ts";
+import {FooterAbout} from "@/components/footer/components/FooterAbout.tsx";
+import {UsefulLinks} from "@/components/footer/components/UsefulLinks.tsx";
+import {CopyrightContainer} from "@/components/footer/components/CopyrightContainer.tsx";
+import {OurServices} from "@/components/footer/components/OurServices.tsx";
+import {Newsletter} from "@/components/footer/components/Newsletter.tsx";
+import {updateNavigate, navOfKey} from "@/store";
 
 
 export const Footer = () => {

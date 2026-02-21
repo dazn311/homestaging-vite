@@ -1,11 +1,11 @@
 import {useRef, useState} from "react";
-import {ImageBlockData} from "../../store/dataApp.ts";
+import {ImageBlockData} from "@/store/dataApp.ts";
+import {motion, AnimatePresence} from "motion/react";
+import {useIsVisible} from "@/hooks/useIsVisible.tsx";
+import {TitleBlock} from "@/components";
+import {activeImages} from "./activeImages.ts";
 import {ImageBlock} from "./ImageBlock.tsx";
 import {PortfolioMenu} from "./PortfolioMenu.tsx";
-import {TitleBlock} from "../title-block/TitleBlock.tsx";
-import {motion, AnimatePresence} from "motion/react";
-import {useIsVisible} from "../../hooks/useIsVisible.tsx";
-import {activeImages} from "./activeImages.ts";
 
 
 export const Portfolio = () => {

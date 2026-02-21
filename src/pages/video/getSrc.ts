@@ -1,4 +1,4 @@
-import {baseUrl, type TVideoCard} from "../../api/data-video.ts";
+import {baseUrl, type TVideoCard} from "@/api/data-video.ts";
 
 
 export function getSrc(item: TVideoCard,type?:string) {

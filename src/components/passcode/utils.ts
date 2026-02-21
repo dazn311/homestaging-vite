@@ -1,4 +1,4 @@
-import {hashStringSHA256} from "../../utils/hashStringSHA256.ts";
+import {hashStringSHA256} from "@/utils/hashStringSHA256.ts";
 
 export class Passcode {
   code = 5555; // enter this to unlock

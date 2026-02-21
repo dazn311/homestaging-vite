@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import {baseApi} from "../api/baseApi.ts";
+import {baseApi} from "@/api/baseApi.ts";
 import {navigateSlice} from "./slices/navigateSlice.ts";
 
 export const store = configureStore({

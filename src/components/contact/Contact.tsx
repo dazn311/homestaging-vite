@@ -1,4 +1,4 @@
-import {TitleBlock} from "../title-block/TitleBlock.tsx";
+import {TitleBlock} from "@/components";
 
 export const Contact = () => {
 
