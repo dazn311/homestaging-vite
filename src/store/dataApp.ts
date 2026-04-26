@@ -257,13 +257,13 @@ export const ImageBlockData:TImageBlockData[] = [
   },
 ]
 
-export type PricingItemProps = {
+export type TAboutItemProps = {
   caption: string;
   body: string;
 }
 
 
-export const aboutItems: PricingItemProps[] = [
+export const aboutItems: TAboutItemProps[] = [
   {
     caption:'✨Вы экономите свой бюджет.',
     body:'Кажется, совсем не очевидно, но ребят, практика показывает и цифры говорят сами за себя, самостоятельно делая ремонт, зачастую, клиенты легко выходят за рамки бюджета, в силу неопытности и нехватки времени в оценке рынка товаров и услуг, тем более ценники переписываются практически еженедельно'

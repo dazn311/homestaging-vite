@@ -21,8 +21,6 @@ export const FooterAbout = () => {
         </div>
         <div className="social-links d-flex mt-4">
           <ButtonTelegram cls={'telegram'} />
-          <ButtonTelegram cls={'facebook'} />
-          <ButtonTelegram cls={'instagram'} />
         </div>
       </div>
     </div>

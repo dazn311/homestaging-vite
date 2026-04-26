@@ -1,6 +1,6 @@
 import {useState} from "react";
 import cn from 'classnames';
-import {aboutItems, type PricingItemProps} from "@/store/dataApp.ts";
+import {aboutItems, type TAboutItemProps} from "@/store/dataApp.ts";
 import {TitleBlock} from "@/components";
 import './about.styles.scss';
 
@@ -59,7 +59,7 @@ function BtnCaption({isShow}: {isShow: boolean}) {
     </>
   )
 }
-function AboutItem({caption,body,isShow}:PricingItemProps & {isShow:boolean}) {
+function AboutItem({caption,body,isShow}:TAboutItemProps & {isShow:boolean}) {
   return (
     <li className={cn('about-item',{'hide': !isShow})}>
       <i className="bi bi-check-circle" />

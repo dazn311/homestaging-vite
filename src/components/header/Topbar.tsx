@@ -8,8 +8,6 @@ export const Topbar = () => {
         </div>
         <div className="social-links d-none d-md-flex align-items-center">
           <a href="https://t.me/homeupakovka"><i className="bi bi-telegram"></i></a>
-          <a href="https://t.me/homeupakovka"><i className="bi bi-facebook"></i></a>
-          <a href="https://t.me/homeupakovka"><i className="bi bi-instagram"></i></a>
         </div>
       </div>
     </div>
