@@ -68,6 +68,13 @@
         "street": "Кронштадтский бул.",
         "apartment": "8к2p2",
         "document_id": "8"
+      },
+      {
+        "address_id": "12",
+        "code": "125222",
+        "street": "ул. Александровская",
+        "apartment": "3к4599",
+        "document_id": "12"
       }
     ]
   },
@@ -115,6 +122,11 @@
         "breadcrumbs_id": "8",
         "project_title": "ЖК Кронштадтский",
         "document_id": "8"
+      },
+      {
+        "breadcrumbs_id": "12",
+        "project_title": "ГК Гранель",
+        "document_id": "12"
       }
     ]
   },
@@ -258,6 +270,17 @@
         "createDate": "2026-02-08 05:59:04",
         "end_date": "2026-01-31 00:00:00",
         "document_id": "8"
+      },
+      {
+        "id": "12",
+        "title": "Евро-3",
+        "category": "Комплектация \"Под ключ\"",
+        "price": "1800000",
+        "project_url": "https:\/\/t.me\/homeupakovka\/124",
+        "project_des": "Telegram канал",
+        "createDate": "2026-06-12 05:59:04",
+        "end_date": "2026-07-31 00:00:00",
+        "document_id": "12"
       }
     ]
   },
@@ -337,6 +360,15 @@
         "createDate": "2025-12-14 10:11:04",
         "userRole": "1",
         "fileName": "kronstadskii1-Nata-251214.xlsx"
+      },
+      {
+        "id": "12",
+        "type": "Евро-3",
+        "mode_id": "3",
+        "project_key": "Alexandrovskaya3k599",
+        "createDate": "2026-06-12 10:11:04",
+        "userRole": "1",
+        "fileName": "Alexandrovskaya3k599-Nata-251214.xlsx"
       }
     ]
   },
@@ -638,6 +670,42 @@
         "image_url": "uploads/kronstadskii8k2p2/8к2p2/20260208_05_51_34.jpg",
         "document_id": "8",
         "image_description": "Сан. узел"
+      },
+      {
+        "image_id": "63",
+        "image_url": "uploads/Alexandrovskaya3k599/1.IMG_8801.jpg",
+        "document_id": "12",
+        "image_description": "Спальня"
+      },
+      {
+        "image_id": "64",
+        "image_url": "uploads/Alexandrovskaya3k599/IMG_8770.jpg",
+        "document_id": "12",
+        "image_description": "Зал"
+      },
+      {
+        "image_id": "64",
+        "image_url": "uploads/Alexandrovskaya3k599/IMG_8765.jpg",
+        "document_id": "12",
+        "image_description": "Зал"
+      },
+      {
+        "image_id": "65",
+        "image_url": "uploads/Alexandrovskaya3k599/IMG_8823.jpg",
+        "document_id": "12",
+        "image_description": "Зал"
+      },
+      {
+        "image_id": "65",
+        "image_url": "uploads/Alexandrovskaya3k599/IMG_8828.jpg",
+        "document_id": "12",
+        "image_description": "Зал"
+      },
+      {
+        "image_id": "66",
+        "image_url": "uploads/Alexandrovskaya3k599/IMG_8799.jpg",
+        "document_id": "12",
+        "image_description": "Спальня"
       }
     ]
   },
@@ -833,6 +901,31 @@
         "id": "32",
         "title_work": "замена плинтуса",
         "document_id": "8"
+      },
+      {
+        "id": "33",
+        "title_work": "перенос розеток",
+        "document_id": "12"
+      },
+      {
+        "id": "34",
+        "title_work": "установка кондеционера",
+        "document_id": "12"
+      },
+      {
+        "id": "35",
+        "title_work": "замена унитаза",
+        "document_id": "12"
+      },
+      {
+        "id": "36",
+        "title_work": "сборка мебели",
+        "document_id": "12"
+      },
+      {
+        "id": "37",
+        "title_work": "установка зеркал, плинтуса, молдингов и их покраска",
+        "document_id": "12"
       }
     ]
   }
