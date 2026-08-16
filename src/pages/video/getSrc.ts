@@ -1,8 +1,8 @@
-import {baseUrl, type TVideoCard} from "@/api/data-video.ts";
+import {baseUrlVideo, type TVideoCard} from "@/api/data-video.ts";
 
 
 export function getSrc(item: TVideoCard,type?:string) {
 
   const typeDoc = type || 'png';
-  return encodeURI(`${baseUrl}/${item.video}.${typeDoc}?ver=2`);
+  return encodeURI(`${baseUrlVideo}/${item.video}.${typeDoc}?ver=2`);
 }
