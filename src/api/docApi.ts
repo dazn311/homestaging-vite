@@ -55,7 +55,7 @@ const docApi = baseApi.injectEndpoints({
         const imagesArr = imagesInx > -1 ? (baseQueryReturnValue[imagesInx].data as IImage[]) : ([] as IImage[]);
         const images = imagesArr
           .filter(image => image.document_id === id)
-          .map(image => `https://homesstaging.online/${image.image_url}`);
+          .map(image => `https://home.staging.moscow/${image.image_url}`);
 
         //worksPerformed
         const worksPerformedInx:number = baseQueryReturnValue.findIndex(b => /^worksPerformed$/i.test(b.name ?? ''));

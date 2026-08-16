@@ -9,7 +9,7 @@ export type TVideoCard = {
   video: string;
 }
 
-export const baseUrl = "https://homesstaging.online/video";
+export const baseUrl = "https://home.staging.moscow/video";
 
 export const dataVideo:TVideoCard[] = [
   {

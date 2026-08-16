@@ -20,9 +20,9 @@ export const dataProject:TProject[] = [
       "замена входной двери",
     ],
     "images": [
-      "https://homesstaging.online/uploads/kronstadskii1/8%D0%BA2/20250906_04_46_16.png",
-      "https://homesstaging.online/uploads/kronstadskii1/8%D0%BA2/20250906_04_46_37.png",
-      "https://homesstaging.online/uploads/kronstadskii1/8%D0%BA2/20250906_04_46_51.png"
+      "https://home.staging.moscow/uploads/kronstadskii1/8%D0%BA2/20250906_04_46_16.png",
+      "https://home.staging.moscow/uploads/kronstadskii1/8%D0%BA2/20250906_04_46_37.png",
+      "https://home.staging.moscow/uploads/kronstadskii1/8%D0%BA2/20250906_04_46_51.png"
     ]
   },
   {
@@ -44,9 +44,9 @@ export const dataProject:TProject[] = [
       "замена входной двери",
     ],
     "images": [
-      "https://homesstaging.online/uploads/mitino2/32%D0%BA1/20250906_04_34_10.jpg",
-      "https://homesstaging.online/uploads/mitino2/32%D0%BA1/20250906_04_34_25.jpg",
-      "https://homesstaging.online/uploads/mitino2/32%D0%BA1/20250906_04_34_45.jpg"
+      "https://home.staging.moscow/uploads/mitino2/32%D0%BA1/20250906_04_34_10.jpg",
+      "https://home.staging.moscow/uploads/mitino2/32%D0%BA1/20250906_04_34_25.jpg",
+      "https://home.staging.moscow/uploads/mitino2/32%D0%BA1/20250906_04_34_45.jpg"
     ]
   },
   {
@@ -68,9 +68,9 @@ export const dataProject:TProject[] = [
       "замена входной двери",
     ],
     "images": [
-      "https://homesstaging.online/assets/img/flats/Mitinskii-les/38/4.jpg",
-      "https://homesstaging.online/uploads/mitino1/38%D0%91%D0%BA1/20250906_04_32_36.jpg",
-      "https://homesstaging.online/uploads/mitino1/38%D0%91%D0%BA1/20250906_04_32_51.jpg"
+      "https://home.staging.moscow/assets/img/flats/Mitinskii-les/38/4.jpg",
+      "https://home.staging.moscow/uploads/mitino1/38%D0%91%D0%BA1/20250906_04_32_36.jpg",
+      "https://home.staging.moscow/uploads/mitino1/38%D0%91%D0%BA1/20250906_04_32_51.jpg"
     ]
   },
   {
@@ -95,8 +95,8 @@ export const dataProject:TProject[] = [
       "приняли большую часть доставок и собрали мебель.",
     ],
     "images": [
-      "https://homesstaging.online/uploads/ilyinskie20/20/20250906_03_58_16.jpg",
-      "https://homesstaging.online/uploads/ilyinskie20/20/20250906_03_58_16.jpg"
+      "https://home.staging.moscow/uploads/ilyinskie20/20/20250906_03_58_16.jpg",
+      "https://home.staging.moscow/uploads/ilyinskie20/20/20250906_03_58_16.jpg"
     ]
   },
   {
@@ -121,9 +121,9 @@ export const dataProject:TProject[] = [
       "покраска швов в санузле",
     ],
     "images": [
-      "https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_19_55.jpg",
-      "https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_20_14.jpg",
-      "https://homesstaging.online/uploads/ilyinskie21/21/20250906_04_20_31.jpg"
+      "https://home.staging.moscow/uploads/ilyinskie21/21/20250906_04_19_55.jpg",
+      "https://home.staging.moscow/uploads/ilyinskie21/21/20250906_04_20_14.jpg",
+      "https://home.staging.moscow/uploads/ilyinskie21/21/20250906_04_20_31.jpg"
     ]
   },
   {
@@ -149,9 +149,9 @@ export const dataProject:TProject[] = [
       "перенос розеток",
     ],
     "images": [
-      "https://homesstaging.online/uploads/rimskogoKorsakova9152/11%D0%BA9/20250920_15_16_10.jpg",
-      "https://homesstaging.online/uploads/rimskogoKorsakova9152/11%D0%BA9/20250921_13_11_43.jpeg",
-      "https://homesstaging.online/uploads/rimskogoKorsakova9152/11%D0%BA9/20250921_13_13_47.jpeg"
+      "https://home.staging.moscow/uploads/rimskogoKorsakova9152/11%D0%BA9/20250920_15_16_10.jpg",
+      "https://home.staging.moscow/uploads/rimskogoKorsakova9152/11%D0%BA9/20250921_13_11_43.jpeg",
+      "https://home.staging.moscow/uploads/rimskogoKorsakova9152/11%D0%BA9/20250921_13_13_47.jpeg"
     ]
   },
   {
@@ -175,9 +175,9 @@ export const dataProject:TProject[] = [
       "сборка мебели",
     ],
     "images": [
-      "https://homesstaging.online/uploads/jkHollandPark8k1/754/JK-Holland-park-100.jpg",
-      "https://homesstaging.online/uploads/jkHollandPark8k1/754/JK-Holland-park-101.jpg",
-      "https://homesstaging.online/uploads/jkHollandPark8k1/754/JK-Holland-park-102.jpg"
+      "https://home.staging.moscow/uploads/jkHollandPark8k1/754/JK-Holland-park-100.jpg",
+      "https://home.staging.moscow/uploads/jkHollandPark8k1/754/JK-Holland-park-101.jpg",
+      "https://home.staging.moscow/uploads/jkHollandPark8k1/754/JK-Holland-park-102.jpg"
     ]
   },
   {
@@ -202,10 +202,10 @@ export const dataProject:TProject[] = [
       "замена плинтуса"
     ],
     "images": [
-      "https://homesstaging.online/uploads/kronstadskii8k2p2/8%D0%BA2p2/20260208_05_49_03.jpg",
-      "https://homesstaging.online/uploads/kronstadskii8k2p2/8%D0%BA2p2/20260208_05_49_37.jpg",
-      "https://homesstaging.online/uploads/kronstadskii8k2p2/8%D0%BA2p2/20260208_05_50_05.jpg",
-      "https://homesstaging.online/uploads/kronstadskii8k2p2/8к2p2/20260208_05_51_34.jpg"
+      "https://home.staging.moscow/uploads/kronstadskii8k2p2/8%D0%BA2p2/20260208_05_49_03.jpg",
+      "https://home.staging.moscow/uploads/kronstadskii8k2p2/8%D0%BA2p2/20260208_05_49_37.jpg",
+      "https://home.staging.moscow/uploads/kronstadskii8k2p2/8%D0%BA2p2/20260208_05_50_05.jpg",
+      "https://home.staging.moscow/uploads/kronstadskii8k2p2/8к2p2/20260208_05_51_34.jpg"
     ]
   }
 ];
