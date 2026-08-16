@@ -209,5 +209,31 @@ export const dataProject:TProject[] = [
       `${baseUrl}/uploads/kronstadskii8k2p2/8%D0%BA2p2/20260208_05_50_05.jpg`,
       `${baseUrl}/uploads/kronstadskii8k2p2/8к2p2/20260208_05_51_34.jpg`
     ]
+  },
+  {
+    "id": "Alexandrovskaya3k599",
+    "document_id": "12",
+    "jkName": "Alexandrovskaya",
+    "jkTitle": "ГК Гранель",
+    "street": "ул. Александровская, 3к4599",
+    "url": "/projects/12",
+    "dataDoc":[
+      "Евро-3",
+      "Комплектация \"Под ключ\"",
+      "1800000",
+      "31.07.2026",
+      ""
+    ],
+    "dataWork":[
+      "замена унитаза",
+      "замена душевой кабины",
+      "установка кондеционера",
+      "замена плинтуса"
+    ],
+    "images": [
+      `${baseUrl}/uploads/Alexandrovskaya3k599/1.IMG_8801.jpg`,
+      `${baseUrl}/uploads/Alexandrovskaya3k599/IMG_8770.jpg`,
+      `${baseUrl}/uploads/Alexandrovskaya3k599/IMG_8765.jpg`,
+    ]
   }
 ];
