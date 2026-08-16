@@ -13,10 +13,8 @@ export const About = () => {
     <section id="about" className="about section">
       <TitleBlock
         title={'Обо мне'}
-        header={'Рада приветствовать вас,'} >
-        <p>меня зовут <b>Наталия Снимщикова</b>,люблю преображать скучные ремонты от застройщика в уютные
-          функциональные пространства для аренды или
-          последующей продажи. </p>
+        header={'Здравствуйте,'} >
+        <p>меня зовут <b>Наталия</b>, Я специализируюсь на комплексной упаковке новостроек — создании функциональных, стилистически завершенных пространств «под ключ» для максимально быстрого сбыта и высокой рентабельности.</p>
       </TitleBlock>
 
       <div className="container">
@@ -26,8 +24,8 @@ export const About = () => {
           </div>
 
           <div className="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200" >
-            <h3>ПРЕИМУЩЕСТВА</h3>
-            <p className="fst-italic">сотрудничества со мной:</p>
+            <h3>Вы приобрели квартиру,</h3>
+            <p className="fst-italic">но вам не нужно разбираться в сантехнических допусках и поиске идеальной фурнитуры. Вы делегируете мне весь процесс, а я отвечаю за:</p>
             <ul>
               {aboutItems.map((item,index:number) => {
                 return <AboutItem key={'about-item-'+index} isShow={isShow} {...item} />
