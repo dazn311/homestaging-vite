@@ -1,5 +1,5 @@
 import { Breadcrumb } from 'antd';
-import type {TProject} from "@/store/dataApp.ts";
+import type {TProject} from "@/store/typesApp.ts";
 
 type TBreadcrumbsProps = {data:TProject | null};
 

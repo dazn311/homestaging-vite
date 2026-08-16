@@ -1,4 +1,4 @@
-import type {TPricingItemProps, TTitlePrice} from "@/store/dataApp.ts";
+import type {TPricingItemProps, TTitlePrice} from "@/store/typesApp.ts";
 import {ButtonTelegram} from "@/components";
 
 export function PriceTitle({id,title,price}:TTitlePrice) {

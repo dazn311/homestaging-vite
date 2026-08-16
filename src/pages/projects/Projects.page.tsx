@@ -2,7 +2,7 @@ import {useEffect, useRef, useState} from "react";
 import {Link, useSearchParams} from "react-router";
 import {LayoutGroup, motion} from "motion/react";
 import {Card} from 'antd';
-import {type TProject} from "@/store/dataApp.ts";
+import {type TProject} from "@/store/typesApp.ts";
 import {getProject} from "@/api/project.ts";
 import {ImagesBlock, ScrollTopBtn} from "@/components";
 import '@/pages/projects/projects.styles.scss';

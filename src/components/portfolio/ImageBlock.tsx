@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Link} from "react-router";
-import {type TImageBlockData} from "@/store/dataApp.ts";
+import {type TImageBlockData} from "@/store/typesApp.ts";
 import {Image} from 'antd';
 import cn from "classnames";
 

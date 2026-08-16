@@ -1,4 +1,4 @@
-import type {TProject} from "@/store/dataApp.ts";
+import type {TProject} from "@/store/typesApp.ts";
 
 export const baseUrl = "https://home.staging.moscow";
 

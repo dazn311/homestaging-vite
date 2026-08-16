@@ -1,7 +1,8 @@
 import {useState} from "react";
 import cn from 'classnames';
-import {aboutItems, type TAboutItemProps} from "@/store/dataApp.ts";
+import {type TAboutItemProps} from "@/store/typesApp.ts";
 import {TitleBlock} from "@/components";
+import {aboutItems} from "@/store/aboutItems.ts";
 import './about.styles.scss';
 
 
