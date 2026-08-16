@@ -15,5 +15,8 @@ git push -u origin main
 
 ssh -i ~/.ssh/id_rsa root@185.72.144.201
 
-scp -r /Users/dazn311/Projects/react-project/homestaging-vite/dist root@185.72.144.201:/var/www/html
+scp -r ~/.ssh/id_rsa /Users/dazn311/Projects/react-project/homestaging-vite/dist root@185.72.144.201:/var/www/html
+rm -r ~/.ssh/id_rsa /Users/dazn311/Projects/ReactJS/homestaging-vite/dist root@185.72.144.201:/var/www/html
 scp -r /Users/dazn311/Projects/ReactJS/homestaging-vite/dist root@185.72.144.201:/var/www/html
+
+scp /Users/dazn311/Projects/ReactJS/homestaging-vite/public/api/u3179688_homesStaging.json root@185.72.144.201:/var/www/html/api

@@ -2,14 +2,15 @@ import {useRef, useState} from "react";
 import {motion, AnimatePresence} from "motion/react";
 import {useIsVisible} from "@/hooks/useIsVisible.tsx";
 import {TitleBlock} from "@/components";
-import {activeImages} from "./activeImages.ts";
+import {activeImages} from "./helpers/activeImages.ts";
+import {setLastActiveDocId} from "@/components/portfolio/helpers/setLastActiveDocId.ts";
 import {ImageBlock} from "./ImageBlock.tsx";
 import {PortfolioMenu} from "./PortfolioMenu.tsx";
 import {ImageBlockData} from "@/store/imageBlockData.ts";
 
 
 export const Portfolio = () => {
-  const [activeDocId, setActiveDocId] = useState('8');
+  const [activeDocId, setActiveDocId] = useState(setLastActiveDocId(ImageBlockData));
   const ref = useRef(null);
   const isVisible = useIsVisible(ref);
 

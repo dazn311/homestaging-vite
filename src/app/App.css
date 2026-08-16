@@ -26,9 +26,10 @@
 #title h2 strong::before {
   position: absolute;
   content: 'Home Staging';
-  font-size: 0.75em;
-  top: -0.2em;
-  opacity: 0.3;
+  font-size: 1.90em;
+  top: 2px;
+  left: -10px;
+  opacity: .3;
   white-space: nowrap;
 }
 
