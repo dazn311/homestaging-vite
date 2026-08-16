@@ -1,7 +1,7 @@
-import {dataProject} from "./data/data-project.ts";
-import type {TProject} from "../store/dataApp.ts";
-import type {TVideoCard} from "./data-video.ts";
-import {dataVideo} from "./data-video.ts";
+import type {TProject} from "@/store/typesApp.ts";
+import {dataProject} from "@/api/data/data-project.ts";
+import type {TVideoCard} from "@/api/data-video.ts";
+import {dataVideo} from "@/api/data-video.ts";
 
 export async function getProject(jkName:string):Promise<TProject[]> {
   if (/^all$/.test(jkName)) {

@@ -1,9 +1,9 @@
 import {Flex, Table} from "antd";
 import {motion} from "motion/react";
-import ImagesBlock from "./images-block/ImagesBlock.tsx";
-import {docColumns, docColumnsWork} from "../dataDoc.ts";
-import {type TDataSourceDto} from "../../../api/getDocDetails.ts";
-import type {TDocSource, TDocTableWork} from "../../../types/documents.ts";
+import {ImagesBlock} from "@/components";
+import {docColumns, docColumnsWork} from "@/pages/document/dataDoc.ts";
+import {type TDataSourceDto} from "@/api/getDocDetails.ts";
+import type {TDocSource, TDocTableWork} from "@/types/documents.ts";
 import {useEffect} from "react";
 
 export function DocumentDetails({data}:{ data: TDocSource}) {

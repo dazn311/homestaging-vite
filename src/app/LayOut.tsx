@@ -1,7 +1,6 @@
 import {Outlet} from "react-router";
-import './App.css'
-import {Header} from "../components/header/Header.tsx";
-import {Footer} from "../components/footer/Footer.tsx";
+import {Header, Footer} from "@/components";
+import '@/app/App.css';
 
 function Layout() {
   return (

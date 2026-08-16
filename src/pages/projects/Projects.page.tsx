@@ -1,16 +1,15 @@
 import {useEffect, useRef, useState} from "react";
 import {Link, useSearchParams} from "react-router";
 import {LayoutGroup, motion} from "motion/react";
-import {type TProject} from "../../store/dataApp.ts";
-import {getProject} from "../../api/project.ts";
 import {Card} from 'antd';
-import ImagesBlock from "../document/components/images-block/ImagesBlock.tsx";
-import {ScrollTopBtn} from "../../components/scroll-top-btn/ScrollTopBtn.tsx";
-import './projects.styles.scss';
+import {type TProject} from "@/store/typesApp.ts";
+import {getProject} from "@/api/project.ts";
+import {ImagesBlock, ScrollTopBtn} from "@/components";
+import '@/pages/projects/projects.styles.scss';
 
 const {Meta} = Card;
 
-function Projects() {
+function ProjectsPage() {
   const [searchParams] = useSearchParams();
   const [pages, setPages] = useState<TProject[]>([]);
   const titleRef = useRef<HTMLDivElement>(null);
@@ -71,5 +70,6 @@ function Projects() {
   )
 }
 
-export default Projects;
+export const Component = ProjectsPage;
+export default ProjectsPage;
 

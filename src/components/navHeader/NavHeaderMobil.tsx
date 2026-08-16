@@ -1,15 +1,15 @@
 import React, {useState} from 'react';
 import {Link, useNavigate} from "react-router";
+import {useDispatch, useSelector} from "react-redux";
 import {MenuFoldOutlined, MenuUnfoldOutlined} from '@ant-design/icons';
 import type {MenuProps} from 'antd';
 import {Button, ConfigProvider, Menu} from 'antd';
 import cn from "classnames";
 import {getItems} from "./helpers/getItems.tsx";
 import { AnimatePresence } from 'motion/react';
-import {useDispatch, useSelector} from "react-redux";
-import {updateNavigate} from "../../store/slices/navigateSlice.ts";
-import type {RootState} from "../../store/store.ts";
-import {navOfKey} from "../../store/slices/initialNavigateState.ts";
+import {updateNavigate} from "@/store";
+import type {RootState} from "@/store/store.ts";
+import {navOfKey} from "@/shared/model/routes.ts";
 import './nav-mobil.scss';
 
 type MenuItem = Required<MenuProps>['items'][number];

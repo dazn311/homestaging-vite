@@ -1,4 +1,4 @@
-import {NavHeaderMobil} from "../navHeader/NavHeaderMobil.tsx";
+import {NavHeaderMobil} from "@/components";
 import {Topbar} from "./Topbar.tsx";
 
 export const Header = () => {

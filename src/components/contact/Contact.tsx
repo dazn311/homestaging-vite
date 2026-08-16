@@ -1,4 +1,4 @@
-import {TitleBlock} from "../title-block/TitleBlock.tsx";
+import {TitleBlock} from "@/components";
 
 export const Contact = () => {
 
@@ -39,7 +39,7 @@ export const Contact = () => {
             <div className="info-item d-flex flex-column justify-content-center align-items-center">
               <i className="bi bi-envelope"></i>
               <h3>Эл.почта</h3>
-              <p><a href="mailto:natalia888@homesstaging.online">natalia888@homesstaging.online</a></p>
+              <p><a href="mailto:natalia888@home.staging.moscow">natalia888@home.staging.moscow</a></p>
             </div>
           </div>
         </div>

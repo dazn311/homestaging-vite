@@ -1,4 +1,4 @@
-import type {TDocTableWork} from "../../types/documents.ts";
+import type {TDocTableWork} from "@/types/documents.ts";
 
 export const dataTableWork:TDocTableWork[] = [
   {

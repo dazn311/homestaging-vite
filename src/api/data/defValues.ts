@@ -1,4 +1,4 @@
-import type {IBreadcrumbs, IDescription} from "../../types/documents.ts";
+import type {IBreadcrumbs, IDescription} from "@/types/documents.ts";
 
 export const defValueBread:IBreadcrumbs = {
   breadcrumbs_id: "1",

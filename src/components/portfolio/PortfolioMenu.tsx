@@ -1,5 +1,5 @@
 import React, {type Dispatch, type SetStateAction} from "react";
-import type {TImageBlockData} from "../../store/dataApp.ts";
+import type {TImageBlockData} from "@/store/typesApp.ts";
 import cn from "classnames";
 
 type TPortfolioMenuProps = {

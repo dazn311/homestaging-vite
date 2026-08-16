@@ -1,0 +1,16 @@
+export {Header} from './header/Header';
+export {Footer} from './footer/Footer';
+export {TitleBlock} from './title-block/TitleBlock';
+export {ScrollTopBtn} from './scroll-top-btn/ScrollTopBtn';
+export {PasscodeComponent} from './passcode/Passcode';
+export {ImagesBlock} from './images-block/ImagesBlock';
+export {About} from './about/About';
+export {Services} from './services/Services';
+export {Prices} from './prices/Prices';
+export {Cooperation} from './cooperation/Cooperation';
+export {Portfolio} from './portfolio/Portfolio';
+export {Contact} from './contact/Contact';
+export {ButtonTelegram} from './btn-telegram/ButtonTelegram';
+export {NavHeaderMobil} from './navHeader/NavHeaderMobil';
+export {LabelA} from './labelA/LabelA';
+export {default as TimelineComp} from './timeline/TimelineComp';

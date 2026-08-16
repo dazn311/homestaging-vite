@@ -9,7 +9,7 @@ import {
   ProjectOutlined
 } from "@ant-design/icons";
 import type {MenuProps} from 'antd';
-import {LabelA} from "../components/LabelA.tsx";
+import {LabelA} from "@/components";
 
 type MenuItem = Required<MenuProps>['items'][number];
 

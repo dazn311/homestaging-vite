@@ -1,5 +1,5 @@
 import {useEffect} from "react";
-import {Passcode} from "./utils.ts";
+import {Passcode} from "@/components/passcode/utils.ts";
 import './passvideo.styles.scss';
 
 

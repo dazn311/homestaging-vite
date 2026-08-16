@@ -1,3 +1,4 @@
+import {baseUrl} from "@/api/data/data-project.ts";
 
 
 export type TVideoCard = {
@@ -9,7 +10,7 @@ export type TVideoCard = {
   video: string;
 }
 
-export const baseUrl = "https://homesstaging.online/video";
+export const baseUrlVideo = `${baseUrl}/video`;
 
 export const dataVideo:TVideoCard[] = [
   {

@@ -8,8 +8,9 @@ export const Services = () => {
       <div className="container">
         <div className="container section-title" data-aos="fade-up" style={{opacity: 1}} >
           <span>Услуги</span>
-          <h2>Услуги</h2>
-          <p>Комплектации и хоумстейджинга</p>
+          <h2>Проект «Под ключ»</h2>
+          <p>Вместо простого ремонта, мы создаем прибыльный актив.</p>
+          <p>Процесс Проекта включает:</p>
         </div>
         <div className="row no-gutters">
           {

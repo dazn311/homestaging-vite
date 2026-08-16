@@ -1,7 +1,7 @@
 import {useEffect} from "react";
 import {useDispatch} from "react-redux";
-import {updateNavigate} from "../../store/slices/navigateSlice.ts";
-import {NavActiveKey} from "../../store/slices/initialNavigateState.ts";
+import {updateNavigate} from "@/store";
+import {ENavActiveKey} from "@/shared/model/routes.ts";
 
 export function ScrollTopBtn() {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ export function ScrollTopBtn() {
 
   const menuHandler = () => {
     dispatch(updateNavigate({
-      activeKey: NavActiveKey.TITLE,
+      activeKey: ENavActiveKey.TITLE,
     }));
   };
 

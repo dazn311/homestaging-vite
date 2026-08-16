@@ -1,4 +1,4 @@
-import {ButtonTelegram} from "../btn-telegram/ButtonTelegram.tsx";
+import {ButtonTelegram} from "@/components";
 
 export const Cooperation = () => {
 
